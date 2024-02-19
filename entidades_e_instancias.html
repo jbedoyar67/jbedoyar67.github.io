@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>ENTIDADES E INSTANCIAS | FUNDAMENTOS Y DISEÑO DE BASES DE DATOS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="JORGE IVAN BEDOYA RESTREPO" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-17"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">FUNDAMENTOS Y DISEÑO DE BASES DE DATOS</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">FUNDAMENTOS Y DISEÑO DE BASES DE DATOS</a></li>
+   <li><a href="conceptos_basicos.html" class="daddy">CONCEPTOS BASICOS</a>
+   <ul class="other-section">
+      <li><a href="bases_de_datos_y_dbms.html" class="no-ch">BASES DE DATOS Y DBMS</a></li>
+      <li><a href="niveles_de_abstraccion_de_datos.html" class="no-ch">NIVELES DE ABSTRACCION DE DATOS</a></li>
+      <li><a href="ejemplar_y_esquema.html" class="no-ch">EJEMPLAR Y ESQUEMA</a></li>
+      <li><a href="lenguajes_de_bases_de_datos.html" class="no-ch">LENGUAJES DE BASES DE DATOS</a></li>
+      <li><a href="modelos_de_datos.html" class="no-ch">MODELOS DE DATOS</a></li>
+      <li><a href="tipos_de_usuarios.html" class="no-ch">TIPOS DE USUARIOS</a></li>
+      <li><a href="dba__administrador_de_bases_de_datos.html" class="no-ch">DBA - ADMINISTRADOR DE BASES DE DATOS</a></li>
+      <li><a href="backups_y_tipos.html" class="no-ch">BACKUPS Y TIPOS</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="modelamiento_de_datos.html" class="current-page-parent daddy">MODELAMIENTO DE DATOS</a>
+   <ul>
+      <li><a href="que_es.html" class="no-ch">QUE ES?</a></li>
+      <li class="current-page-parent"><a href="modelo_entidad_relacion.html" class="current-page-parent daddy">MODELO ENTIDAD RELACION</a>
+      <ul>
+         <li id="active"><a href="entidades_e_instancias.html" class="active no-ch">ENTIDADES E INSTANCIAS</a></li>
+         <li><a href="atributos_y_tipos.html" class="no-ch">ATRIBUTOS Y TIPOS</a></li>
+         <li><a href="relaciones.html" class="no-ch">RELACIONES</a></li>
+         <li><a href="entidad_debil.html" class="no-ch">ENTIDAD DEBIL</a></li>
+         <li><a href="atributo_en_relacion.html" class="no-ch">ATRIBUTO EN RELACION</a></li>
+      </ul>
+      </li>
+      <li><a href="modelo_entidad_relacion_extendido.html" class="daddy">MODELO ENTIDAD RELACION EXTENDIDO</a>
+      <ul class="other-section">
+         <li><a href="especializacion.html" class="no-ch">ESPECIALIZACION</a></li>
+         <li><a href="generalizacion.html" class="no-ch">GENERALIZACION</a></li>
+      </ul>
+      </li>
+      <li><a href="diagrama_entidad_relacion.html" class="no-ch">DIAGRAMA ENTIDAD RELACION</a></li>
+      <li><a href="ejercicio_completo_de_modelamiento.html" class="no-ch">EJERCICIO COMPLETO DE MODELAMIENTO</a></li>
+   </ul>
+   </li>
+   <li><a href="modelo_relacional.html" class="daddy">MODELO RELACIONAL</a>
+   <ul class="other-section">
+      <li><a href="terminologia_tecnica.html" class="no-ch">TERMINOLOGIA TECNICA</a></li>
+      <li><a href="dominio_de_un_atributo.html" class="no-ch">DOMINIO DE UN ATRIBUTO</a></li>
+      <li><a href="tipos_de_claves.html" class="no-ch">TIPOS DE CLAVES</a></li>
+      <li><a href="reglas_de_mapeo__traduccion.html" class="daddy">REGLAS DE MAPEO / TRADUCCION</a>
+      <ul class="other-section">
+         <li><a href="cantidad_de_tablas.html" class="no-ch">CANTIDAD DE TABLAS</a></li>
+         <li><a href="entidad_normal__fuerte.html" class="no-ch">ENTIDAD NORMAL / FUERTE</a></li>
+         <li><a href="entidad_debil0.html" class="no-ch">ENTIDAD DEBIL</a></li>
+         <li><a href="atributo_multivalorado.html" class="no-ch">ATRIBUTO MULTIVALORADO</a></li>
+         <li><a href="relacion_uno_a_uno.html" class="no-ch">RELACION UNO A UNO</a></li>
+         <li><a href="relacion_uno_a_muchos.html" class="no-ch">RELACION UNO A MUCHOS</a></li>
+         <li><a href="relacion_muchos_a_muchos.html" class="no-ch">RELACION MUCHOS A MUCHOS</a></li>
+         <li><a href="atributo_en_relacion0.html" class="no-ch">ATRIBUTO EN RELACION</a></li>
+         <li><a href="especializacion0.html" class="no-ch">ESPECIALIZACION</a></li>
+         <li><a href="ejercicio_completo.html" class="no-ch">EJERCICIO COMPLETO</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="normalizacion_de_datos.html" class="daddy">NORMALIZACION DE DATOS</a>
+   <ul class="other-section">
+      <li><a href="introduccion.html" class="no-ch">INTRODUCCION</a></li>
+      <li><a href="anomalias_en_el_diseo.html" class="no-ch">ANOMALIAS EN EL DISEÑO</a></li>
+      <li><a href="tuplas_espurias.html" class="no-ch">TUPLAS ESPURIAS</a></li>
+      <li><a href="dependencia_funcional.html" class="no-ch">DEPENDENCIA FUNCIONAL</a></li>
+      <li><a href="formas_normales.html" class="daddy">FORMAS NORMALES</a>
+      <ul class="other-section">
+         <li><a href="primera_forma_normal_1nf.html" class="no-ch">PRIMERA FORMA NORMAL (1NF)</a></li>
+         <li><a href="segunda_forma_normal_2nf.html" class="no-ch">SEGUNDA FORMA NORMAL (2NF)</a></li>
+         <li><a href="tercera_forma_normal_3nf.html" class="no-ch">TERCERA FORMA NORMAL (3NF)</a></li>
+         <li><a href="ejercicio_completo0.html" class="no-ch">EJERCICIO COMPLETO</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="modelo_entidad_relacion.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="atributos_y_tipos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">ENTIDADES E INSTANCIAS</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id22">
+<div class="iDevice emphasis0" >
+<div id="ta22_110_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;"><strong>Entidad</strong></p>
+<p style="text-align: justify;">Una entidad se puede definir como <em>cualquier elemento concreto o abstracto que exista en el problema y del cual queramos conocer cierta información.</em><em> </em></p>
+<p style="text-align: justify;">Esta última parte de la definición es muy importante. Si tomamos en cuenta el ejemplo del Paciente. Será una entidad? Corresponde el Paciente a la definición dada anteriormente? Sí, ya que es un elemento concreto incluido dentro del problema y del cual necesitamos saber cierta información como su cédula, nombre, edad, diagnóstico, sexo, etc.</p>
+<p style="text-align: justify;">Ahora bien, será el nombre de la enfermera una entidad? Si nos ponemos a analizar este ejemplo a la luz de la definición dada, nos damos cuenta de que cumple con la mitad de ella, es decir, el nombre de la enfermera es otro elemento, éste sí abstracto, incluido en el problema, pero que en realidad no queremos conocer información de el; de hecho, el nombre de la enfermera se constituye en información referente a otro elemento del problema que es la enfermera.</p>
+<p style="text-align: justify;">Cuando se dice "elemento concreto o abstracto" se refiere a aquellos elementos visibles, palpables o invisibles, intangibles respectivamente.</p>
+<p style="text-align: justify;">Desde este punto de vista, entonces, tenemos que los siguientes elementos, entre otros más, son entidades del problema propuesto:</p>
+<ul style="text-align: justify;">
+<li>Paciente</li>
+<li>Médico</li>
+<li>Enfermera</li>
+<li>Medicamento</li>
+<li>Enfermedad</li>
+<li>Cita</li>
+<li>Diagnóstico</li>
+<li>Historia Clínica </li>
+</ul>
+<p style="text-align: justify;">Considero que no merece mayor detalle explicar porque Paciente, Médico, Enfermera, Cita e Historia Clínica son entidades, algunas concretas y otras abstractas (Cuales ?). Pero analicemos las demás entidades. </p>
+<p style="text-align: justify;">Se podría pensar que Medicamento no es propiamente una entidad sino que es información referente al paciente, es decir, necesitamos saber en la futura base de datos el nombre de los medicamentos que va a tomar un paciente dado. En este caso, lo único que necesitamos conocer acerca del Medicamento es su nombre y por lo tanto, no podríamos decir que es una Entidad sino, más bien, una característica propia del Paciente. Pero qué sucede si, por ejemplo, necesitamos saber, además del nombre del medicamento, su número de lote de producción, el nombre del laboratorio que lo fabricó, el nombre del químico farmacéutico responsable del mismo, entre otras cosas. Desde este punto de vista, el medicamento se convierte en Entidad ya que existe información inherente a él que deseamos conocer.</p>
+<p style="text-align: justify;">En la explicación anterior se vislumbra claramente la importancia que tienen los requerimientos del usuario. Es el usuario, en este caso, el que decide qué información necesita manejar acerca de los medicamentos, para que el analista / diseñador decida si modelarla como entidad o como característica de otra entidad (en este caso, Paciente).</p>
+<p style="text-align: justify;">Lo mismo sucedería con Enfermedad. Podríamos pensar en colocar el nombre de la enfermedad como una característica del Paciente y no como una entidad. Esto dependerá de la buena comprensión que tengamos de los requerimientos del usuario (y, valga decir, de lo bien que éstos estén definidos). </p>
+<p style="text-align: justify;">Exactamente el mismo caso tendríamos con Diagnóstico. Es usted, señor diseñador, el que define si es entidad o no, dependiendo de la conversación previa que haya tenido con el usuario.</p>
+<p style="text-align: justify;">Vale decir que el hecho de que una entidad sea concreta o abstracta no va a tener mayor importancia en la definición del modelo. Es una cuestión simplemente semántica, es decir, que le va a dar significado al modelo.</p>
+<p style="text-align: justify;"><strong>Instancia de una Entidad</strong></p>
+<p style="text-align: justify;">Las instancias de una entidad se definen como los “registros” que están siendo representados por la entidad, es decir, son los datos particulares que están incluidos en la entidad y que están siendo representados por ella. </p>
+<p style="text-align: justify;">Tomemos el ejemplo de la entidad Paciente y sus atributos cedula-paciente, nombre-paciente, edad-paciente y teléfono-paciente. Si en un momento dado se desea representar los pacientes que hay hospitalizados, pues el número de instancias de la entidad Paciente será igual al número de pacientes hospitalizados. En este caso, suponiendo 4 pacientes hospitalizados, las instancias se muestran en la tabla No. 3.</p>
+<table border="1" style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><span style="font-size: 12pt;"><strong>INSTANCIAS DE LA ENTIDAD PACIENTE</strong></span></td>
+</tr>
+</tbody>
+</table>
+<table border="1" style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 25%; text-align: center;"><strong>Cedula-Paciente</strong></td>
+<td style="width: 25%; text-align: center;"><strong>Nombre-Paciente</strong></td>
+<td style="width: 25%; text-align: center;"><strong>Edad-Paciente</strong></td>
+<td style="width: 25%; text-align: center;"><strong>Telefono-Paciente</strong></td>
+</tr>
+<tr>
+<td width="150" style="width: 25%;">
+<p>45,520,520</p>
+</td>
+<td width="150" style="width: 25%;">
+<p>Juan Carlos Mora</p>
+</td>
+<td width="140" style="width: 25%;">
+<p>35</p>
+</td>
+<td width="159" style="width: 25%;">
+<p>311 5429652</p>
+</td>
+</tr>
+<tr>
+<td width="150" style="width: 25%;">
+<p>17,540,960</p>
+</td>
+<td width="150" style="width: 25%;">
+<p>Ana María Mesa</p>
+</td>
+<td width="140" style="width: 25%;">
+<p>19</p>
+</td>
+<td width="159" style="width: 25%;">
+<p>2589645</p>
+</td>
+</tr>
+<tr>
+<td width="150" style="width: 25%;">
+<p>36,850,890</p>
+</td>
+<td width="150" style="width: 25%;">
+<p>Julián Pedroza</p>
+</td>
+<td width="140" style="width: 25%;">
+<p>65</p>
+</td>
+<td width="159" style="width: 25%;">
+<p>315 5206325</p>
+</td>
+</tr>
+<tr>
+<td width="150" style="width: 25%;">
+<p>98,547,520</p>
+</td>
+<td width="150" style="width: 25%;">
+<p>Ligia Tabares</p>
+</td>
+<td width="140" style="width: 25%;">
+<p>39</p>
+</td>
+<td width="159" style="width: 25%;">
+<p>2694530</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h2 style="text-align: justify;"><span style="font-size: 12pt; color: #000000;"><strong>Tabla No. 3  Ejemplo de Instancias de la Entidad Paciente</strong></span></h2>
+<p style="text-align: justify;">Toda entidad debe representar, como mínimo, a dos instancias.  Entidades que, de antemano, sabemos que van a contener una sola instancia no tienen sentido.</p>
+<hr />
+<p style="text-align: justify;">Video:</p>
+<p style="text-align: justify;"><a href="https://youtu.be/3O6KJFp0GEw">Entidades e Instancias</a></p>
+<p style="text-align: justify;"></p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="modelo_entidad_relacion.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="atributos_y_tipos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

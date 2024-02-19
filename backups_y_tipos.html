@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>BACKUPS Y TIPOS | FUNDAMENTOS Y DISEÑO DE BASES DE DATOS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="JORGE IVAN BEDOYA RESTREPO" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-14"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">FUNDAMENTOS Y DISEÑO DE BASES DE DATOS</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">FUNDAMENTOS Y DISEÑO DE BASES DE DATOS</a></li>
+   <li class="current-page-parent"><a href="conceptos_basicos.html" class="current-page-parent daddy">CONCEPTOS BASICOS</a>
+   <ul>
+      <li><a href="bases_de_datos_y_dbms.html" class="no-ch">BASES DE DATOS Y DBMS</a></li>
+      <li><a href="niveles_de_abstraccion_de_datos.html" class="no-ch">NIVELES DE ABSTRACCION DE DATOS</a></li>
+      <li><a href="ejemplar_y_esquema.html" class="no-ch">EJEMPLAR Y ESQUEMA</a></li>
+      <li><a href="lenguajes_de_bases_de_datos.html" class="no-ch">LENGUAJES DE BASES DE DATOS</a></li>
+      <li><a href="modelos_de_datos.html" class="no-ch">MODELOS DE DATOS</a></li>
+      <li><a href="tipos_de_usuarios.html" class="no-ch">TIPOS DE USUARIOS</a></li>
+      <li><a href="dba__administrador_de_bases_de_datos.html" class="no-ch">DBA - ADMINISTRADOR DE BASES DE DATOS</a></li>
+      <li id="active"><a href="backups_y_tipos.html" class="active no-ch">BACKUPS Y TIPOS</a></li>
+   </ul>
+   </li>
+   <li><a href="modelamiento_de_datos.html" class="daddy">MODELAMIENTO DE DATOS</a>
+   <ul class="other-section">
+      <li><a href="que_es.html" class="no-ch">QUE ES?</a></li>
+      <li><a href="modelo_entidad_relacion.html" class="daddy">MODELO ENTIDAD RELACION</a>
+      <ul class="other-section">
+         <li><a href="entidades_e_instancias.html" class="no-ch">ENTIDADES E INSTANCIAS</a></li>
+         <li><a href="atributos_y_tipos.html" class="no-ch">ATRIBUTOS Y TIPOS</a></li>
+         <li><a href="relaciones.html" class="no-ch">RELACIONES</a></li>
+         <li><a href="entidad_debil.html" class="no-ch">ENTIDAD DEBIL</a></li>
+         <li><a href="atributo_en_relacion.html" class="no-ch">ATRIBUTO EN RELACION</a></li>
+      </ul>
+      </li>
+      <li><a href="modelo_entidad_relacion_extendido.html" class="daddy">MODELO ENTIDAD RELACION EXTENDIDO</a>
+      <ul class="other-section">
+         <li><a href="especializacion.html" class="no-ch">ESPECIALIZACION</a></li>
+         <li><a href="generalizacion.html" class="no-ch">GENERALIZACION</a></li>
+      </ul>
+      </li>
+      <li><a href="diagrama_entidad_relacion.html" class="no-ch">DIAGRAMA ENTIDAD RELACION</a></li>
+      <li><a href="ejercicio_completo_de_modelamiento.html" class="no-ch">EJERCICIO COMPLETO DE MODELAMIENTO</a></li>
+   </ul>
+   </li>
+   <li><a href="modelo_relacional.html" class="daddy">MODELO RELACIONAL</a>
+   <ul class="other-section">
+      <li><a href="terminologia_tecnica.html" class="no-ch">TERMINOLOGIA TECNICA</a></li>
+      <li><a href="dominio_de_un_atributo.html" class="no-ch">DOMINIO DE UN ATRIBUTO</a></li>
+      <li><a href="tipos_de_claves.html" class="no-ch">TIPOS DE CLAVES</a></li>
+      <li><a href="reglas_de_mapeo__traduccion.html" class="daddy">REGLAS DE MAPEO / TRADUCCION</a>
+      <ul class="other-section">
+         <li><a href="cantidad_de_tablas.html" class="no-ch">CANTIDAD DE TABLAS</a></li>
+         <li><a href="entidad_normal__fuerte.html" class="no-ch">ENTIDAD NORMAL / FUERTE</a></li>
+         <li><a href="entidad_debil0.html" class="no-ch">ENTIDAD DEBIL</a></li>
+         <li><a href="atributo_multivalorado.html" class="no-ch">ATRIBUTO MULTIVALORADO</a></li>
+         <li><a href="relacion_uno_a_uno.html" class="no-ch">RELACION UNO A UNO</a></li>
+         <li><a href="relacion_uno_a_muchos.html" class="no-ch">RELACION UNO A MUCHOS</a></li>
+         <li><a href="relacion_muchos_a_muchos.html" class="no-ch">RELACION MUCHOS A MUCHOS</a></li>
+         <li><a href="atributo_en_relacion0.html" class="no-ch">ATRIBUTO EN RELACION</a></li>
+         <li><a href="especializacion0.html" class="no-ch">ESPECIALIZACION</a></li>
+         <li><a href="ejercicio_completo.html" class="no-ch">EJERCICIO COMPLETO</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="normalizacion_de_datos.html" class="daddy">NORMALIZACION DE DATOS</a>
+   <ul class="other-section">
+      <li><a href="introduccion.html" class="no-ch">INTRODUCCION</a></li>
+      <li><a href="anomalias_en_el_diseo.html" class="no-ch">ANOMALIAS EN EL DISEÑO</a></li>
+      <li><a href="tuplas_espurias.html" class="no-ch">TUPLAS ESPURIAS</a></li>
+      <li><a href="dependencia_funcional.html" class="no-ch">DEPENDENCIA FUNCIONAL</a></li>
+      <li><a href="formas_normales.html" class="daddy">FORMAS NORMALES</a>
+      <ul class="other-section">
+         <li><a href="primera_forma_normal_1nf.html" class="no-ch">PRIMERA FORMA NORMAL (1NF)</a></li>
+         <li><a href="segunda_forma_normal_2nf.html" class="no-ch">SEGUNDA FORMA NORMAL (2NF)</a></li>
+         <li><a href="tercera_forma_normal_3nf.html" class="no-ch">TERCERA FORMA NORMAL (3NF)</a></li>
+         <li><a href="ejercicio_completo0.html" class="no-ch">EJERCICIO COMPLETO</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="dba__administrador_de_bases_de_datos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="modelamiento_de_datos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">BACKUPS Y TIPOS</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id19">
+<div class="iDevice emphasis0" >
+<div id="ta19_118_2" class="block iDevice_content">
+<div class="exe-text"><h1 style="text-align: justify;"><span style="font-size: 12pt;"><strong>Backups de una Base de Datos</strong></span></h1>
+<p style="text-align: justify;"><span>Como ya se expresó anteriormente, una de las funciones del DBA es realizar los backups de la base de datos y mantenerlos al día.</span></p>
+<p style="text-align: justify;">Para poder mantener al día las copias de seguridad de los datos, el DBA cuenta, en general, con 3 tipos de backups: </p>
+<ul style="text-align: justify;">
+<li>Backup Completo</li>
+<li>Backup Incremental</li>
+<li>Backup Diferencial</li>
+</ul>
+<p style="text-align: justify;">A continuación, se explica en detalle qué características tiene cada uno de estos backups y cuáles son sus relaciones y diferencias.</p>
+<p style="text-align: justify;"><strong> Backup Completo</strong></p>
+<p style="text-align: justify;"><strong> </strong><span>Como su nombre lo indica, el backup completo realiza una copia de TODOS los datos de una base de datos. Es decir, le realiza una copia al EJEMPLAR de la base de datos existente en el momento de hacer la copia (esta última frase ya se debe entender).</span></p>
+<p style="text-align: justify;"> <strong>Backup Incremental</strong></p>
+<p style="text-align: justify;"><strong> </strong><span>A diferencia del backup completo, el backup incremental le hace una copia solo a los movimientos hechos sobre la base de datos, desde el momento en que se le realizó el último backup, bien sea completo o diferencial.</span></p>
+<p style="text-align: justify;"><strong><span>Backup Diferencial</span></strong></p>
+<p style="text-align: justify;"><span> </span><span>A diferencia del backup incremental, el backup diferencial hace copia de los movimientos hechos desde el ultimo backup completo hecho. No se tienen en cuenta los backups incrementales.</span></p>
+<p style="text-align: justify;"><strong> Como funcionan, en la vida real, estos tres tipos de backups?</strong></p>
+<p style="text-align: justify;"><strong> </strong><span>La responsabilidad del DBA ante la pérdida de datos es poder restaurar la base de datos al estado más próximo al que estaba en el momento de la pérdida.</span></p>
+<p style="text-align: justify;">Para poder explicar lo anterior en el marco de los 3 tipos de backups expuestos, se expone un ejemplo concreto, factible de suceder en la cotidianidad de un departamento de sistemas.</p>
+<p style="text-align: justify;"> Suponga que el miércoles 6 de septiembre de 2006, Juan Peláez que es el DBA de la empresa XYZ, realiza a las 12:00 del mediodía un backup completo de la base de datos. Siendo las 6:00 p.m. del mismo día, sucede un daño y se pierden los datos de la base de datos. Qué puede hacer Juan Peláez? En este caso, él como DBA, debe “montar” el backup completo realizado. Pero y como es posible recuperar las 6 horas de trabajo perdidas, para que lo hecho se refleje en lo recuperado por Juan Peláez? Existe un componente muy importante de toda base de datos que se conoce como el log de transacciones, que es simplemente en archivo físico del sistema operativo en el cual se van grabando todas las acciones que se van realizando sobre la base de datos. Por lo tanto, después de haber montado el backup completo, Juan Peláez debe aplicarle el log de transacciones hechas después de las 12:00 del mediodía. Con esta operación, la base de datos quedará como si nunca se hubieran perdido los datos.</p>
+<p style="text-align: justify;"> Sigamos con el caso anterior. Después de restaurar la base de datos, Juan Peláez vuelve y realiza un backup completo a las 6:30 p.m. Al finalizar el día siguiente, 6:00 p.m. del 7 de septiembre de 2006, el DBA hace un backup incremental. Y al empezar el día siguiente, 8:00 a.m. del 8 de septiembre de 2006, Juan Peláez se encuentra con que la base de datos ha sufrido un daño por un mal arranque del servidor. Como recupera Juan la base de datos en este caso? Lo que se debe hacer es restaurar el último backup completo realizado, es decir, el del 6 de septiembre de 2006 a las 6:30 p.m. En este caso, la base de datos quedará con un día entero de atraso. Pero como existe un backup incremental hecho el día anterior al finalizar el día, es factible montar sobre el backup completo recién restaurado, el último backup incremental realizado para así dejar la base de datos como estaba en el momento del fallo. (En estos ejemplos estoy suponiendo que Juan Peláez trabaja en una empresa que no labora en las horas de la noche sobre la base de datos).</p>
+<p><img src="INCREMENTAL.jpg" alt="INCREMENTAL" width="594" height="305" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: center;"><strong>Fuente Propia.</strong></p>
+<p style="text-align: justify;">Por otra parte, la siguiente grafica muestra el comportamiento del backup diferencial, el cual solo tiene en cuenta el ultimo backup completo realizado.</p>
+<p style="text-align: justify;"> En este caso, la diferencia entre el backup incremental y el backup diferencial es que, si necesitamos restaurar la base de datos a un punto del tiempo, con los backups incrementales debemos restaurar el ultimo backup completo y todos los backups incrementales que se hayan hecho hasta el momento de la restauración. Por otro lado, con el backup diferencial se necesitaría restaurar el ultimo backup completo y el backup diferencial mas reciente al punto de restauración.</p>
+<p> Es importante resaltar que el backup incremental consume menos recursos en disco.</p>
+<p> <img src="DIFERENCIAL.jpg" alt="DIFERENCIAL" width="594" height="305" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: center;"><strong>Fuente Propia.</strong></p>
+<p style="text-align: justify;"> De lo anterior podemos deducir que es una política común hacer un backup completo de la base de datos cada semana y backups incrementales y/o diferenciales de la misma todos los días al finalizar la jornada. Esta política, como se ilustra en la figura No. 6, permite que el DBA cumpla con su función plenamente.</p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="dba__administrador_de_bases_de_datos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="modelamiento_de_datos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

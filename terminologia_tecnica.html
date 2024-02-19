@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>TERMINOLOGIA TECNICA | FUNDAMENTOS Y DISEÑO DE BASES DE DATOS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="JORGE IVAN BEDOYA RESTREPO" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-26"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">FUNDAMENTOS Y DISEÑO DE BASES DE DATOS</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">FUNDAMENTOS Y DISEÑO DE BASES DE DATOS</a></li>
+   <li><a href="conceptos_basicos.html" class="daddy">CONCEPTOS BASICOS</a>
+   <ul class="other-section">
+      <li><a href="bases_de_datos_y_dbms.html" class="no-ch">BASES DE DATOS Y DBMS</a></li>
+      <li><a href="niveles_de_abstraccion_de_datos.html" class="no-ch">NIVELES DE ABSTRACCION DE DATOS</a></li>
+      <li><a href="ejemplar_y_esquema.html" class="no-ch">EJEMPLAR Y ESQUEMA</a></li>
+      <li><a href="lenguajes_de_bases_de_datos.html" class="no-ch">LENGUAJES DE BASES DE DATOS</a></li>
+      <li><a href="modelos_de_datos.html" class="no-ch">MODELOS DE DATOS</a></li>
+      <li><a href="tipos_de_usuarios.html" class="no-ch">TIPOS DE USUARIOS</a></li>
+      <li><a href="dba__administrador_de_bases_de_datos.html" class="no-ch">DBA - ADMINISTRADOR DE BASES DE DATOS</a></li>
+      <li><a href="backups_y_tipos.html" class="no-ch">BACKUPS Y TIPOS</a></li>
+   </ul>
+   </li>
+   <li><a href="modelamiento_de_datos.html" class="daddy">MODELAMIENTO DE DATOS</a>
+   <ul class="other-section">
+      <li><a href="que_es.html" class="no-ch">QUE ES?</a></li>
+      <li><a href="modelo_entidad_relacion.html" class="daddy">MODELO ENTIDAD RELACION</a>
+      <ul class="other-section">
+         <li><a href="entidades_e_instancias.html" class="no-ch">ENTIDADES E INSTANCIAS</a></li>
+         <li><a href="atributos_y_tipos.html" class="no-ch">ATRIBUTOS Y TIPOS</a></li>
+         <li><a href="relaciones.html" class="no-ch">RELACIONES</a></li>
+         <li><a href="entidad_debil.html" class="no-ch">ENTIDAD DEBIL</a></li>
+         <li><a href="atributo_en_relacion.html" class="no-ch">ATRIBUTO EN RELACION</a></li>
+      </ul>
+      </li>
+      <li><a href="modelo_entidad_relacion_extendido.html" class="daddy">MODELO ENTIDAD RELACION EXTENDIDO</a>
+      <ul class="other-section">
+         <li><a href="especializacion.html" class="no-ch">ESPECIALIZACION</a></li>
+         <li><a href="generalizacion.html" class="no-ch">GENERALIZACION</a></li>
+      </ul>
+      </li>
+      <li><a href="diagrama_entidad_relacion.html" class="no-ch">DIAGRAMA ENTIDAD RELACION</a></li>
+      <li><a href="ejercicio_completo_de_modelamiento.html" class="no-ch">EJERCICIO COMPLETO DE MODELAMIENTO</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="modelo_relacional.html" class="current-page-parent daddy">MODELO RELACIONAL</a>
+   <ul>
+      <li id="active"><a href="terminologia_tecnica.html" class="active no-ch">TERMINOLOGIA TECNICA</a></li>
+      <li><a href="dominio_de_un_atributo.html" class="no-ch">DOMINIO DE UN ATRIBUTO</a></li>
+      <li><a href="tipos_de_claves.html" class="no-ch">TIPOS DE CLAVES</a></li>
+      <li><a href="reglas_de_mapeo__traduccion.html" class="daddy">REGLAS DE MAPEO / TRADUCCION</a>
+      <ul class="other-section">
+         <li><a href="cantidad_de_tablas.html" class="no-ch">CANTIDAD DE TABLAS</a></li>
+         <li><a href="entidad_normal__fuerte.html" class="no-ch">ENTIDAD NORMAL / FUERTE</a></li>
+         <li><a href="entidad_debil0.html" class="no-ch">ENTIDAD DEBIL</a></li>
+         <li><a href="atributo_multivalorado.html" class="no-ch">ATRIBUTO MULTIVALORADO</a></li>
+         <li><a href="relacion_uno_a_uno.html" class="no-ch">RELACION UNO A UNO</a></li>
+         <li><a href="relacion_uno_a_muchos.html" class="no-ch">RELACION UNO A MUCHOS</a></li>
+         <li><a href="relacion_muchos_a_muchos.html" class="no-ch">RELACION MUCHOS A MUCHOS</a></li>
+         <li><a href="atributo_en_relacion0.html" class="no-ch">ATRIBUTO EN RELACION</a></li>
+         <li><a href="especializacion0.html" class="no-ch">ESPECIALIZACION</a></li>
+         <li><a href="ejercicio_completo.html" class="no-ch">EJERCICIO COMPLETO</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="normalizacion_de_datos.html" class="daddy">NORMALIZACION DE DATOS</a>
+   <ul class="other-section">
+      <li><a href="introduccion.html" class="no-ch">INTRODUCCION</a></li>
+      <li><a href="anomalias_en_el_diseo.html" class="no-ch">ANOMALIAS EN EL DISEÑO</a></li>
+      <li><a href="tuplas_espurias.html" class="no-ch">TUPLAS ESPURIAS</a></li>
+      <li><a href="dependencia_funcional.html" class="no-ch">DEPENDENCIA FUNCIONAL</a></li>
+      <li><a href="formas_normales.html" class="daddy">FORMAS NORMALES</a>
+      <ul class="other-section">
+         <li><a href="primera_forma_normal_1nf.html" class="no-ch">PRIMERA FORMA NORMAL (1NF)</a></li>
+         <li><a href="segunda_forma_normal_2nf.html" class="no-ch">SEGUNDA FORMA NORMAL (2NF)</a></li>
+         <li><a href="tercera_forma_normal_3nf.html" class="no-ch">TERCERA FORMA NORMAL (3NF)</a></li>
+         <li><a href="ejercicio_completo0.html" class="no-ch">EJERCICIO COMPLETO</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="modelo_relacional.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="dominio_de_un_atributo.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">TERMINOLOGIA TECNICA</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id30">
+<div class="iDevice emphasis0" >
+<div id="ta30_109_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;"><strong>Conceptos Importantes</strong></p>
+<p style="text-align: justify;">En la siguiente tabla  se muestran los términos inherentes al modelo relacional comparados con los que se utilizan en un ambiente tradicional de archivos.</p>
+<table border="1" style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><span style="font-size: 12pt;"><strong>Terminología Técnica del Modelo Relacional</strong></span></td>
+</tr>
+</tbody>
+</table>
+<table border="1" style="width: 100%; height: 126px;">
+<tbody>
+<tr style="height: 21px;">
+<td style="width: 50%; text-align: center; height: 21px;"><strong>En el Modelo Relacional se dice......</strong></td>
+<td style="width: 50%; text-align: center; height: 21px;"><strong>.......y en Archivos Tradicionales se dice.....</strong></td>
+</tr>
+<tr style="height: 21px;">
+<td style="width: 50%; text-align: center; height: 21px;"></td>
+<td style="width: 50%; text-align: center; height: 21px;"><strong> </strong></td>
+</tr>
+<tr style="height: 21px;">
+<td style="width: 50%; text-align: center; height: 21px;">Bases de Datos</td>
+<td style="width: 50%; text-align: center; height: 21px;">Conjunto de Archivos de Datos</td>
+</tr>
+<tr style="height: 21px;">
+<td style="width: 50%; text-align: center; height: 21px;">Tabla</td>
+<td style="width: 50%; text-align: center; height: 21px;">Archivo de Datos</td>
+</tr>
+<tr style="height: 21px;">
+<td style="width: 50%; text-align: center; height: 21px;">Tupla</td>
+<td style="width: 50%; text-align: center; height: 21px;">Registro</td>
+</tr>
+<tr style="height: 21px;">
+<td style="width: 50%; text-align: center; height: 21px;">Atributo</td>
+<td style="width: 50%; text-align: center; height: 21px;">Campo</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;">Una base de datos no es más que el conjunto de archivos en un ambiente de archivos tradicionales. Las tablas de una base de datos corresponden a cada uno de los archivos de datos en el ambiente tradicional. Cada tabla consta de una o varias tuplas, que es el mismo concepto de registros en el ambiente tradicional. Y cada tupla está constituida por un conjunto de atributos, los cuales corresponden a los campos en el ambiente anterior. A partir de este punto, seguiremos hablando con la terminología propia del modelo relacional.</p>
+<p style="text-align: justify;"> <strong>Ejemplo de Modelo Relacional</strong></p>
+<p style="text-align: justify;"><strong> </strong>A continuación, se muestra un ejemplo sencillo de lo que es el modelo relacional, junto con los conceptos involucrados en él.</p>
+<table border="1" style="width: 87.2362%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><span style="font-size: 12pt;"><strong>Tabla Departamento</strong></span></td>
+</tr>
+</tbody>
+</table>
+<table border="1" style="width: 87.3367%; height: 126px;">
+<tbody>
+<tr style="height: 21px;">
+<td style="width: 50%; text-align: center; height: 21px;"><strong>Código</strong></td>
+<td style="width: 37.3367%; text-align: center; height: 21px;"><strong>Nombre</strong></td>
+</tr>
+<tr style="height: 21px;">
+<td style="width: 50%; height: 21px;">10</td>
+<td style="width: 37.3367%; height: 21px;">Antioquia</td>
+</tr>
+<tr style="height: 21px;">
+<td style="width: 50%; height: 21px;">20</td>
+<td style="width: 37.3367%; height: 21px;">Cundinamarca</td>
+</tr>
+<tr style="height: 21px;">
+<td style="width: 50%; height: 21px;">30</td>
+<td style="width: 37.3367%; height: 21px;">Valle del Cauca</td>
+</tr>
+<tr style="height: 21px;">
+<td style="width: 50%; height: 21px;">40</td>
+<td style="width: 37.3367%; height: 21px;">Magdalena</td>
+</tr>
+<tr style="height: 21px;">
+<td style="width: 50%; height: 21px;">50</td>
+<td style="width: 37.3367%; height: 21px;">Nariño</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;"></p>
+<table border="1" style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><span style="font-size: 12pt;"><strong>Tabla Ciudad</strong></span></td>
+</tr>
+</tbody>
+</table>
+<table border="1" style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 20%; text-align: center;"><strong>Código</strong></td>
+<td style="width: 20%; text-align: center;"><strong>Nombre</strong></td>
+<td style="width: 20%; text-align: center;"><strong>Extensión</strong></td>
+<td style="width: 20%; text-align: center;"><strong>Nro. Habitantes</strong></td>
+<td style="width: 20%; text-align: center;"><strong>Código Departamento</strong></td>
+</tr>
+<tr>
+<td style="width: 20%;">100</td>
+<td style="width: 20%;">Medellín</td>
+<td style="width: 20%;">300</td>
+<td style="width: 20%;">2.100.000</td>
+<td style="width: 20%;">10</td>
+</tr>
+<tr>
+<td style="width: 20%;">200</td>
+<td style="width: 20%;">Ginebra</td>
+<td style="width: 20%;">15</td>
+<td style="width: 20%;">54.500</td>
+<td style="width: 20%;">30</td>
+</tr>
+<tr>
+<td style="width: 20%;">300</td>
+<td style="width: 20%;">Villeta</td>
+<td style="width: 20%;">35</td>
+<td style="width: 20%;">23.600</td>
+<td style="width: 20%;">20</td>
+</tr>
+<tr>
+<td style="width: 20%;">400</td>
+<td style="width: 20%;">Puerto Berrío</td>
+<td style="width: 20%;">34</td>
+<td style="width: 20%;">45.600</td>
+<td style="width: 20%;">10</td>
+</tr>
+<tr>
+<td style="width: 20%;">500</td>
+<td style="width: 20%;">Pasto</td>
+<td style="width: 20%;">125</td>
+<td style="width: 20%;">560.000</td>
+<td style="width: 20%;">50</td>
+</tr>
+<tr>
+<td style="width: 20%;">600</td>
+<td style="width: 20%;">Aracataca</td>
+<td style="width: 20%;">43</td>
+<td style="width: 20%;">25.800</td>
+<td style="width: 20%;">40</td>
+</tr>
+<tr>
+<td style="width: 20%;">700</td>
+<td style="width: 20%;">Bogotá</td>
+<td style="width: 20%;">690</td>
+<td style="width: 20%;">7.800.000</td>
+<td style="width: 20%;">20</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;"> Lo que se ha mostrado es una <em><u>Base de Datos</u></em> de Municipios del País. Dicha Base de Datos se compone de 2 <em><u>tablas</u></em>: Departamento y Ciudad.</p>
+<p style="text-align: justify;"> La tabla Departamento tiene 5 <em><u>tuplas</u></em>, donde cada tupla se compone de 2 <em><u>atributos</u></em>: código y nombre de departamento.</p>
+<p style="text-align: justify;"> La tabla Ciudad tiene 7 <em><u>tuplas</u></em>, cada tupla contiene 5 <em><u>atributos</u></em>: Código, nombre, extensión (en kms 2), número de habitantes y código de departamento.</p>
+<p style="text-align: justify;"> El concepto de tupla se refiere a una serie de datos relacionados entre sí. Por ejemplo, en el ejemplo anterior la segunda tupla de la tabla Departamento se compone de 2 datos (atributos) relacionados entre sí: código 20 es el código del departamento cuyo nombre es Cundinamarca.</p>
+<p style="text-align: justify;"> En términos generales, el concepto de tupla se refiere a un conjunto de atributos (A1, A2, A3, ….., An), donde cada atributo está relacionado el uno con el otro.</p>
+<p style="text-align: justify;"> En el ejemplo anterior, es importante recalcar que la forma como están relacionadas las dos tablas es a través de un campo en común: código de departamento. Este campo, en este caso, es el campo conocido como clave foránea y el cual pasaré a continuación a reseñar.</p>
+<p style="text-align: justify;"> <strong>Esquema Relacional</strong></p>
+<p style="text-align: justify;"> Para poder mostrar la estructura de una base de datos relacional vamos a utilizar una simbología relativamente sencilla pero demasiado clara. Esta simbología que se muestra a continuación es lo que se conoce como el esquema relacional.</p>
+<p style="text-align: justify;"> El esquema de una base de datos se compone principalmente del conjunto de esquemas de las tablas que están incluidas en la base de datos. Así que debemos aprender a escribir el esquema de tablas individuales.</p>
+<p style="text-align: justify;"> Para escribir el esquema de una tabla, vamos a utilizar la siguiente sintaxis: </p>
+<table border="1" style="width: 30.2513%;">
+<tbody>
+<tr>
+<td style="width: 100%;">
+<p style="text-align: center;"><strong>NOMBRE TABLA</strong></p>
+</td>
+</tr>
+<tr>
+<td style="width: 100%;">
+<p>Atributo 1</p>
+<p>Atributo 2</p>
+<p>..............</p>
+<p>Atributo N</p>
+</td>
+</tr>
+<tr>
+<td style="width: 100%;">
+<p>Definición de PK (en caso de ser compuesta)</p>
+</td>
+</tr>
+<tr>
+<td style="width: 100%;">
+<p>Definición de FK(s)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;"> Por ejemplo, el esquema de la base de datos del ejemplo anterior sería el siguiente:</p>
+<table border="1" style="width: 25.9296%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><strong>DEPARTAMENTO</strong></td>
+</tr>
+<tr>
+<td style="width: 100%;">
+<p>Código     PK</p>
+<p>Nombre</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;"></p>
+<table border="1" style="width: 29.8492%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><strong>CIUDAD</strong></td>
+</tr>
+<tr>
+<td style="width: 100%;">
+<p>Código</p>
+<p>Nombre</p>
+<p>EXtensión</p>
+<p>No.Habitantes</p>
+<p>Código-Departamento</p>
+</td>
+</tr>
+<tr>
+<td style="width: 100%;">
+<p>FK: Código-Departamento referencia a DEPARTAMENTO(Código)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;"> En el anterior esquema, además de lo enunciado en la sintaxis expuesta, existen otros conceptos que más adelante los abordaremos como son clave primaria y clave foránea.</p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="modelo_relacional.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="dominio_de_un_atributo.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

@@ -1,0 +1,925 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>ANOMALIAS EN EL DISEÑO | FUNDAMENTOS Y DISEÑO DE BASES DE DATOS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="JORGE IVAN BEDOYA RESTREPO" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-43"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">FUNDAMENTOS Y DISEÑO DE BASES DE DATOS</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">FUNDAMENTOS Y DISEÑO DE BASES DE DATOS</a></li>
+   <li><a href="conceptos_basicos.html" class="daddy">CONCEPTOS BASICOS</a>
+   <ul class="other-section">
+      <li><a href="bases_de_datos_y_dbms.html" class="no-ch">BASES DE DATOS Y DBMS</a></li>
+      <li><a href="niveles_de_abstraccion_de_datos.html" class="no-ch">NIVELES DE ABSTRACCION DE DATOS</a></li>
+      <li><a href="ejemplar_y_esquema.html" class="no-ch">EJEMPLAR Y ESQUEMA</a></li>
+      <li><a href="lenguajes_de_bases_de_datos.html" class="no-ch">LENGUAJES DE BASES DE DATOS</a></li>
+      <li><a href="modelos_de_datos.html" class="no-ch">MODELOS DE DATOS</a></li>
+      <li><a href="tipos_de_usuarios.html" class="no-ch">TIPOS DE USUARIOS</a></li>
+      <li><a href="dba__administrador_de_bases_de_datos.html" class="no-ch">DBA - ADMINISTRADOR DE BASES DE DATOS</a></li>
+      <li><a href="backups_y_tipos.html" class="no-ch">BACKUPS Y TIPOS</a></li>
+   </ul>
+   </li>
+   <li><a href="modelamiento_de_datos.html" class="daddy">MODELAMIENTO DE DATOS</a>
+   <ul class="other-section">
+      <li><a href="que_es.html" class="no-ch">QUE ES?</a></li>
+      <li><a href="modelo_entidad_relacion.html" class="daddy">MODELO ENTIDAD RELACION</a>
+      <ul class="other-section">
+         <li><a href="entidades_e_instancias.html" class="no-ch">ENTIDADES E INSTANCIAS</a></li>
+         <li><a href="atributos_y_tipos.html" class="no-ch">ATRIBUTOS Y TIPOS</a></li>
+         <li><a href="relaciones.html" class="no-ch">RELACIONES</a></li>
+         <li><a href="entidad_debil.html" class="no-ch">ENTIDAD DEBIL</a></li>
+         <li><a href="atributo_en_relacion.html" class="no-ch">ATRIBUTO EN RELACION</a></li>
+      </ul>
+      </li>
+      <li><a href="modelo_entidad_relacion_extendido.html" class="daddy">MODELO ENTIDAD RELACION EXTENDIDO</a>
+      <ul class="other-section">
+         <li><a href="especializacion.html" class="no-ch">ESPECIALIZACION</a></li>
+         <li><a href="generalizacion.html" class="no-ch">GENERALIZACION</a></li>
+      </ul>
+      </li>
+      <li><a href="diagrama_entidad_relacion.html" class="no-ch">DIAGRAMA ENTIDAD RELACION</a></li>
+      <li><a href="ejercicio_completo_de_modelamiento.html" class="no-ch">EJERCICIO COMPLETO DE MODELAMIENTO</a></li>
+   </ul>
+   </li>
+   <li><a href="modelo_relacional.html" class="daddy">MODELO RELACIONAL</a>
+   <ul class="other-section">
+      <li><a href="terminologia_tecnica.html" class="no-ch">TERMINOLOGIA TECNICA</a></li>
+      <li><a href="dominio_de_un_atributo.html" class="no-ch">DOMINIO DE UN ATRIBUTO</a></li>
+      <li><a href="tipos_de_claves.html" class="no-ch">TIPOS DE CLAVES</a></li>
+      <li><a href="reglas_de_mapeo__traduccion.html" class="daddy">REGLAS DE MAPEO / TRADUCCION</a>
+      <ul class="other-section">
+         <li><a href="cantidad_de_tablas.html" class="no-ch">CANTIDAD DE TABLAS</a></li>
+         <li><a href="entidad_normal__fuerte.html" class="no-ch">ENTIDAD NORMAL / FUERTE</a></li>
+         <li><a href="entidad_debil0.html" class="no-ch">ENTIDAD DEBIL</a></li>
+         <li><a href="atributo_multivalorado.html" class="no-ch">ATRIBUTO MULTIVALORADO</a></li>
+         <li><a href="relacion_uno_a_uno.html" class="no-ch">RELACION UNO A UNO</a></li>
+         <li><a href="relacion_uno_a_muchos.html" class="no-ch">RELACION UNO A MUCHOS</a></li>
+         <li><a href="relacion_muchos_a_muchos.html" class="no-ch">RELACION MUCHOS A MUCHOS</a></li>
+         <li><a href="atributo_en_relacion0.html" class="no-ch">ATRIBUTO EN RELACION</a></li>
+         <li><a href="especializacion0.html" class="no-ch">ESPECIALIZACION</a></li>
+         <li><a href="ejercicio_completo.html" class="no-ch">EJERCICIO COMPLETO</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="normalizacion_de_datos.html" class="current-page-parent daddy">NORMALIZACION DE DATOS</a>
+   <ul>
+      <li><a href="introduccion.html" class="no-ch">INTRODUCCION</a></li>
+      <li id="active"><a href="anomalias_en_el_diseo.html" class="active no-ch">ANOMALIAS EN EL DISEÑO</a></li>
+      <li><a href="tuplas_espurias.html" class="no-ch">TUPLAS ESPURIAS</a></li>
+      <li><a href="dependencia_funcional.html" class="no-ch">DEPENDENCIA FUNCIONAL</a></li>
+      <li><a href="formas_normales.html" class="daddy">FORMAS NORMALES</a>
+      <ul class="other-section">
+         <li><a href="primera_forma_normal_1nf.html" class="no-ch">PRIMERA FORMA NORMAL (1NF)</a></li>
+         <li><a href="segunda_forma_normal_2nf.html" class="no-ch">SEGUNDA FORMA NORMAL (2NF)</a></li>
+         <li><a href="tercera_forma_normal_3nf.html" class="no-ch">TERCERA FORMA NORMAL (3NF)</a></li>
+         <li><a href="ejercicio_completo0.html" class="no-ch">EJERCICIO COMPLETO</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="introduccion.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="tuplas_espurias.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">ANOMALIAS EN EL DISEÑO</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id50">
+<div class="iDevice emphasis0" >
+<div id="ta50_129_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;"><strong>Posibles anomalías en el diseño de una base de datos.</strong></p>
+<p style="text-align: justify;">Al diseñar una base de datos, existe la posibilidad de que ésta, por mal diseño,  quede con tres (3) tipos de anomalías (o defectos) que existen. Las posibles anomalías que existen son las siguientes:</p>
+<ul style="text-align: justify;">
+<li>Anomalía de Inserción</li>
+<li>Anomalía de Actualización</li>
+<li>Anomalía de Borrado</li>
+</ul>
+<p style="text-align: justify;">Cabe aclarar que las anomalías las tienen individualmente las tablas que componen la base de datos.</p>
+<p style="text-align: justify;"><strong>Anomalía de Inserción. </strong></p>
+<p style="text-align: justify;">Es una situación anormal que se presenta en una tabla al INSERTAR nuevas tuplas en ella y que es causada por el diseño de la tabla.</p>
+<p style="text-align: justify;">La consecuencia de este tipo de anomalía es que la tabla va a tener REDUNDANCIA DE DATOS.</p>
+<p style="text-align: justify;"><strong>Anomalía de Actualización.</strong></p>
+<p style="text-align: justify;">Es una situación anormal que se presenta en una tabla al ACTUALIZAR tuplas ya existentes y que es causada por el diseño de la tabla.</p>
+<p style="text-align: justify;">La consecuencia de este tipo de anomalía es una posible INCONSISTENCIA FUTURA DE LOS DATOS. Generalmente, esta inconsistencia es producida por redundancia de datos que hay en la tabla. Es decir, cuando una tabla tiene anomalía de inserción, es muy posible que también tenga anomalía de actualización.</p>
+<p style="text-align: justify;"><strong>Anomalía de Borrado.</strong></p>
+<p style="text-align: justify;">Es una situación anormal que se presenta en una tabla al BORRAR tuplas de ella y que es causada por el diseño de la tabla.</p>
+<p style="text-align: justify;">La consecuencia de este tipo de anomalía es una posible PERDIDA O BORRADO NO DESEADO DE DATOS. Esto quiere decir que por borrar un dato, se borra dicho dato y se borra(n) otro(s) que no se querían borrar.</p>
+<p style="text-align: justify;"><strong>Ejemplo.</strong></p>
+<p style="text-align: justify;">Para entender los tipos de anomalías existentes, suponga el esquema de tabla siguiente:</p>
+<table border="1" style="width: 19.0955%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><strong>VEHICULO</strong></td>
+</tr>
+<tr>
+<td style="width: 100%;">
+<p>Placa    PK</p>
+<p>Marca</p>
+<p>Modelo</p>
+<p>Capacidad</p>
+<p>CodoficinaTransito</p>
+<p>CiudadOficina</p>
+<p>NroEmpleados</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;">Esta tabla pretende almacenar los datos de los vehículos junto con los datos de la oficina de transito donde está matriculado.</p>
+<p style="text-align: justify;">Los atributos de la tabla VEHICULO son la placa del carro, la marca, modelo y capacidad del carro, el código de la oficina de transito donde está matriculado, la ciudad donde queda dicha oficina y el número de empleados que tiene la oficina de transito.</p>
+<p style="text-align: justify;">Para saber si una tabla tiene anomalías de inserción, la pregunta que se debe hacer es “EN QUÉ SITUACIONES SE PRESENTA REDUNDANCIA DE DATOS AL INSERTARLE NUEVAS TUPLAS A LA TABLA?”</p>
+<p style="text-align: justify;">Si analizamos bien la tabla, nos damos cuenta de que los datos de la misma pudieran ser los siguientes:</p>
+<table border="1" style="width: 99.9999%; height: 21px;">
+<tbody>
+<tr style="height: 21px;">
+<td style="width: 14.2857%; height: 21px; text-align: center;"><strong>Placa</strong></td>
+<td style="width: 14.2857%; height: 21px; text-align: center;"><strong>Marca</strong></td>
+<td style="width: 14.2857%; height: 21px; text-align: center;"><strong>Modelo</strong></td>
+<td style="width: 14.2857%; height: 21px; text-align: center;"><strong>Capacidad</strong></td>
+<td style="width: 14.2857%; height: 21px; text-align: center;"><strong>CodOficina</strong></td>
+<td style="width: 14.2857%; height: 21px; text-align: center;"><strong>Ciudad</strong></td>
+<td style="width: 14.2857%; height: 21px; text-align: center;"><strong>NroEmp</strong></td>
+</tr>
+<tr>
+<td width="71" style="width: 14.2857%;">
+<p>KJH564</p>
+</td>
+<td width="87" style="width: 14.2857%;">
+<p>RENAULT</p>
+</td>
+<td width="78" style="width: 14.2857%;">
+<p>2004</p>
+</td>
+<td width="103" style="width: 14.2857%;">
+<p>5</p>
+</td>
+<td width="109" style="width: 14.2857%;">
+<p>10</p>
+</td>
+<td width="75" style="width: 14.2857%;">
+<p>BELLO</p>
+</td>
+<td width="81" style="width: 14.2857%;">
+<p>45</p>
+</td>
+</tr>
+<tr>
+<td width="71" style="width: 14.2857%;">
+<p>PEF786</p>
+</td>
+<td width="87" style="width: 14.2857%;">
+<p>MAZDA</p>
+</td>
+<td width="78" style="width: 14.2857%;">
+<p>2008</p>
+</td>
+<td width="103" style="width: 14.2857%;">
+<p>4</p>
+</td>
+<td width="109" style="width: 14.2857%;">
+<p>10</p>
+</td>
+<td width="75" style="width: 14.2857%;">
+<p>BELLO</p>
+</td>
+<td width="81" style="width: 14.2857%;">
+<p>45</p>
+</td>
+</tr>
+<tr>
+<td width="71" style="width: 14.2857%;">
+<p>DER876</p>
+</td>
+<td width="87" style="width: 14.2857%;">
+<p>BMW</p>
+</td>
+<td width="78" style="width: 14.2857%;">
+<p>2010</p>
+</td>
+<td width="103" style="width: 14.2857%;">
+<p>3</p>
+</td>
+<td width="109" style="width: 14.2857%;">
+<p>10</p>
+</td>
+<td width="75" style="width: 14.2857%;">
+<p>BELLO</p>
+</td>
+<td width="81" style="width: 14.2857%;">
+<p>45</p>
+</td>
+</tr>
+<tr>
+<td width="71" style="width: 14.2857%;">
+<p>HJN983</p>
+</td>
+<td width="87" style="width: 14.2857%;">
+<p>MAZDA</p>
+</td>
+<td width="78" style="width: 14.2857%;">
+<p>2000</p>
+</td>
+<td width="103" style="width: 14.2857%;">
+<p>4</p>
+</td>
+<td width="109" style="width: 14.2857%;">
+<p>20</p>
+</td>
+<td width="75" style="width: 14.2857%;">
+<p>CALDAS</p>
+</td>
+<td width="81" style="width: 14.2857%;">
+<p>33</p>
+</td>
+</tr>
+<tr>
+<td width="71" style="width: 14.2857%;">
+<p>HBF909</p>
+</td>
+<td width="87" style="width: 14.2857%;">
+<p>TOYOTA</p>
+</td>
+<td width="78" style="width: 14.2857%;">
+<p>2011</p>
+</td>
+<td width="103" style="width: 14.2857%;">
+<p>6</p>
+</td>
+<td width="109" style="width: 14.2857%;">
+<p>20</p>
+</td>
+<td width="75" style="width: 14.2857%;">
+<p>CALDAS</p>
+</td>
+<td width="81" style="width: 14.2857%;">
+<p>33</p>
+</td>
+</tr>
+<tr>
+<td width="71" style="width: 14.2857%;">
+<p>GTF501</p>
+</td>
+<td width="87" style="width: 14.2857%;">
+<p>AUDI</p>
+</td>
+<td width="78" style="width: 14.2857%;">
+<p>2011</p>
+</td>
+<td width="103" style="width: 14.2857%;">
+<p>4</p>
+</td>
+<td width="109" style="width: 14.2857%;">
+<p>20</p>
+</td>
+<td width="75" style="width: 14.2857%;">
+<p>CALDAS</p>
+</td>
+<td width="81" style="width: 14.2857%;">
+<p>33</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;">Como se puede ver claramente esta tabla presenta alta redundancia de datos cuando hay varios vehículos matriculados en una misma oficina de transito, situación ésta que es completamente normal en la vida real. Se ve que en los atributos CIUDAD y NROEMP se está presentando redundancia de datos a medida que se insertan vehículos de una misma oficina de transito.</p>
+<p style="text-align: justify;">Por lo tanto, la tabla <strong><u>VEHICULO TIENE ANOMALÍAS DE INSERCION.</u></strong></p>
+<p style="text-align: justify;">Para saber si una tabla tiene anomalías de actualización, nos hacemos la siguiente pregunta: “Al actualizar algún dato de una tupla (registro), hay posibilidad de que la tabla quede con datos inconsistentes?”.</p>
+<p style="text-align: justify;">La anterior pregunta debe ser hecha para los campos de la tabla donde existe redundancia. Si miramos los datos de la tabla VEHICULO, y suponemos que la oficina de transito de BELLO ha aumentado su número de empleados de 45 a 50, entonces debemos reflejar este aumento en la base de datos. A cuantas tuplas de la tabla VEHICULO hay que actualizarle el número de empleados? A las que tienen la oficina de transito de BELLO, es decir, se deben modificar tres (3) tuplas. Qué sucede si al tratar de actualizar esas tres (3) tuplas, sucede algo que solo deja modificar dos (2) de las tres(3) tuplas? La tabla quedaría de la siguiente manera:</p>
+<table border="1" style="width: 99.9999%;">
+<tbody>
+<tr>
+<td style="width: 14.2857%; text-align: center;"><strong>Placa</strong></td>
+<td style="width: 14.2857%; text-align: center;"><strong>Marca</strong></td>
+<td style="width: 14.2857%; text-align: center;"><strong>Modelo</strong></td>
+<td style="width: 14.2857%; text-align: center;"><strong>Capacidad</strong></td>
+<td style="width: 14.2857%; text-align: center;"><strong>CodOficina</strong></td>
+<td style="width: 14.2857%; text-align: center;"><strong>Ciudad</strong></td>
+<td style="width: 14.2857%; text-align: center;"><strong>NroEmp</strong></td>
+</tr>
+<tr>
+<td width="71" style="width: 14.2857%;">
+<p>KJH564</p>
+</td>
+<td width="84" style="width: 14.2857%;">
+<p>RENAULT</p>
+</td>
+<td width="80" style="width: 14.2857%;">
+<p>2004</p>
+</td>
+<td width="104" style="width: 14.2857%;">
+<p>5</p>
+</td>
+<td width="109" style="width: 14.2857%;">
+<p>10</p>
+</td>
+<td width="74" style="width: 14.2857%;">
+<p>BELLO</p>
+</td>
+<td width="80" style="width: 14.2857%;">
+<p>50</p>
+</td>
+</tr>
+<tr>
+<td width="71" style="width: 14.2857%;">
+<p>PEF786</p>
+</td>
+<td width="84" style="width: 14.2857%;">
+<p>MAZDA</p>
+</td>
+<td width="80" style="width: 14.2857%;">
+<p>2008</p>
+</td>
+<td width="104" style="width: 14.2857%;">
+<p>4</p>
+</td>
+<td width="109" style="width: 14.2857%;">
+<p>10</p>
+</td>
+<td width="74" style="width: 14.2857%;">
+<p>BELLO</p>
+</td>
+<td width="80" style="width: 14.2857%;">
+<p>50</p>
+</td>
+</tr>
+<tr>
+<td width="71" style="width: 14.2857%;">
+<p>DER876</p>
+</td>
+<td width="84" style="width: 14.2857%;">
+<p>BMW</p>
+</td>
+<td width="80" style="width: 14.2857%;">
+<p>2010</p>
+</td>
+<td width="104" style="width: 14.2857%;">
+<p>3</p>
+</td>
+<td width="109" style="width: 14.2857%;">
+<p>10</p>
+</td>
+<td width="74" style="width: 14.2857%;">
+<p>BELLO</p>
+</td>
+<td width="80" style="width: 14.2857%;">
+<p>45</p>
+</td>
+</tr>
+<tr>
+<td width="71" style="width: 14.2857%;">
+<p>HJN983</p>
+</td>
+<td width="84" style="width: 14.2857%;">
+<p>MAZDA</p>
+</td>
+<td width="80" style="width: 14.2857%;">
+<p>2000</p>
+</td>
+<td width="104" style="width: 14.2857%;">
+<p>4</p>
+</td>
+<td width="109" style="width: 14.2857%;">
+<p>20</p>
+</td>
+<td width="74" style="width: 14.2857%;">
+<p>CALDAS</p>
+</td>
+<td width="80" style="width: 14.2857%;">
+<p>33</p>
+</td>
+</tr>
+<tr>
+<td width="71" style="width: 14.2857%;">
+<p>HBF909</p>
+</td>
+<td width="84" style="width: 14.2857%;">
+<p>TOYOTA</p>
+</td>
+<td width="80" style="width: 14.2857%;">
+<p>2011</p>
+</td>
+<td width="104" style="width: 14.2857%;">
+<p>6</p>
+</td>
+<td width="109" style="width: 14.2857%;">
+<p>20</p>
+</td>
+<td width="74" style="width: 14.2857%;">
+<p>CALDAS</p>
+</td>
+<td width="80" style="width: 14.2857%;">
+<p>33</p>
+</td>
+</tr>
+<tr>
+<td width="71" style="width: 14.2857%;">
+<p>GTF501</p>
+</td>
+<td width="84" style="width: 14.2857%;">
+<p>AUDI</p>
+</td>
+<td width="80" style="width: 14.2857%;">
+<p>2011</p>
+</td>
+<td width="104" style="width: 14.2857%;">
+<p>4</p>
+</td>
+<td width="109" style="width: 14.2857%;">
+<p>20</p>
+</td>
+<td width="74" style="width: 14.2857%;">
+<p>CALDAS</p>
+</td>
+<td width="80" style="width: 14.2857%;">
+<p>33</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;">Como se puede observar, la oficina de transito de Bello queda con dos números (o cantidades) distintas de empleados, lo cual no tiene sentido. En otras palabras, los datos de la tabla VEHICULO han quedado inconsistentes. Esta inconsistencia es producida por la redundancia que tiene dicha tabla. La pregunta que se hace uno es: “por qué si necesito actualizar el número de empleados de UNA sola oficina de transito, tengo que modificar tres(3) tuplas y no solamente una?”</p>
+<p style="text-align: justify;">Por lo tanto, la tabla <strong><u>VEHICULO TIENE ANOMALÍAS DE ACTUALIZACIÓN</u></strong> porque hay posibilidades de quedar los datos inconsistentes al actualizar ciertos atributos (campos) de la tabla.</p>
+<p style="text-align: justify;">Para saber si una tabla tiene anomalías de borrado, la pregunta que se debe hacer es “EN QUÉ SITUACIONES, AL BORRAR ALGUNA TUPLA DE LA TABLA, SE ME PODRÍA BORRAR DATOS QUE NO ESPERABA QUE SE BORRARAN?”</p>
+<p style="text-align: justify;">Suponga que existe una oficina de transito que solo tiene un vehículo matriculado (es un caso muy raro en la vida real pero se puede dar en la tabla diseñada). Es decir, suponga lo siguiente:</p>
+<table border="1" style="width: 99.9999%;">
+<tbody>
+<tr>
+<td style="width: 14.2857%;">Placa</td>
+<td style="width: 14.2857%;">Marca</td>
+<td style="width: 14.2857%;">Modelo</td>
+<td style="width: 14.2857%;">Capacidad</td>
+<td style="width: 14.2857%;">CodOficina</td>
+<td style="width: 14.2857%;">Ciudad</td>
+<td style="width: 14.2857%;">NroEmp</td>
+</tr>
+<tr>
+<td style="width: 14.2857%;">
+<p>KJH564</p>
+</td>
+<td style="width: 14.2857%;">
+<p>RENAULT</p>
+</td>
+<td style="width: 14.2857%;">
+<p>2004</p>
+</td>
+<td style="width: 14.2857%;">
+<p>5</p>
+</td>
+<td style="width: 14.2857%;">
+<p>10</p>
+</td>
+<td style="width: 14.2857%;">
+<p>BELLO</p>
+</td>
+<td style="width: 14.2857%;">
+<p>50</p>
+</td>
+</tr>
+<tr>
+<td style="width: 14.2857%;">
+<p>PEF786</p>
+</td>
+<td style="width: 14.2857%;">
+<p>MAZDA</p>
+</td>
+<td style="width: 14.2857%;">
+<p>2008</p>
+</td>
+<td style="width: 14.2857%;">
+<p>4</p>
+</td>
+<td style="width: 14.2857%;">
+<p>10</p>
+</td>
+<td style="width: 14.2857%;">
+<p>BELLO</p>
+</td>
+<td style="width: 14.2857%;">
+<p>50</p>
+</td>
+</tr>
+<tr>
+<td style="width: 14.2857%;">
+<p>DER876</p>
+</td>
+<td style="width: 14.2857%;">
+<p>BMW</p>
+</td>
+<td style="width: 14.2857%;">
+<p>2010</p>
+</td>
+<td style="width: 14.2857%;">
+<p>3</p>
+</td>
+<td style="width: 14.2857%;">
+<p>10</p>
+</td>
+<td style="width: 14.2857%;">
+<p>BELLO</p>
+</td>
+<td style="width: 14.2857%;">
+<p>50</p>
+</td>
+</tr>
+<tr>
+<td style="width: 14.2857%;">
+<p>HJN983</p>
+</td>
+<td style="width: 14.2857%;">
+<p>MAZDA</p>
+</td>
+<td style="width: 14.2857%;">
+<p>2000</p>
+</td>
+<td style="width: 14.2857%;">
+<p>4</p>
+</td>
+<td style="width: 14.2857%;">
+<p>20</p>
+</td>
+<td style="width: 14.2857%;">
+<p>CALDAS</p>
+</td>
+<td style="width: 14.2857%;">
+<p>33</p>
+</td>
+</tr>
+<tr>
+<td style="width: 14.2857%;">
+<p>HBF909</p>
+</td>
+<td style="width: 14.2857%;">
+<p>TOYOTA</p>
+</td>
+<td style="width: 14.2857%;">
+<p>2011</p>
+</td>
+<td style="width: 14.2857%;">
+<p>6</p>
+</td>
+<td style="width: 14.2857%;">
+<p>20</p>
+</td>
+<td style="width: 14.2857%;">
+<p>CALDAS</p>
+</td>
+<td style="width: 14.2857%;">
+<p>33</p>
+</td>
+</tr>
+<tr>
+<td style="width: 14.2857%;">
+<p>GTF501</p>
+</td>
+<td style="width: 14.2857%;">
+<p>AUDI</p>
+</td>
+<td style="width: 14.2857%;">
+<p>2011</p>
+</td>
+<td style="width: 14.2857%;">
+<p>4</p>
+</td>
+<td style="width: 14.2857%;">
+<p>20</p>
+</td>
+<td style="width: 14.2857%;">
+<p>CALDAS</p>
+</td>
+<td style="width: 14.2857%;">
+<p>33</p>
+</td>
+</tr>
+<tr>
+<td style="width: 14.2857%;">
+<p>JUH560</p>
+</td>
+<td style="width: 14.2857%;">
+<p>HYUNDAI</p>
+</td>
+<td style="width: 14.2857%;">
+<p>2009</p>
+</td>
+<td style="width: 14.2857%;">
+<p>5</p>
+</td>
+<td style="width: 14.2857%;">
+<p>30</p>
+</td>
+<td style="width: 14.2857%;">
+<p>BOGOTA</p>
+</td>
+<td style="width: 14.2857%;">
+<p>76</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;">Como se puede ver, en la oficina de transito de BOGOTA solo está matriculado el vehículo de placas JUH560. Suponga que el vehículo en cuestión se estrella y se da pérdida total de él. Es decir, hay que retirarlo de la base de datos. Al borrar la tupla correspondiente a dicho vehículo, también se está borrando la información sobre la oficina de transito de Bogotá (código de oficina, nombre y número de empleados). Y de dicha oficina no quedará rastro en la base de datos (por el hecho de que en esa oficina NO HAY MAS carros matriculados). Al querer borrar el vehículo, sin querer, se me han borrado los datos de la oficina de transito a la que pertenece el carro. Es decir, hubo una pérdida o borrado NO DESEADO de datos. Por qué si deseo borrar los datos de un vehículo se me tienen que borrar los datos de la oficina de transito también?</p>
+<p style="text-align: justify;">Por lo tanto, la tabla <strong><u>VEHÍCULO TIENE ANOMALÍAS DE BORRADO</u></strong>.</p>
+<p style="text-align: justify;">Conclusión. La tabla VEHÍCULO tiene los tres (3) tipos de anomalías. Es decir, está MUY MAL DISEÑADA.</p>
+<p style="text-align: justify;"><strong>IMPORTANTE.  Para que una tabla esté bien diseñada, NO PUEDE TENER NINGÚN TIPO DE ANOMALÍA.</strong></p>
+<p style="text-align: justify;"><strong>Ejercicio a Resolver</strong></p>
+<p style="text-align: justify;">Suponga la siguiente tabla:</p>
+<table border="1" style="width: 24.1206%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><strong>FACTURAPROD</strong></td>
+</tr>
+<tr>
+<td style="width: 100%;">
+<p>NroFactura</p>
+<p>CodProducto</p>
+<p>Cantidad</p>
+<p>FechaFactura</p>
+<p>ValorFactura</p>
+<p>NombreProducto</p>
+<p>PrecioProducto</p>
+</td>
+</tr>
+<tr>
+<td style="width: 100%;">
+<p>PK: NroFactura, CodProducto</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;">El objetivo de la tabla es almacenar el detalle de todas las facturas generadas en una empresa. Los atributos de la tabla son el número de la factura, el código del producto que está dentro de la factura, la cantidad facturada de dicho producto en dicha factura, la fecha de generación de la factura, el valor total de la factura, el nombre del producto facturado y el precio unitario del producto facturado.</p>
+<p style="text-align: justify;">Un ejemplo de los datos de dicha tabla podrían ser los siguientes:</p>
+<table border="1" style="width: 98.1909%; height: 470px;">
+<tbody>
+<tr style="height: 47px;">
+<td width="100" style="width: 14.8744%; text-align: center; height: 47px;">
+<p><strong>NroFactura</strong></p>
+</td>
+<td width="116" style="width: 17.0854%; text-align: center; height: 47px;">
+<p><strong>CodProducto</strong></p>
+</td>
+<td width="83" style="width: 12.4623%; text-align: center; height: 47px;">
+<p><strong>Cantidad</strong></p>
+</td>
+<td width="88" style="width: 13.1658%; text-align: center; height: 47px;">
+<p><strong>FechaF</strong></p>
+</td>
+<td width="79" style="width: 11.8593%; text-align: center; height: 47px;">
+<p><strong>ValorTot</strong></p>
+</td>
+<td width="103" style="width: 15.3769%; text-align: center; height: 47px;">
+<p style="text-align: center;"><strong>NombrePr</strong></p>
+</td>
+<td width="89" style="width: 13.3668%; height: 47px;">
+<p style="text-align: center;"><strong>PrecioUni</strong></p>
+</td>
+</tr>
+<tr style="height: 47px;">
+<td width="100" style="width: 14.8744%; height: 47px;">
+<p>100</p>
+</td>
+<td width="116" style="width: 17.0854%; height: 47px;">
+<p>10</p>
+</td>
+<td width="83" style="width: 12.4623%; height: 47px;">
+<p>45</p>
+</td>
+<td width="88" style="width: 13.1658%; height: 47px;">
+<p>12/12/2005</p>
+</td>
+<td width="79" style="width: 11.8593%; height: 47px;">
+<p>450000</p>
+</td>
+<td width="103" style="width: 15.3769%; height: 47px;">
+<p>JABON</p>
+</td>
+<td width="89" style="width: 13.3668%; height: 47px;">
+<p>500</p>
+</td>
+</tr>
+<tr style="height: 47px;">
+<td width="100" style="width: 14.8744%; height: 47px;">
+<p>100</p>
+</td>
+<td width="116" style="width: 17.0854%; height: 47px;">
+<p>20</p>
+</td>
+<td width="83" style="width: 12.4623%; height: 47px;">
+<p>23</p>
+</td>
+<td width="88" style="width: 13.1658%; height: 47px;">
+<p>12/12/2005</p>
+</td>
+<td width="79" style="width: 11.8593%; height: 47px;">
+<p>450000</p>
+</td>
+<td width="103" style="width: 15.3769%; height: 47px;">
+<p>PERA</p>
+</td>
+<td width="89" style="width: 13.3668%; height: 47px;">
+<p>430</p>
+</td>
+</tr>
+<tr style="height: 47px;">
+<td width="100" style="width: 14.8744%; height: 47px;">
+<p>100</p>
+</td>
+<td width="116" style="width: 17.0854%; height: 47px;">
+<p>30</p>
+</td>
+<td width="83" style="width: 12.4623%; height: 47px;">
+<p>24</p>
+</td>
+<td width="88" style="width: 13.1658%; height: 47px;">
+<p>12/12/2005</p>
+</td>
+<td width="79" style="width: 11.8593%; height: 47px;">
+<p>450000</p>
+</td>
+<td width="103" style="width: 15.3769%; height: 47px;">
+<p>GALLETAS</p>
+</td>
+<td width="89" style="width: 13.3668%; height: 47px;">
+<p>760</p>
+</td>
+</tr>
+<tr style="height: 47px;">
+<td width="100" style="width: 14.8744%; height: 47px;">
+<p>100</p>
+</td>
+<td width="116" style="width: 17.0854%; height: 47px;">
+<p>40</p>
+</td>
+<td width="83" style="width: 12.4623%; height: 47px;">
+<p>10</p>
+</td>
+<td width="88" style="width: 13.1658%; height: 47px;">
+<p>12/12/2005</p>
+</td>
+<td width="79" style="width: 11.8593%; height: 47px;">
+<p>450000</p>
+</td>
+<td width="103" style="width: 15.3769%; height: 47px;">
+<p>MARGARINA</p>
+</td>
+<td width="89" style="width: 13.3668%; height: 47px;">
+<p>600</p>
+</td>
+</tr>
+<tr style="height: 47px;">
+<td width="100" style="width: 14.8744%; height: 47px;">
+<p>200</p>
+</td>
+<td width="116" style="width: 17.0854%; height: 47px;">
+<p>20</p>
+</td>
+<td width="83" style="width: 12.4623%; height: 47px;">
+<p>67</p>
+</td>
+<td width="88" style="width: 13.1658%; height: 47px;">
+<p>23/05/2001</p>
+</td>
+<td width="79" style="width: 11.8593%; height: 47px;">
+<p>760000</p>
+</td>
+<td width="103" style="width: 15.3769%; height: 47px;">
+<p>PERA</p>
+</td>
+<td width="89" style="width: 13.3668%; height: 47px;">
+<p>430</p>
+</td>
+</tr>
+<tr style="height: 47px;">
+<td width="100" style="width: 14.8744%; height: 47px;">
+<p>200</p>
+</td>
+<td width="116" style="width: 17.0854%; height: 47px;">
+<p>40</p>
+</td>
+<td width="83" style="width: 12.4623%; height: 47px;">
+<p>5</p>
+</td>
+<td width="88" style="width: 13.1658%; height: 47px;">
+<p>23/05/2001</p>
+</td>
+<td width="79" style="width: 11.8593%; height: 47px;">
+<p>760000</p>
+</td>
+<td width="103" style="width: 15.3769%; height: 47px;">
+<p>MARGARINA</p>
+</td>
+<td width="89" style="width: 13.3668%; height: 47px;">
+<p>600</p>
+</td>
+</tr>
+<tr style="height: 47px;">
+<td width="100" style="width: 14.8744%; height: 47px;">
+<p>200</p>
+</td>
+<td width="116" style="width: 17.0854%; height: 47px;">
+<p>70</p>
+</td>
+<td width="83" style="width: 12.4623%; height: 47px;">
+<p>8</p>
+</td>
+<td width="88" style="width: 13.1658%; height: 47px;">
+<p>23/05/2001</p>
+</td>
+<td width="79" style="width: 11.8593%; height: 47px;">
+<p>760000</p>
+</td>
+<td width="103" style="width: 15.3769%; height: 47px;">
+<p>PLATANO</p>
+</td>
+<td width="89" style="width: 13.3668%; height: 47px;">
+<p>440</p>
+</td>
+</tr>
+<tr style="height: 47px;">
+<td width="100" style="width: 14.8744%; height: 47px;">
+<p>300</p>
+</td>
+<td width="116" style="width: 17.0854%; height: 47px;">
+<p>10</p>
+</td>
+<td width="83" style="width: 12.4623%; height: 47px;">
+<p>40</p>
+</td>
+<td width="88" style="width: 13.1658%; height: 47px;">
+<p>31/12/2010</p>
+</td>
+<td width="79" style="width: 11.8593%; height: 47px;">
+<p>340000</p>
+</td>
+<td width="103" style="width: 15.3769%; height: 47px;">
+<p>JABON</p>
+</td>
+<td width="89" style="width: 13.3668%; height: 47px;">
+<p>500</p>
+</td>
+</tr>
+<tr style="height: 47px;">
+<td width="100" style="width: 14.8744%; height: 47px;">
+<p>300</p>
+</td>
+<td width="116" style="width: 17.0854%; height: 47px;">
+<p>30</p>
+</td>
+<td width="83" style="width: 12.4623%; height: 47px;">
+<p>11</p>
+</td>
+<td width="88" style="width: 13.1658%; height: 47px;">
+<p>31/12/2010</p>
+</td>
+<td width="79" style="width: 11.8593%; height: 47px;">
+<p>340000</p>
+</td>
+<td width="103" style="width: 15.3769%; height: 47px;">
+<p>GALLETAS</p>
+</td>
+<td width="89" style="width: 13.3668%; height: 47px;">
+<p>760</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;">Analizar y justificar las posibles anomalías que pudiera tener la tabla anterior.</p>
+<hr />
+<p>Videos:</p>
+<table border="1" style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;"><a href="https://youtu.be/EFd0sLSPvYU">Anomalías en el Diseño - Concepto</a></td>
+<td style="width: 50%; text-align: center;"><a href="https://youtu.be/cN3yaKgDppo">Anomalías en el Diseño - Ejercicio</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="introduccion.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="tuplas_espurias.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>TUPLAS ESPURIAS | FUNDAMENTOS Y DISEÑO DE BASES DE DATOS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="JORGE IVAN BEDOYA RESTREPO" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-44"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">FUNDAMENTOS Y DISEÑO DE BASES DE DATOS</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">FUNDAMENTOS Y DISEÑO DE BASES DE DATOS</a></li>
+   <li><a href="conceptos_basicos.html" class="daddy">CONCEPTOS BASICOS</a>
+   <ul class="other-section">
+      <li><a href="bases_de_datos_y_dbms.html" class="no-ch">BASES DE DATOS Y DBMS</a></li>
+      <li><a href="niveles_de_abstraccion_de_datos.html" class="no-ch">NIVELES DE ABSTRACCION DE DATOS</a></li>
+      <li><a href="ejemplar_y_esquema.html" class="no-ch">EJEMPLAR Y ESQUEMA</a></li>
+      <li><a href="lenguajes_de_bases_de_datos.html" class="no-ch">LENGUAJES DE BASES DE DATOS</a></li>
+      <li><a href="modelos_de_datos.html" class="no-ch">MODELOS DE DATOS</a></li>
+      <li><a href="tipos_de_usuarios.html" class="no-ch">TIPOS DE USUARIOS</a></li>
+      <li><a href="dba__administrador_de_bases_de_datos.html" class="no-ch">DBA - ADMINISTRADOR DE BASES DE DATOS</a></li>
+      <li><a href="backups_y_tipos.html" class="no-ch">BACKUPS Y TIPOS</a></li>
+   </ul>
+   </li>
+   <li><a href="modelamiento_de_datos.html" class="daddy">MODELAMIENTO DE DATOS</a>
+   <ul class="other-section">
+      <li><a href="que_es.html" class="no-ch">QUE ES?</a></li>
+      <li><a href="modelo_entidad_relacion.html" class="daddy">MODELO ENTIDAD RELACION</a>
+      <ul class="other-section">
+         <li><a href="entidades_e_instancias.html" class="no-ch">ENTIDADES E INSTANCIAS</a></li>
+         <li><a href="atributos_y_tipos.html" class="no-ch">ATRIBUTOS Y TIPOS</a></li>
+         <li><a href="relaciones.html" class="no-ch">RELACIONES</a></li>
+         <li><a href="entidad_debil.html" class="no-ch">ENTIDAD DEBIL</a></li>
+         <li><a href="atributo_en_relacion.html" class="no-ch">ATRIBUTO EN RELACION</a></li>
+      </ul>
+      </li>
+      <li><a href="modelo_entidad_relacion_extendido.html" class="daddy">MODELO ENTIDAD RELACION EXTENDIDO</a>
+      <ul class="other-section">
+         <li><a href="especializacion.html" class="no-ch">ESPECIALIZACION</a></li>
+         <li><a href="generalizacion.html" class="no-ch">GENERALIZACION</a></li>
+      </ul>
+      </li>
+      <li><a href="diagrama_entidad_relacion.html" class="no-ch">DIAGRAMA ENTIDAD RELACION</a></li>
+      <li><a href="ejercicio_completo_de_modelamiento.html" class="no-ch">EJERCICIO COMPLETO DE MODELAMIENTO</a></li>
+   </ul>
+   </li>
+   <li><a href="modelo_relacional.html" class="daddy">MODELO RELACIONAL</a>
+   <ul class="other-section">
+      <li><a href="terminologia_tecnica.html" class="no-ch">TERMINOLOGIA TECNICA</a></li>
+      <li><a href="dominio_de_un_atributo.html" class="no-ch">DOMINIO DE UN ATRIBUTO</a></li>
+      <li><a href="tipos_de_claves.html" class="no-ch">TIPOS DE CLAVES</a></li>
+      <li><a href="reglas_de_mapeo__traduccion.html" class="daddy">REGLAS DE MAPEO / TRADUCCION</a>
+      <ul class="other-section">
+         <li><a href="cantidad_de_tablas.html" class="no-ch">CANTIDAD DE TABLAS</a></li>
+         <li><a href="entidad_normal__fuerte.html" class="no-ch">ENTIDAD NORMAL / FUERTE</a></li>
+         <li><a href="entidad_debil0.html" class="no-ch">ENTIDAD DEBIL</a></li>
+         <li><a href="atributo_multivalorado.html" class="no-ch">ATRIBUTO MULTIVALORADO</a></li>
+         <li><a href="relacion_uno_a_uno.html" class="no-ch">RELACION UNO A UNO</a></li>
+         <li><a href="relacion_uno_a_muchos.html" class="no-ch">RELACION UNO A MUCHOS</a></li>
+         <li><a href="relacion_muchos_a_muchos.html" class="no-ch">RELACION MUCHOS A MUCHOS</a></li>
+         <li><a href="atributo_en_relacion0.html" class="no-ch">ATRIBUTO EN RELACION</a></li>
+         <li><a href="especializacion0.html" class="no-ch">ESPECIALIZACION</a></li>
+         <li><a href="ejercicio_completo.html" class="no-ch">EJERCICIO COMPLETO</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="normalizacion_de_datos.html" class="current-page-parent daddy">NORMALIZACION DE DATOS</a>
+   <ul>
+      <li><a href="introduccion.html" class="no-ch">INTRODUCCION</a></li>
+      <li><a href="anomalias_en_el_diseo.html" class="no-ch">ANOMALIAS EN EL DISEÑO</a></li>
+      <li id="active"><a href="tuplas_espurias.html" class="active no-ch">TUPLAS ESPURIAS</a></li>
+      <li><a href="dependencia_funcional.html" class="no-ch">DEPENDENCIA FUNCIONAL</a></li>
+      <li><a href="formas_normales.html" class="daddy">FORMAS NORMALES</a>
+      <ul class="other-section">
+         <li><a href="primera_forma_normal_1nf.html" class="no-ch">PRIMERA FORMA NORMAL (1NF)</a></li>
+         <li><a href="segunda_forma_normal_2nf.html" class="no-ch">SEGUNDA FORMA NORMAL (2NF)</a></li>
+         <li><a href="tercera_forma_normal_3nf.html" class="no-ch">TERCERA FORMA NORMAL (3NF)</a></li>
+         <li><a href="ejercicio_completo0.html" class="no-ch">EJERCICIO COMPLETO</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="anomalias_en_el_diseo.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="dependencia_funcional.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">TUPLAS ESPURIAS</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id40">
+<div class="iDevice emphasis0" >
+<div id="ta40_119_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;"><strong>Tuplas Espurias</strong></p>
+<p style="text-align: justify;">Antes que nada, el sinónimo más claro de ESPURIA es BASURA, es decir, estamos hablando de TUPLAS BASURA.</p>
+<p style="text-align: justify;">Para explicar este concepto, como casi siempre lo he hecho, partiré de un ejemplo.</p>
+<p style="text-align: justify;">Suponga el siguiente par de tablas correspondientes a una serie de competiciones deportivas.</p>
+<table border="1" style="width: 22.0101%;">
+<tbody>
+<tr>
+<td width="206" style="width: 100%;">
+<p style="text-align: center;"><strong>CAMPEONATO</strong></p>
+</td>
+</tr>
+<tr>
+<td style="width: 100%;">
+<p>CodigoCampeonato    PK</p>
+<p>DeporteCampeonato</p>
+<p>CiudadCampeonato</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;">La tabla CAMPEONATO almacena un conjunto de campeonatos hechos, cada campeonato de un solo deporte. Y cada campeonato fue realizado en una sola ciudad.</p>
+<p style="text-align: justify;">Por lo tanto, un ejemplo de los datos de esta tabla podrían ser los siguientes:</p>
+<table border="1" style="width: 98.9949%;">
+<tbody>
+<tr>
+<td width="199" style="width: 33.0653%;">
+<p><strong>CódigoCampeonato</strong></p>
+</td>
+<td width="200" style="width: 32.9648%;">
+<p><strong>DeporteCampeonato</strong></p>
+</td>
+<td width="200" style="width: 32.9648%;">
+<p><strong>CiudadCampeonato</strong></p>
+</td>
+</tr>
+<tr>
+<td width="199" style="width: 33.0653%;">
+<p>10</p>
+</td>
+<td width="200" style="width: 32.9648%;">
+<p>Fútbol</p>
+</td>
+<td width="200" style="width: 32.9648%;">
+<p>Cali</p>
+</td>
+</tr>
+<tr>
+<td width="199" style="width: 33.0653%;">
+<p>20</p>
+</td>
+<td width="200" style="width: 32.9648%;">
+<p>Tejo</p>
+</td>
+<td width="200" style="width: 32.9648%;">
+<p>Bogotá</p>
+</td>
+</tr>
+<tr>
+<td width="199" style="width: 33.0653%;">
+<p>30</p>
+</td>
+<td width="200" style="width: 32.9648%;">
+<p>Basketbol</p>
+</td>
+<td width="200" style="width: 32.9648%;">
+<p>Bogotá</p>
+</td>
+</tr>
+<tr>
+<td width="199" style="width: 33.0653%;">
+<p>40</p>
+</td>
+<td width="200" style="width: 32.9648%;">
+<p>Voleibol</p>
+</td>
+<td width="200" style="width: 32.9648%;">
+<p>Medellín</p>
+</td>
+</tr>
+<tr>
+<td width="199" style="width: 33.0653%;">
+<p>50</p>
+</td>
+<td width="200" style="width: 32.9648%;">
+<p>Tenis</p>
+</td>
+<td width="200" style="width: 32.9648%;">
+<p>Medellín</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;"></p>
+<table border="1" style="width: 17.6884%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><strong>DEPORTISTA</strong></td>
+</tr>
+<tr>
+<td style="width: 100%;">
+<p>CedulaDep     PK</p>
+<p>NombreDep</p>
+<p>EdadDep</p>
+<p>CiudadCompitió</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;">La tabla DEPORTISTA almacena los diferentes deportistas que participaron en los campeonatos. Almacena su cédula, nombre, edad y ciudad donde compitió en un campeonato. Es de anotar que estamos suponiendo <strong><u>que CADA DEPORTISTA PRACTICA UN SOLO DEPORTE, NO VARIOS.</u></strong></p>
+<p style="text-align: justify;">Los datos de esta tabla podrían ser los siguientes:</p>
+<table border="1" style="width: 98.7939%;">
+<tbody>
+<tr>
+<td width="150" style="width: 24.7236%; text-align: center;">
+<p><strong>CedulaDep</strong></p>
+</td>
+<td width="150" style="width: 24.7236%; text-align: center;">
+<p><strong>NombreDep</strong></p>
+</td>
+<td width="150" style="width: 24.7236%; text-align: center;">
+<p><strong>EdadDep</strong></p>
+</td>
+<td width="150" style="width: 24.6231%; text-align: center;">
+<p><strong>CiudadCompitió</strong></p>
+</td>
+</tr>
+<tr>
+<td width="150" style="width: 24.7236%;">
+<p>1000</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>Juan Hernández</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>25</p>
+</td>
+<td width="150" style="width: 24.6231%;">
+<p>Bogotá</p>
+</td>
+</tr>
+<tr>
+<td width="150" style="width: 24.7236%;">
+<p>2000</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>Lina Carrillo</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>21</p>
+</td>
+<td width="150" style="width: 24.6231%;">
+<p>Cali</p>
+</td>
+</tr>
+<tr>
+<td width="150" style="width: 24.7236%;">
+<p>3000</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>Hugo Torres</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>29</p>
+</td>
+<td width="150" style="width: 24.6231%;">
+<p>Medellín</p>
+</td>
+</tr>
+<tr>
+<td width="150" style="width: 24.7236%;">
+<p>4000</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>Carolina Bernal</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>20</p>
+</td>
+<td width="150" style="width: 24.6231%;">
+<p>Medellín</p>
+</td>
+</tr>
+<tr>
+<td width="150" style="width: 24.7236%;">
+<p>5000</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>Tatiana Calle</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>22</p>
+</td>
+<td width="150" style="width: 24.6231%;">
+<p>Bogotá</p>
+</td>
+</tr>
+<tr>
+<td width="150" style="width: 24.7236%;">
+<p>6000</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>Víctor Lopez</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>28</p>
+</td>
+<td width="150" style="width: 24.6231%;">
+<p>Cali</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;"> Analicen muy bien los datos de ambas tablas para que respondan las siguientes preguntas:</p>
+<ul style="text-align: justify;">
+<li>Qué deporte practicó la deportista Lina Carrillo? <strong><u>Sin duda</u></strong>, practicó el fútbol.</li>
+<li>Qué deporte practicó el deportista Víctor López? También, <strong><u>sin duda</u></strong>, el fútbol.</li>
+</ul>
+<p style="text-align: justify;">Ahora respondamos las siguientes preguntas:</p>
+<ul style="text-align: justify;">
+<li>Qué deporte practicó el deportista Hugo Torres? No lo podemos afirmar con seguridad. Para la respuesta se tienen dos opciones……Que practicó voleibol o tenis. (Recuerde que dijimos que un deportista solo practica un deporte). Entonces, cuál deporte practicó Hugo Torres?</li>
+<li>Qué deporte practicó Carolina Bernal? Tenemos la misma duda que con Hugo Torres. Pudo haber sido voleibol o tenis.</li>
+<li>Qué deporte practicó Juan Hernández? Tenemos la duda…..pudo haber sido el tejo o el basketbol.</li>
+<li>Qué deporte practicó Tatiana Calle? Igual respuesta que Juan Hernández……o tejo o basketbol.</li>
+</ul>
+<p style="text-align: justify;">Para responder las anteriores preguntas, lo que se hace es un INNER JOIN sobre ambas tablas. El INNER JOIN me genera como resultado la concatenación de los registros relacionados por CAMPOS EN COMUN.</p>
+<p style="text-align: justify;">Cuáles son los campos en común entre estas dos tablas?  El nombre de la ciudad.</p>
+<p style="text-align: justify;">Y para saber un deportista qué deporte practicó, hay que hacer un INNER JOIN entre estas dos tablas.</p>
+<p style="text-align: justify;">Al hacer el INNER JOIN entre estas dos tablas obtenemos los siguientes datos:</p>
+<table border="1" style="width: 98.1909%;">
+<tbody>
+<tr>
+<td width="92" style="width: 13.4673%; text-align: center;">
+<p><strong>CedulaDep</strong></p>
+</td>
+<td width="95" style="width: 13.8693%; text-align: center;">
+<p><strong>NomDeport</strong></p>
+</td>
+<td width="76" style="width: 11.2563%; text-align: center;">
+<p><strong>EdadD</strong></p>
+</td>
+<td width="123" style="width: 17.8894%; text-align: center;">
+<p><strong>CiudadComp</strong></p>
+</td>
+<td width="132" style="width: 19.0955%; text-align: center;">
+<p><strong>CodCampeonato</strong></p>
+</td>
+<td width="76" style="width: 11.2563%; text-align: center;">
+<p><strong>Deporte</strong></p>
+</td>
+<td width="76" style="width: 11.3568%; text-align: center;">
+<p><strong>Ciudad</strong></p>
+</td>
+</tr>
+<tr>
+<td width="92" style="width: 13.4673%;">
+<p>1000</p>
+</td>
+<td width="95" style="width: 13.8693%;">
+<p>Juan Hernández</p>
+</td>
+<td width="76" style="width: 11.2563%;">
+<p>25</p>
+</td>
+<td width="123" style="width: 17.8894%;">
+<p>Bogotá</p>
+</td>
+<td width="132" style="width: 19.0955%;">
+<p>20</p>
+</td>
+<td width="76" style="width: 11.2563%;">
+<p>Tejo</p>
+</td>
+<td width="76" style="width: 11.3568%;">
+<p>Bogotá</p>
+</td>
+</tr>
+<tr>
+<td width="92" style="width: 13.4673%;">
+<p>1000</p>
+</td>
+<td width="95" style="width: 13.8693%;">
+<p>Juan Hernández</p>
+</td>
+<td width="76" style="width: 11.2563%;">
+<p>25</p>
+</td>
+<td width="123" style="width: 17.8894%;">
+<p>Bogotá</p>
+</td>
+<td width="132" style="width: 19.0955%;">
+<p>30</p>
+</td>
+<td width="76" style="width: 11.2563%;">
+<p>Basketbol</p>
+</td>
+<td width="76" style="width: 11.3568%;">
+<p>Bogotá</p>
+</td>
+</tr>
+<tr>
+<td width="92" style="width: 13.4673%;">
+<p>2000</p>
+</td>
+<td width="95" style="width: 13.8693%;">
+<p>Lina Carrillo</p>
+</td>
+<td width="76" style="width: 11.2563%;">
+<p>21</p>
+</td>
+<td width="123" style="width: 17.8894%;">
+<p>Cali</p>
+</td>
+<td width="132" style="width: 19.0955%;">
+<p>10</p>
+</td>
+<td width="76" style="width: 11.2563%;">
+<p>Fútbol</p>
+</td>
+<td width="76" style="width: 11.3568%;">
+<p>Cali</p>
+</td>
+</tr>
+<tr>
+<td width="92" style="width: 13.4673%;">
+<p>3000</p>
+</td>
+<td width="95" style="width: 13.8693%;">
+<p>Hugo Torres</p>
+</td>
+<td width="76" style="width: 11.2563%;">
+<p>29</p>
+</td>
+<td width="123" style="width: 17.8894%;">
+<p>Medellín</p>
+</td>
+<td width="132" style="width: 19.0955%;">
+<p>40</p>
+</td>
+<td width="76" style="width: 11.2563%;">
+<p>Voleibol</p>
+</td>
+<td width="76" style="width: 11.3568%;">
+<p>Medellín</p>
+</td>
+</tr>
+<tr>
+<td width="92" style="width: 13.4673%;">
+<p>3000</p>
+</td>
+<td width="95" style="width: 13.8693%;">
+<p>Hugo Torres</p>
+</td>
+<td width="76" style="width: 11.2563%;">
+<p>29</p>
+</td>
+<td width="123" style="width: 17.8894%;">
+<p>Medellín</p>
+</td>
+<td width="132" style="width: 19.0955%;">
+<p>50</p>
+</td>
+<td width="76" style="width: 11.2563%;">
+<p>Tenis</p>
+</td>
+<td width="76" style="width: 11.3568%;">
+<p>Medellín</p>
+</td>
+</tr>
+<tr>
+<td width="92" style="width: 13.4673%;">
+<p>4000</p>
+</td>
+<td width="95" style="width: 13.8693%;">
+<p>Carolina Bernal</p>
+</td>
+<td width="76" style="width: 11.2563%;">
+<p>20</p>
+</td>
+<td width="123" style="width: 17.8894%;">
+<p>Medellín</p>
+</td>
+<td width="132" style="width: 19.0955%;">
+<p>40</p>
+</td>
+<td width="76" style="width: 11.2563%;">
+<p>Voleibol</p>
+</td>
+<td width="76" style="width: 11.3568%;">
+<p>Medellín</p>
+</td>
+</tr>
+<tr>
+<td width="92" style="width: 13.4673%;">
+<p>4000</p>
+</td>
+<td width="95" style="width: 13.8693%;">
+<p>Carolina Bernal</p>
+</td>
+<td width="76" style="width: 11.2563%;">
+<p>20</p>
+</td>
+<td width="123" style="width: 17.8894%;">
+<p>Medellín</p>
+</td>
+<td width="132" style="width: 19.0955%;">
+<p>50</p>
+</td>
+<td width="76" style="width: 11.2563%;">
+<p>Tenis</p>
+</td>
+<td width="76" style="width: 11.3568%;">
+<p>Medellín</p>
+</td>
+</tr>
+<tr>
+<td width="92" style="width: 13.4673%;">
+<p>5000</p>
+</td>
+<td width="95" style="width: 13.8693%;">
+<p>Tatiana Calle</p>
+</td>
+<td width="76" style="width: 11.2563%;">
+<p>22</p>
+</td>
+<td width="123" style="width: 17.8894%;">
+<p>Bogotá</p>
+</td>
+<td width="132" style="width: 19.0955%;">
+<p>20</p>
+</td>
+<td width="76" style="width: 11.2563%;">
+<p>Tejo</p>
+</td>
+<td width="76" style="width: 11.3568%;">
+<p>Bogotá</p>
+</td>
+</tr>
+<tr>
+<td width="92" style="width: 13.4673%;">
+<p>5000</p>
+</td>
+<td width="95" style="width: 13.8693%;">
+<p>Tatiana Calle</p>
+</td>
+<td width="76" style="width: 11.2563%;">
+<p>22</p>
+</td>
+<td width="123" style="width: 17.8894%;">
+<p>Bogotá</p>
+</td>
+<td width="132" style="width: 19.0955%;">
+<p>30</p>
+</td>
+<td width="76" style="width: 11.2563%;">
+<p>Basketbol</p>
+</td>
+<td width="76" style="width: 11.3568%;">
+<p>Bogotá</p>
+</td>
+</tr>
+<tr>
+<td width="92" style="width: 13.4673%;">
+<p>6000</p>
+</td>
+<td width="95" style="width: 13.8693%;">
+<p>Víctor López</p>
+</td>
+<td width="76" style="width: 11.2563%;">
+<p>28</p>
+</td>
+<td width="123" style="width: 17.8894%;">
+<p>Cali</p>
+</td>
+<td width="132" style="width: 19.0955%;">
+<p>10</p>
+</td>
+<td width="76" style="width: 11.2563%;">
+<p>Fútbol</p>
+</td>
+<td width="76" style="width: 11.3568%;">
+<p>Cali</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;">Teniendo en cuenta el resultado anterior, vamos a suponer que, <strong><u>EN LA REALIDAD</u></strong>, sucedió lo siguiente:</p>
+<ul style="text-align: justify;">
+<li>Juan Hernández practicó Basketbol.</li>
+<li>Hugo Torres practicó Tenis.</li>
+<li>Carolina Bernal practicó Voleibol.</li>
+<li>Tatiana Calle practicó Tejo.</li>
+</ul>
+<p style="text-align: justify;">Por lo tanto, en la tabla resultado anterior hay unos resultados “mentirosos” que me están dando información que no es verdad. Estos resultados están dados en forma de tuplas (sabemos que el resultado de cualquier consulta, inclusive un INNER JOIN, es un conjunto de tuplas).</p>
+<p style="text-align: justify;">Estos resultados mentirosos están resaltados de color amarillo. Las seis tuplas que no están sombreadas son verídicas, es decir, me están relacionando correctamente a cada deportista con el deporte o campeonato donde compitió.</p>
+<p style="text-align: justify;">Las restantes cuatro (4) tuplas, las que están sombreadas de amarillo, SON LAS TUPLAS ESPURIAS.</p>
+<p style="text-align: justify;">Recuerde que dijimos que espuria es lo mismo que basura. Estas cuatro tuplas son tuplas basura ya que no me están reflejando la realidad (Carolina Bernal no practicó el tenis,  Juan Hernández no practicó el tejo, Hugo Torres no practicó el voleibol ni Tatiana Calle el basketbol).</p>
+<p style="text-align: justify;">Cual fue la situación que hizo generar TUPLAS ESPURIAS al hacerle un INNER JOIN a estas dos tablas? Cuál fue el error cometido en el diseño de las tablas? Hemos dicho que dos tablas se relacionan por campos en común. Estas dos tablas tienen campos en común. Pero también hemos dicho que dos tablas se relacionan por la clave foránea de una y la clave primaria de la otra…..en otras palabras, uno de los campos en común tiene que ser clave primaria de una de las tablas.</p>
+<table border="1" style="width: 21.608%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><strong>CAMPEONATO</strong></td>
+</tr>
+<tr>
+<td style="width: 100%;">
+<p>CodigoCampeonato    PK</p>
+<p>DeporteCampeonato</p>
+<p>CiudadCampeonato</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;"></p>
+<table border="1" style="width: 18.0905%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><strong>DEPORTISTA</strong></td>
+</tr>
+<tr>
+<td style="width: 100%;">
+<p>CedulaDep     PK</p>
+<p>NombreDep</p>
+<p>EdadDep</p>
+<p>CiudadCompitió</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;">Como podemos ver, ambas tablas sí tienen campos en común (los que están de verde) pero ninguno de los campos en común es clave primaria de alguna tabla. Es decir, no cumple que la relación se tiene que dar por clave foránea de una tabla y clave primaria de la otra.</p>
+<p style="text-align: justify;">Cuando dos tablas se relacionan entre si violando la condición anterior, hay posibilidad de que generen TUPLAS ESPURIAS, lo cual es totalmente INDESEABLE para el usuario final. Una base de datos no le puede entregar información “mentirosa” al usuario.</p>
+<p style="text-align: justify;">Importante.  Dos tablas siempre se deben relacionar por la clave foránea de una con la clave primaria de la otra. Si esto no sucede, hay posibilidad de generar TUPLAS ESPURIAS. O, dicho de otra manera, el INNER JOIN entre dos tablas NUNCA puede dar TUPLAS ESPURIAS.</p>
+<p style="text-align: justify;"><strong>Ejercicio. </strong></p>
+<p style="text-align: justify;">Escribir el esquema de dos tablas que pudieran dar TUPLAS ESPURIAS al hacerles un INNER JOIN. Coja el tema que desee (FARMACIA, BANCO, UNIVERSIDAD, etc.)</p>
+<p style="text-align: justify;">Justifique por qué dicho esquema produce tuplas espurias.</p>
+<hr />
+<p>Videos:</p>
+<table border="1" style="width: 100%; height: 21px;">
+<tbody>
+<tr style="height: 21px;">
+<td style="width: 50%; height: 21px; text-align: center;"><a href="https://youtu.be/3qe3zKJhUSI">Tuplas Espurias - Concepto</a></td>
+<td style="width: 50%; height: 21px; text-align: center;"><a href="https://youtu.be/W2XY9lCZrjI">Tuplas Espurias - Ejercicio</a></td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;"></p></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice" id="id62">
+<div class="iDevice emphasis0" >
+<div id="ta62_108_2" class="block iDevice_content">
+
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="anomalias_en_el_diseo.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="dependencia_funcional.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

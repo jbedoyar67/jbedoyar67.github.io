@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>DBA - ADMINISTRADOR DE BASES DE DATOS | FUNDAMENTOS Y DISEÑO DE BASES DE DATOS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="JORGE IVAN BEDOYA RESTREPO" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-13"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">FUNDAMENTOS Y DISEÑO DE BASES DE DATOS</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">FUNDAMENTOS Y DISEÑO DE BASES DE DATOS</a></li>
+   <li class="current-page-parent"><a href="conceptos_basicos.html" class="current-page-parent daddy">CONCEPTOS BASICOS</a>
+   <ul>
+      <li><a href="bases_de_datos_y_dbms.html" class="no-ch">BASES DE DATOS Y DBMS</a></li>
+      <li><a href="niveles_de_abstraccion_de_datos.html" class="no-ch">NIVELES DE ABSTRACCION DE DATOS</a></li>
+      <li><a href="ejemplar_y_esquema.html" class="no-ch">EJEMPLAR Y ESQUEMA</a></li>
+      <li><a href="lenguajes_de_bases_de_datos.html" class="no-ch">LENGUAJES DE BASES DE DATOS</a></li>
+      <li><a href="modelos_de_datos.html" class="no-ch">MODELOS DE DATOS</a></li>
+      <li><a href="tipos_de_usuarios.html" class="no-ch">TIPOS DE USUARIOS</a></li>
+      <li id="active"><a href="dba__administrador_de_bases_de_datos.html" class="active no-ch">DBA - ADMINISTRADOR DE BASES DE DATOS</a></li>
+      <li><a href="backups_y_tipos.html" class="no-ch">BACKUPS Y TIPOS</a></li>
+   </ul>
+   </li>
+   <li><a href="modelamiento_de_datos.html" class="daddy">MODELAMIENTO DE DATOS</a>
+   <ul class="other-section">
+      <li><a href="que_es.html" class="no-ch">QUE ES?</a></li>
+      <li><a href="modelo_entidad_relacion.html" class="daddy">MODELO ENTIDAD RELACION</a>
+      <ul class="other-section">
+         <li><a href="entidades_e_instancias.html" class="no-ch">ENTIDADES E INSTANCIAS</a></li>
+         <li><a href="atributos_y_tipos.html" class="no-ch">ATRIBUTOS Y TIPOS</a></li>
+         <li><a href="relaciones.html" class="no-ch">RELACIONES</a></li>
+         <li><a href="entidad_debil.html" class="no-ch">ENTIDAD DEBIL</a></li>
+         <li><a href="atributo_en_relacion.html" class="no-ch">ATRIBUTO EN RELACION</a></li>
+      </ul>
+      </li>
+      <li><a href="modelo_entidad_relacion_extendido.html" class="daddy">MODELO ENTIDAD RELACION EXTENDIDO</a>
+      <ul class="other-section">
+         <li><a href="especializacion.html" class="no-ch">ESPECIALIZACION</a></li>
+         <li><a href="generalizacion.html" class="no-ch">GENERALIZACION</a></li>
+      </ul>
+      </li>
+      <li><a href="diagrama_entidad_relacion.html" class="no-ch">DIAGRAMA ENTIDAD RELACION</a></li>
+      <li><a href="ejercicio_completo_de_modelamiento.html" class="no-ch">EJERCICIO COMPLETO DE MODELAMIENTO</a></li>
+   </ul>
+   </li>
+   <li><a href="modelo_relacional.html" class="daddy">MODELO RELACIONAL</a>
+   <ul class="other-section">
+      <li><a href="terminologia_tecnica.html" class="no-ch">TERMINOLOGIA TECNICA</a></li>
+      <li><a href="dominio_de_un_atributo.html" class="no-ch">DOMINIO DE UN ATRIBUTO</a></li>
+      <li><a href="tipos_de_claves.html" class="no-ch">TIPOS DE CLAVES</a></li>
+      <li><a href="reglas_de_mapeo__traduccion.html" class="daddy">REGLAS DE MAPEO / TRADUCCION</a>
+      <ul class="other-section">
+         <li><a href="cantidad_de_tablas.html" class="no-ch">CANTIDAD DE TABLAS</a></li>
+         <li><a href="entidad_normal__fuerte.html" class="no-ch">ENTIDAD NORMAL / FUERTE</a></li>
+         <li><a href="entidad_debil0.html" class="no-ch">ENTIDAD DEBIL</a></li>
+         <li><a href="atributo_multivalorado.html" class="no-ch">ATRIBUTO MULTIVALORADO</a></li>
+         <li><a href="relacion_uno_a_uno.html" class="no-ch">RELACION UNO A UNO</a></li>
+         <li><a href="relacion_uno_a_muchos.html" class="no-ch">RELACION UNO A MUCHOS</a></li>
+         <li><a href="relacion_muchos_a_muchos.html" class="no-ch">RELACION MUCHOS A MUCHOS</a></li>
+         <li><a href="atributo_en_relacion0.html" class="no-ch">ATRIBUTO EN RELACION</a></li>
+         <li><a href="especializacion0.html" class="no-ch">ESPECIALIZACION</a></li>
+         <li><a href="ejercicio_completo.html" class="no-ch">EJERCICIO COMPLETO</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="normalizacion_de_datos.html" class="daddy">NORMALIZACION DE DATOS</a>
+   <ul class="other-section">
+      <li><a href="introduccion.html" class="no-ch">INTRODUCCION</a></li>
+      <li><a href="anomalias_en_el_diseo.html" class="no-ch">ANOMALIAS EN EL DISEÑO</a></li>
+      <li><a href="tuplas_espurias.html" class="no-ch">TUPLAS ESPURIAS</a></li>
+      <li><a href="dependencia_funcional.html" class="no-ch">DEPENDENCIA FUNCIONAL</a></li>
+      <li><a href="formas_normales.html" class="daddy">FORMAS NORMALES</a>
+      <ul class="other-section">
+         <li><a href="primera_forma_normal_1nf.html" class="no-ch">PRIMERA FORMA NORMAL (1NF)</a></li>
+         <li><a href="segunda_forma_normal_2nf.html" class="no-ch">SEGUNDA FORMA NORMAL (2NF)</a></li>
+         <li><a href="tercera_forma_normal_3nf.html" class="no-ch">TERCERA FORMA NORMAL (3NF)</a></li>
+         <li><a href="ejercicio_completo0.html" class="no-ch">EJERCICIO COMPLETO</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="tipos_de_usuarios.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="backups_y_tipos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">DBA - ADMINISTRADOR DE BASES DE DATOS</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id18">
+<div class="iDevice emphasis0" >
+<div id="ta18_117_2" class="block iDevice_content">
+<div class="exe-text"><h1 style="text-align: justify;"><span style="font-size: 12pt;"><strong>El Administrador de la Base de Datos – DBA</strong></span></h1>
+<p style="text-align: justify;"><span>Los que hemos trabajado con Bases de Datos, hemos visto que esta tecnología permite que el usuario técnico, en este caso el analista, se desentienda de una serie de cosas que automáticamente realiza el DBMS. Es así como, por ejemplo, cuando el DBMS está en pleno funcionamiento con 50 usuarios accediendo la base de datos a la vez, y de repente se presenta una falla (corte de luz, bloqueo del servidor, problema lógico de una transacción, etc.). En este caso, y como lo veremos en módulos posteriores, el usuario no se tiene que preocupar por la consistencia de la base de datos. Después de que se soluciona el problema que dio origen a la falla, es el DBMS quien automáticamente restaura la base de datos y la deja en un estado consistente, libre de problemas.</span><span> </span></p>
+<p style="text-align: justify;">Pero para que suceda lo anterior, debe existir una persona que configure el DBMS para que haga esta labor de la mejor manera posible. Esa persona es el DBA.</p>
+<p style="text-align: justify;"><strong>Qué significa DBA?</strong></p>
+<p style="text-align: justify;">DBA viene de la sigla en inglés Data Base Administrator, es decir, Administrador de la Base de Datos. Es conveniente aclarar qué se tiene la creencia con mucha frecuencia de que el DBA es un software que permite controlar el funcionamiento del DBMS. Debo decir que el DBA no es un software, es una persona de carne y hueso como usted señor lector o como yo que tiene una funciones muy definidas dentro del departamento de sistemas de una compañía. </p>
+<h2 style="text-align: justify;"><span style="font-size: 12pt; color: #000000;"><strong>Funciones del DBA</strong></span></h2>
+<p style="text-align: justify;"><span>En términos generales, la responsabilidad del DBA es optimizar el funcionamiento y rendimiento del DBMS, para que los usuarios finales del mismo se sientan satisfechos con los tiempos de respuesta.</span></p>
+<p style="text-align: justify;">Dentro de las funciones específicas del DBA, se encuentran las siguientes: </p>
+<ul style="text-align: justify;">
+<li>Sintonizar la Base de Datos: Es talvez la labor más importante del DBA, sin querer decir que las demás que voy a enunciar no sean importantes. Lo que sucede es que a través de esta actividad, en gran medida, el DBA estará logrando el rendimiento óptimo del DBMS. El término sintonizar en inglés se traduce como “tuning” y por eso es muy frecuente oír decir que al DBA le toca hacerle “tuning” a la base de datos.</li>
+</ul>
+<p style="padding-left: 30px; text-align: justify;"> Pero qué es sintonizar una base de datos? Seguramente usted, cuando oye la palabra “sintonizar”, lo primero que se le viene a la mente es la imagen de un radio transistor. Y es obvio que suceda esto ya que cuando usamos un radio, lo que estamos haciendo es sintonizando emisoras. En este caso, sintonizar una emisora significa mover el dial hasta el punto en que el sonido que proviene de la emisora se escuche de la mejor manera posible, es decir, qué el sonido sea claro, “nítido”, sin interferencias. Por lo tanto, sintonizar una emisora significa mover el dial del radio hasta que el sonido de la emisora sea lo más óptimo posible.</p>
+<p style="padding-left: 30px; text-align: justify;">Exactamente lo mismo sucede en una base de datos. Para poder sintonizar una base de datos, el DBA configura una serie de parámetros que son los que dictaminan como debe trabajar el DBMS. Estos parámetros vienen grabados en un archivo que se llama el archivo de configuración del DBMS. Cada vez que el DBMS empieza su ejecución, se guía por los parámetros grabados en este archivo para poder saber como debe empezar a funcionar.</p>
+<p style="padding-left: 30px; text-align: justify;">Para poder poner un caso, existe un parámetro que le dice al DBMS cuantos usuarios en total va a soportar en forma concurrente, es decir, accediendo a las bases de datos al mismo tiempo. Supongamos que este parámetro tiene el valor de 100 y el DBA se da cuenta que, con el hardware disponible en un momento dado, el comportamiento de la base de datos es muy lento, podría pensar en tomar la decisión de disminuir el valor para este parámetro, ya que teniendo 100 usuarios concurrentemente, el rendimiento de la base de datos se disminuirá. </p>
+<ul style="text-align: justify;">
+<li>Controlar el uso de recursos de hardware: Es deber del DBA estar al cuidado de que, con los parámetros de configuración establecidos en la labor de sintonización de la base de datos, los recursos del hardware estén siendo óptimamente utilizados, es decir, que la memoria RAM pueda alojar temporalmente los diferentes datos de los usuarios, que el procesador pueda realizar su función con todas las transacciones concurrentes que existan, que la fragmentación del disco duro no sea muy alta para que el acceso a los datos sea rápido. Generalmente los DBMS, dentro de sus módulos, incluyen uno que le permite al DBA realizar esta labor, es decir, permite visualizar, generalmente de una manera gráfica, cuanta memoria RAM se está utilizando en un momento dado, cómo están distribuidos los datos dentro del disco duro, en qué porcentaje de capacidad total está trabajando el procesador, etc.</li>
+</ul>
+<p style="text-align: justify;"></p>
+<ul style="text-align: justify;">
+<li>Realizar backups de la base de datos: Cuando, por alguna circunstancia, se pierde información de la base de datos, es responsabilidad del DBA poder restaurar los datos perdidos. Es decir, poder dejar la base de datos tal y como estaba inmediatamente antes de que se perdieran los datos.</li>
+</ul>
+<p style="padding-left: 30px; text-align: justify;">Para lograr esto, el DBA debe realizar periódicamente copias de seguridad de los datos de la base de datos, copias que se conocen como backups.</p>
+<p style="padding-left: 30px; text-align: justify;">Cabe mencionar que dentro de una base de datos existen 2 tipos de backups: completos e incrementales (o diferenciales). En el siguiente apartado de este módulo se explicará en detalle que son estos backups y cuales son sus diferencias.</p>
+<ul style="text-align: justify;">
+<li>Manejar el control de acceso a la base de datos: El término “control de acceso” en una base de datos es muy importante ya que se refiere a los perfiles de los diferentes usuarios, es decir, a los permisos que tiene cada usuario para acceder a la base de datos.</li>
+</ul>
+<p style="padding-left: 30px; text-align: justify;">Cabe anotar que es responsabilidad del DBA velar porque estos controles de acceso no sean violados. También es su responsabilidad la de configurar el control de acceso dentro de la base de datos, lo cual se logra a través de unas instrucciones SQL que se estudiarán más adelante. Pero cabe explicar que NO es responsabilidad del DBA definir este control de acceso. Es el analista, que es la persona que está desarrollando la aplicación y que conoce a los diferentes usuarios que van a acceder a la base de datos, el que define como debe el DBA configurar físicamente el control de acceso sobre la base de datos.</p>
+<p style="padding-left: 30px; text-align: justify;">En resumen, si en algún momento un usuario hace algo indebido sobre la base de datos, es decir, algo sobre lo cual no tenía permiso, es responsabilidad del DBA solucionar esta situación.</p>
+<p style="text-align: justify;"><span>Las anteriores son solamente algunas de las principales funciones del DBA, lo cual da una clara muestra de que el nivel de responsabilidad de esta persona dentro del departamento de sistemas es alto.</span></p>
+<p style="text-align: justify;">Quiero aclarar que no comparto el criterio de muchos autores sobre base de datos cuando exponen que una de las funciones del DBA es definir el esquema de la base de datos. Quiero explicar el por qué de mi desacuerdo.</p>
+<p style="text-align: justify;">Ya dijimos que el esquema de la base de datos es la estructura de la misma, es decir, es el conjunto de tablas que van a conformar la base de datos, junto con la definición de cada uno de sus campos (tipo de datos, longitud, nulo, etc.). Y es el analista, precisamente con su análisis realizado, el que va a diseñar el esquema de la base de datos. Al fin y al cabo es la persona que ha estado en pleno contacto con el usuario de la base de datos y sus necesidades. Recuerden que el analista está en el nivel conceptual de abstracción de datos, mientras que el DBA está en el nivel físico de abstracción de datos. Cual de estas dos personas, dentro del esquema de niveles de abstracción de datos, está mas cercano al usuario final? Ya sabemos que la respuesta es el analista.</p>
+<p style="text-align: justify;">Por lo tanto, considero que NO es responsabilidad del DBA definir el esquema de la base de datos. Sí es su responsabilidad que el esquema definido y creado por el analista, funcione óptimamente dentro del hardware y software con el que se cuenta para ello.</p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="tipos_de_usuarios.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="backups_y_tipos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

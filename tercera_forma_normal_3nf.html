@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>TERCERA FORMA NORMAL (3NF) | FUNDAMENTOS Y DISEÑO DE BASES DE DATOS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="JORGE IVAN BEDOYA RESTREPO" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-49"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">FUNDAMENTOS Y DISEÑO DE BASES DE DATOS</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">FUNDAMENTOS Y DISEÑO DE BASES DE DATOS</a></li>
+   <li><a href="conceptos_basicos.html" class="daddy">CONCEPTOS BASICOS</a>
+   <ul class="other-section">
+      <li><a href="bases_de_datos_y_dbms.html" class="no-ch">BASES DE DATOS Y DBMS</a></li>
+      <li><a href="niveles_de_abstraccion_de_datos.html" class="no-ch">NIVELES DE ABSTRACCION DE DATOS</a></li>
+      <li><a href="ejemplar_y_esquema.html" class="no-ch">EJEMPLAR Y ESQUEMA</a></li>
+      <li><a href="lenguajes_de_bases_de_datos.html" class="no-ch">LENGUAJES DE BASES DE DATOS</a></li>
+      <li><a href="modelos_de_datos.html" class="no-ch">MODELOS DE DATOS</a></li>
+      <li><a href="tipos_de_usuarios.html" class="no-ch">TIPOS DE USUARIOS</a></li>
+      <li><a href="dba__administrador_de_bases_de_datos.html" class="no-ch">DBA - ADMINISTRADOR DE BASES DE DATOS</a></li>
+      <li><a href="backups_y_tipos.html" class="no-ch">BACKUPS Y TIPOS</a></li>
+   </ul>
+   </li>
+   <li><a href="modelamiento_de_datos.html" class="daddy">MODELAMIENTO DE DATOS</a>
+   <ul class="other-section">
+      <li><a href="que_es.html" class="no-ch">QUE ES?</a></li>
+      <li><a href="modelo_entidad_relacion.html" class="daddy">MODELO ENTIDAD RELACION</a>
+      <ul class="other-section">
+         <li><a href="entidades_e_instancias.html" class="no-ch">ENTIDADES E INSTANCIAS</a></li>
+         <li><a href="atributos_y_tipos.html" class="no-ch">ATRIBUTOS Y TIPOS</a></li>
+         <li><a href="relaciones.html" class="no-ch">RELACIONES</a></li>
+         <li><a href="entidad_debil.html" class="no-ch">ENTIDAD DEBIL</a></li>
+         <li><a href="atributo_en_relacion.html" class="no-ch">ATRIBUTO EN RELACION</a></li>
+      </ul>
+      </li>
+      <li><a href="modelo_entidad_relacion_extendido.html" class="daddy">MODELO ENTIDAD RELACION EXTENDIDO</a>
+      <ul class="other-section">
+         <li><a href="especializacion.html" class="no-ch">ESPECIALIZACION</a></li>
+         <li><a href="generalizacion.html" class="no-ch">GENERALIZACION</a></li>
+      </ul>
+      </li>
+      <li><a href="diagrama_entidad_relacion.html" class="no-ch">DIAGRAMA ENTIDAD RELACION</a></li>
+      <li><a href="ejercicio_completo_de_modelamiento.html" class="no-ch">EJERCICIO COMPLETO DE MODELAMIENTO</a></li>
+   </ul>
+   </li>
+   <li><a href="modelo_relacional.html" class="daddy">MODELO RELACIONAL</a>
+   <ul class="other-section">
+      <li><a href="terminologia_tecnica.html" class="no-ch">TERMINOLOGIA TECNICA</a></li>
+      <li><a href="dominio_de_un_atributo.html" class="no-ch">DOMINIO DE UN ATRIBUTO</a></li>
+      <li><a href="tipos_de_claves.html" class="no-ch">TIPOS DE CLAVES</a></li>
+      <li><a href="reglas_de_mapeo__traduccion.html" class="daddy">REGLAS DE MAPEO / TRADUCCION</a>
+      <ul class="other-section">
+         <li><a href="cantidad_de_tablas.html" class="no-ch">CANTIDAD DE TABLAS</a></li>
+         <li><a href="entidad_normal__fuerte.html" class="no-ch">ENTIDAD NORMAL / FUERTE</a></li>
+         <li><a href="entidad_debil0.html" class="no-ch">ENTIDAD DEBIL</a></li>
+         <li><a href="atributo_multivalorado.html" class="no-ch">ATRIBUTO MULTIVALORADO</a></li>
+         <li><a href="relacion_uno_a_uno.html" class="no-ch">RELACION UNO A UNO</a></li>
+         <li><a href="relacion_uno_a_muchos.html" class="no-ch">RELACION UNO A MUCHOS</a></li>
+         <li><a href="relacion_muchos_a_muchos.html" class="no-ch">RELACION MUCHOS A MUCHOS</a></li>
+         <li><a href="atributo_en_relacion0.html" class="no-ch">ATRIBUTO EN RELACION</a></li>
+         <li><a href="especializacion0.html" class="no-ch">ESPECIALIZACION</a></li>
+         <li><a href="ejercicio_completo.html" class="no-ch">EJERCICIO COMPLETO</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="normalizacion_de_datos.html" class="current-page-parent daddy">NORMALIZACION DE DATOS</a>
+   <ul>
+      <li><a href="introduccion.html" class="no-ch">INTRODUCCION</a></li>
+      <li><a href="anomalias_en_el_diseo.html" class="no-ch">ANOMALIAS EN EL DISEÑO</a></li>
+      <li><a href="tuplas_espurias.html" class="no-ch">TUPLAS ESPURIAS</a></li>
+      <li><a href="dependencia_funcional.html" class="no-ch">DEPENDENCIA FUNCIONAL</a></li>
+      <li class="current-page-parent"><a href="formas_normales.html" class="current-page-parent daddy">FORMAS NORMALES</a>
+      <ul>
+         <li><a href="primera_forma_normal_1nf.html" class="no-ch">PRIMERA FORMA NORMAL (1NF)</a></li>
+         <li><a href="segunda_forma_normal_2nf.html" class="no-ch">SEGUNDA FORMA NORMAL (2NF)</a></li>
+         <li id="active"><a href="tercera_forma_normal_3nf.html" class="active no-ch">TERCERA FORMA NORMAL (3NF)</a></li>
+         <li><a href="ejercicio_completo0.html" class="no-ch">EJERCICIO COMPLETO</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="segunda_forma_normal_2nf.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="ejercicio_completo0.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">TERCERA FORMA NORMAL (3NF)</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id45">
+<div class="iDevice emphasis0" >
+<div id="ta45_124_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;"><strong>TERCERA FORMA NORMAL (3NF)</strong></p>
+<p style="text-align: justify;">Para la explicación de la tercera forma normal (3NF), miremos los posibles datos de la tabla Ciudad enunciada al principio de este documento:</p>
+<table border="1" style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><span style="font-size: 12pt;"><strong>CIUDAD</strong></span></td>
+</tr>
+</tbody>
+</table>
+<table border="1" style="width: 98.3919%;">
+<tbody>
+<tr>
+<td width="100" style="width: 16.3819%; text-align: center;">
+<p><strong>Cod-ciudad</strong></p>
+</td>
+<td width="100" style="width: 16.3819%; text-align: center;">
+<p><strong>Nombre-ciu</strong></p>
+</td>
+<td width="100" style="width: 16.3819%; text-align: center;">
+<p><strong>Nro-habitan.</strong></p>
+</td>
+<td width="100" style="width: 16.3819%; text-align: center;">
+<p><strong>Cod-pais</strong></p>
+</td>
+<td width="100" style="width: 16.3819%; text-align: center;">
+<p><strong>Nombre-pais</strong></p>
+</td>
+<td width="100" style="width: 16.4824%; text-align: center;">
+<p><strong>Área-pais</strong></p>
+</td>
+</tr>
+<tr>
+<td width="100" style="width: 16.3819%;">
+<p>10</p>
+</td>
+<td width="100" style="width: 16.3819%;">
+<p>Medellín</p>
+</td>
+<td width="100" style="width: 16.3819%;">
+<p>2500000</p>
+</td>
+<td width="100" style="width: 16.3819%;">
+<p>1</p>
+</td>
+<td width="100" style="width: 16.3819%;">
+<p>Colombia</p>
+</td>
+<td width="100" style="width: 16.4824%;">
+<p>36000000</p>
+</td>
+</tr>
+<tr>
+<td width="100" style="width: 16.3819%;">
+<p>20</p>
+</td>
+<td width="100" style="width: 16.3819%;">
+<p>Cali</p>
+</td>
+<td width="100" style="width: 16.3819%;">
+<p>1800000</p>
+</td>
+<td width="100" style="width: 16.3819%;">
+<p>1</p>
+</td>
+<td width="100" style="width: 16.3819%;">
+<p>Colombia</p>
+</td>
+<td width="100" style="width: 16.4824%;">
+<p>36000000</p>
+</td>
+</tr>
+<tr>
+<td width="100" style="width: 16.3819%;">
+<p>30</p>
+</td>
+<td width="100" style="width: 16.3819%;">
+<p>Pereira</p>
+</td>
+<td width="100" style="width: 16.3819%;">
+<p>520000</p>
+</td>
+<td width="100" style="width: 16.3819%;">
+<p>1</p>
+</td>
+<td width="100" style="width: 16.3819%;">
+<p>Colombia</p>
+</td>
+<td width="100" style="width: 16.4824%;">
+<p>36000000</p>
+</td>
+</tr>
+<tr>
+<td width="100" style="width: 16.3819%;">
+<p>40</p>
+</td>
+<td width="100" style="width: 16.3819%;">
+<p>New York</p>
+</td>
+<td width="100" style="width: 16.3819%;">
+<p>52000000</p>
+</td>
+<td width="100" style="width: 16.3819%;">
+<p>2</p>
+</td>
+<td width="100" style="width: 16.3819%;">
+<p>EEUU</p>
+</td>
+<td width="100" style="width: 16.4824%;">
+<p>56000000</p>
+</td>
+</tr>
+<tr>
+<td width="100" style="width: 16.3819%;">
+<p>50</p>
+</td>
+<td width="100" style="width: 16.3819%;">
+<p>Boston</p>
+</td>
+<td width="100" style="width: 16.3819%;">
+<p>25600000</p>
+</td>
+<td width="100" style="width: 16.3819%;">
+<p>2</p>
+</td>
+<td width="100" style="width: 16.3819%;">
+<p>EEUU</p>
+</td>
+<td width="100" style="width: 16.4824%;">
+<p>56000000</p>
+</td>
+</tr>
+<tr>
+<td width="100" style="width: 16.3819%;">
+<p>60</p>
+</td>
+<td width="100" style="width: 16.3819%;">
+<p>Quito</p>
+</td>
+<td width="100" style="width: 16.3819%;">
+<p>4500000</p>
+</td>
+<td width="100" style="width: 16.3819%;">
+<p>3</p>
+</td>
+<td width="100" style="width: 16.3819%;">
+<p>Ecuador</p>
+</td>
+<td width="100" style="width: 16.4824%;">
+<p>5280000</p>
+</td>
+</tr>
+<tr>
+<td width="100" style="width: 16.3819%;">
+<p>70</p>
+</td>
+<td width="100" style="width: 16.3819%;">
+<p>Guayaquil</p>
+</td>
+<td width="100" style="width: 16.3819%;">
+<p>3600000</p>
+</td>
+<td width="100" style="width: 16.3819%;">
+<p>3</p>
+</td>
+<td width="100" style="width: 16.3819%;">
+<p>Ecuador</p>
+</td>
+<td width="100" style="width: 16.4824%;">
+<p>5280000</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;"><span style="font-size: 1.05em;">La tabla se refiere a las ciudades del mundo junto con el país donde se encuentran.</span></p>
+<p style="text-align: justify;">Vamos a analizar las dependencias funcionales que existen en dicha tabla:</p>
+<p style="text-align: justify;">DF1 : cod-ciudad <span>→</span> nombre-ciu</p>
+<p style="text-align: justify;">DF2 : cod-ciudad <span>→</span> nro-habitantes</p>
+<p style="text-align: justify;">DF3 : cod-ciudad <span>→</span> cod-pais</p>
+<p style="text-align: justify;">DF4 : cod- país <span>→</span> nombre-pais</p>
+<p style="text-align: justify;">DF5 : cod-ciudad <span>→ </span>nombre-pais</p>
+<p style="text-align: justify;">DF6 : cod-pais <span>→</span> área-pais</p>
+<p style="text-align: justify;">DF7 : cod-ciudad <span>→</span> área-pais</p>
+<p style="text-align: justify;"><strong> </strong>Si se entendió la segunda forma normal (2NF), es claro que la tabla Ciudad <strong>está en 2NF</strong> (De hecho, también está en 1NF, ya que no tiene atributos multivalorados). Pero <strong>NO ESTÁ EN 3NF. </strong>Expliquemos por qué no está en 3NF.</p>
+<p style="text-align: justify;">De las dependencias anteriores, escojamos DF3, DF4 y DF5. Si se analizan bien esas tres (3) dependencias funcionales, nos damos cuenta de que existe TRANSITIVIDAD. Es decir, nombre-pais depende de cod-ciudad porque cod-pais depende de cod-ciudad y nombre-pais depende de cod-pais. (Recuerden lo que alguna vez aprendimos en matemáticas: Si A se relaciona con B; y B se relaciona con C; entonces A se relaciona con C. Propiedad transitiva. Lo mismo está sucediendo en estas tres (3) dependencias funcionales. El atributo nombre-pais depende funcionalmente de cod-ciudad en forma transitiva).</p>
+<p style="text-align: justify;"><strong>Por esta transitividad y por la que hay entre DF3, DF6 y DF7, la tabla Ciudad NO ESTÁ EN 3NF.</strong></p>
+<p style="text-align: justify;">Para poder corregir el diseño de esta tabla, pensemos en la regla de traducción de la relación uno a muchos (de hecho, entre Ciudad y País, en el modelo entidad relación, hay una relación uno a muchos).</p>
+<p style="text-align: justify;">La tabla Ciudad la vamos a convertir a 3NF, separándola en las siguientes dos (2) tablas:</p>
+<p style="text-align: justify;"><strong>Definición 3NF.</strong></p>
+<p style="text-align: justify;">Una tabla está en 3NF cuando cumple las siguientes dos (2) condiciones:</p>
+<ul style="text-align: justify;">
+<li>Está en 2NF</li>
+<li>Todo atributo no clave depende funcionalmente, en forma directa, no transitiva, de la clave primaria. (En otras palabras, cuando las únicas dependencias funcionales que existen son entre los atributos no claves y la clave primaria).</li>
+</ul>
+<p style="text-align: justify;">Otra manera de decir el segundo item es:</p>
+<p style="text-align: justify;">Las UNICAS dependencias funcionales que pueden existir son entre los atributos no PK y la PK, es decir, no puede haber dependencias funcionales entre atributos no PK.</p>
+<table border="1" style="width: 21.206%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><strong>CIUDAD1</strong></td>
+</tr>
+<tr>
+<td style="width: 100%;">
+<p>Codigo-Ciu     PK</p>
+<p>Nombre-Ciu</p>
+<p>Nro-Habitantes</p>
+<p>Cod-Pais</p>
+</td>
+</tr>
+<tr>
+<td style="width: 100%;">
+<p>FK: Cod-Pais referencia a PAIS(Cod-Pais)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;"></p>
+<table border="1" style="width: 14.7739%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><strong>PAIS</strong></td>
+</tr>
+<tr>
+<td style="width: 100%;">
+<p>Cod-Pais     PK</p>
+<p>Nombre-Pais</p>
+<p>Area-Pais</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;"> Los datos quedan así:</p>
+<table border="1" style="width: 98.593%; height: 21px;">
+<tbody>
+<tr style="height: 21px;">
+<td style="width: 100%; height: 21px; text-align: center;"><span style="font-size: 12pt;"><strong>CIUDAD1</strong></span></td>
+</tr>
+</tbody>
+</table>
+<table border="1" style="width: 98.7939%;">
+<tbody>
+<tr>
+<td width="150" style="width: 24.6231%; text-align: center;">
+<p><strong>Codigo-ciu</strong></p>
+</td>
+<td width="150" style="width: 24.7236%; text-align: center;">
+<p><strong>Nombre-ciu</strong></p>
+</td>
+<td width="150" style="width: 24.7236%; text-align: center;">
+<p><strong>Nro-habitantes</strong></p>
+</td>
+<td width="150" style="width: 24.7236%; text-align: center;">
+<p><strong>Cod-pais</strong></p>
+</td>
+</tr>
+<tr>
+<td width="150" style="width: 24.6231%;">
+<p>10</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>Medellín</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>2500000</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>1</p>
+</td>
+</tr>
+<tr>
+<td width="150" style="width: 24.6231%;">
+<p>20</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>Cali</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>1800000</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>1</p>
+</td>
+</tr>
+<tr>
+<td width="150" style="width: 24.6231%;">
+<p>30</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>Pereira</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>520000</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>1</p>
+</td>
+</tr>
+<tr>
+<td width="150" style="width: 24.6231%;">
+<p>40</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>New York</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>52000000</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>2</p>
+</td>
+</tr>
+<tr>
+<td width="150" style="width: 24.6231%;">
+<p>50</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>Boston</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>25600000</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>2</p>
+</td>
+</tr>
+<tr>
+<td width="150" style="width: 24.6231%;">
+<p>60</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>Quito</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>4500000</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>3</p>
+</td>
+</tr>
+<tr>
+<td width="150" style="width: 24.6231%;">
+<p>70</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>Guayaquil</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>3600000</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>3</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;"></p>
+<table border="1" style="width: 98.8945%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><span style="font-size: 12pt;"><strong>PAIS</strong></span></td>
+</tr>
+</tbody>
+</table>
+<table border="1" style="width: 98.9949%;">
+<tbody>
+<tr>
+<td width="199" style="width: 32.8643%; text-align: center;">
+<p><strong>Cod-pais</strong></p>
+</td>
+<td width="200" style="width: 33.0653%; text-align: center;">
+<p><strong>Nombre-pais</strong></p>
+</td>
+<td width="200" style="width: 33.0653%; text-align: center;">
+<p><strong>Área-pais</strong></p>
+</td>
+</tr>
+<tr>
+<td width="199" style="width: 32.8643%;">
+<p>1</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>Colombia</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>36000000</p>
+</td>
+</tr>
+<tr>
+<td width="199" style="width: 32.8643%;">
+<p>2</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>EEUU</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>56000000</p>
+</td>
+</tr>
+<tr>
+<td width="199" style="width: 32.8643%;">
+<p>3</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>Ecuador</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>5280000</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;"><span style="font-size: 1.05em;">Las tablas Ciudad1 y Pais reflejan la misma información que se quería almacenar en la tabla original Ciudad. La diferencia es que estas dos últimas tablas NO tienen anomalías de ningún tipo. Ambas tablas están en 3NF porque, en cada tabla, cada atributo no clave depende funcionalmente solamente de la clave primaria, no hay dependencias funcionales entre atributos no PK.</span></p>
+<p style="text-align: justify;"><strong>Conclusión Importante.</strong></p>
+<p style="text-align: justify;">En la explicación dada en este documento se justifica claramente por qué cuando a un modelo entidad relación se le aplican las reglas de traducción vistas en clase, se llega a una base de datos en 3NF, es decir, bien diseñada, sin ningún tipo de anomalía.</p>
+<p> </p>
+<hr />
+<p><a href="https://youtu.be/PLbLmIKSgmY">Tercera Forma Normal - 3NF</a></p>
+<hr />
+<p>Conclusiones al proceso de Normalización de Datos</p>
+<p><a href="https://youtu.be/ZDUGduw3vyc">Conclusiones Normalización</a><br /><br /> </p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="segunda_forma_normal_2nf.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="ejercicio_completo0.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

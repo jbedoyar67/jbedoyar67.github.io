@@ -1,0 +1,702 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>PRIMERA FORMA NORMAL (1NF) | FUNDAMENTOS Y DISEÑO DE BASES DE DATOS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="JORGE IVAN BEDOYA RESTREPO" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-47"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">FUNDAMENTOS Y DISEÑO DE BASES DE DATOS</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">FUNDAMENTOS Y DISEÑO DE BASES DE DATOS</a></li>
+   <li><a href="conceptos_basicos.html" class="daddy">CONCEPTOS BASICOS</a>
+   <ul class="other-section">
+      <li><a href="bases_de_datos_y_dbms.html" class="no-ch">BASES DE DATOS Y DBMS</a></li>
+      <li><a href="niveles_de_abstraccion_de_datos.html" class="no-ch">NIVELES DE ABSTRACCION DE DATOS</a></li>
+      <li><a href="ejemplar_y_esquema.html" class="no-ch">EJEMPLAR Y ESQUEMA</a></li>
+      <li><a href="lenguajes_de_bases_de_datos.html" class="no-ch">LENGUAJES DE BASES DE DATOS</a></li>
+      <li><a href="modelos_de_datos.html" class="no-ch">MODELOS DE DATOS</a></li>
+      <li><a href="tipos_de_usuarios.html" class="no-ch">TIPOS DE USUARIOS</a></li>
+      <li><a href="dba__administrador_de_bases_de_datos.html" class="no-ch">DBA - ADMINISTRADOR DE BASES DE DATOS</a></li>
+      <li><a href="backups_y_tipos.html" class="no-ch">BACKUPS Y TIPOS</a></li>
+   </ul>
+   </li>
+   <li><a href="modelamiento_de_datos.html" class="daddy">MODELAMIENTO DE DATOS</a>
+   <ul class="other-section">
+      <li><a href="que_es.html" class="no-ch">QUE ES?</a></li>
+      <li><a href="modelo_entidad_relacion.html" class="daddy">MODELO ENTIDAD RELACION</a>
+      <ul class="other-section">
+         <li><a href="entidades_e_instancias.html" class="no-ch">ENTIDADES E INSTANCIAS</a></li>
+         <li><a href="atributos_y_tipos.html" class="no-ch">ATRIBUTOS Y TIPOS</a></li>
+         <li><a href="relaciones.html" class="no-ch">RELACIONES</a></li>
+         <li><a href="entidad_debil.html" class="no-ch">ENTIDAD DEBIL</a></li>
+         <li><a href="atributo_en_relacion.html" class="no-ch">ATRIBUTO EN RELACION</a></li>
+      </ul>
+      </li>
+      <li><a href="modelo_entidad_relacion_extendido.html" class="daddy">MODELO ENTIDAD RELACION EXTENDIDO</a>
+      <ul class="other-section">
+         <li><a href="especializacion.html" class="no-ch">ESPECIALIZACION</a></li>
+         <li><a href="generalizacion.html" class="no-ch">GENERALIZACION</a></li>
+      </ul>
+      </li>
+      <li><a href="diagrama_entidad_relacion.html" class="no-ch">DIAGRAMA ENTIDAD RELACION</a></li>
+      <li><a href="ejercicio_completo_de_modelamiento.html" class="no-ch">EJERCICIO COMPLETO DE MODELAMIENTO</a></li>
+   </ul>
+   </li>
+   <li><a href="modelo_relacional.html" class="daddy">MODELO RELACIONAL</a>
+   <ul class="other-section">
+      <li><a href="terminologia_tecnica.html" class="no-ch">TERMINOLOGIA TECNICA</a></li>
+      <li><a href="dominio_de_un_atributo.html" class="no-ch">DOMINIO DE UN ATRIBUTO</a></li>
+      <li><a href="tipos_de_claves.html" class="no-ch">TIPOS DE CLAVES</a></li>
+      <li><a href="reglas_de_mapeo__traduccion.html" class="daddy">REGLAS DE MAPEO / TRADUCCION</a>
+      <ul class="other-section">
+         <li><a href="cantidad_de_tablas.html" class="no-ch">CANTIDAD DE TABLAS</a></li>
+         <li><a href="entidad_normal__fuerte.html" class="no-ch">ENTIDAD NORMAL / FUERTE</a></li>
+         <li><a href="entidad_debil0.html" class="no-ch">ENTIDAD DEBIL</a></li>
+         <li><a href="atributo_multivalorado.html" class="no-ch">ATRIBUTO MULTIVALORADO</a></li>
+         <li><a href="relacion_uno_a_uno.html" class="no-ch">RELACION UNO A UNO</a></li>
+         <li><a href="relacion_uno_a_muchos.html" class="no-ch">RELACION UNO A MUCHOS</a></li>
+         <li><a href="relacion_muchos_a_muchos.html" class="no-ch">RELACION MUCHOS A MUCHOS</a></li>
+         <li><a href="atributo_en_relacion0.html" class="no-ch">ATRIBUTO EN RELACION</a></li>
+         <li><a href="especializacion0.html" class="no-ch">ESPECIALIZACION</a></li>
+         <li><a href="ejercicio_completo.html" class="no-ch">EJERCICIO COMPLETO</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="normalizacion_de_datos.html" class="current-page-parent daddy">NORMALIZACION DE DATOS</a>
+   <ul>
+      <li><a href="introduccion.html" class="no-ch">INTRODUCCION</a></li>
+      <li><a href="anomalias_en_el_diseo.html" class="no-ch">ANOMALIAS EN EL DISEÑO</a></li>
+      <li><a href="tuplas_espurias.html" class="no-ch">TUPLAS ESPURIAS</a></li>
+      <li><a href="dependencia_funcional.html" class="no-ch">DEPENDENCIA FUNCIONAL</a></li>
+      <li class="current-page-parent"><a href="formas_normales.html" class="current-page-parent daddy">FORMAS NORMALES</a>
+      <ul>
+         <li id="active"><a href="primera_forma_normal_1nf.html" class="active no-ch">PRIMERA FORMA NORMAL (1NF)</a></li>
+         <li><a href="segunda_forma_normal_2nf.html" class="no-ch">SEGUNDA FORMA NORMAL (2NF)</a></li>
+         <li><a href="tercera_forma_normal_3nf.html" class="no-ch">TERCERA FORMA NORMAL (3NF)</a></li>
+         <li><a href="ejercicio_completo0.html" class="no-ch">EJERCICIO COMPLETO</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="formas_normales.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="segunda_forma_normal_2nf.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">PRIMERA FORMA NORMAL (1NF)</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id49">
+<div class="iDevice emphasis0" >
+<div id="ta49_128_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;"><strong>PRIMERA FORMA NORMAL (1NF)</strong></p>
+<p style="text-align: justify;">Trabajemos con la tabla Deportista enunciada anteriormente. Dicha tabla podría tener los siguientes datos:</p>
+<table border="1" style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><span style="font-size: 12pt;"><strong>DEPORTISTA</strong></span></td>
+</tr>
+</tbody>
+</table>
+<table border="1" style="width: 98.593%;">
+<tbody>
+<tr>
+<td width="68" style="width: 11.3568%; text-align: center;">
+<p><strong>Cédula</strong></p>
+</td>
+<td width="128" style="width: 20.804%; text-align: center;">
+<p><strong>Nombre</strong></p>
+</td>
+<td width="76" style="width: 12.6633%; text-align: center;">
+<p><strong>Edad</strong></p>
+</td>
+<td width="142" style="width: 23.1156%; text-align: center;">
+<p><strong>Ciudad-Compet.</strong></p>
+</td>
+<td width="189" style="width: 30.6533%; text-align: center;">
+<p><strong>Número-Medalla</strong></p>
+</td>
+</tr>
+<tr>
+<td width="68" style="width: 11.3568%;">
+<p>2500</p>
+</td>
+<td width="128" style="width: 20.804%;">
+<p>Juan Villa</p>
+</td>
+<td width="76" style="width: 12.6633%;">
+<p>25</p>
+</td>
+<td width="142" style="width: 23.1156%;">
+<p>Bogotá</p>
+<p>Medellín</p>
+<p>Cali</p>
+</td>
+<td width="189" style="width: 30.6533%;">
+<p>12</p>
+</td>
+</tr>
+<tr>
+<td width="68" style="width: 11.3568%;">
+<p>3600</p>
+</td>
+<td width="128" style="width: 20.804%;">
+<p>Lina Jaramillo</p>
+</td>
+<td width="76" style="width: 12.6633%;">
+<p>19</p>
+</td>
+<td width="142" style="width: 23.1156%;">
+<p>Medellín</p>
+<p>Bello</p>
+</td>
+<td width="189" style="width: 30.6533%;">
+<p>6</p>
+</td>
+</tr>
+<tr>
+<td width="68" style="width: 11.3568%;">
+<p>5800</p>
+</td>
+<td width="128" style="width: 20.804%;">
+<p>Gregorio Torres</p>
+</td>
+<td width="76" style="width: 12.6633%;">
+<p>22</p>
+</td>
+<td width="142" style="width: 23.1156%;">
+<p>Bogotá</p>
+<p>Fusagasugá</p>
+</td>
+<td width="189" style="width: 30.6533%;">
+<p>3</p>
+</td>
+</tr>
+<tr>
+<td width="68" style="width: 11.3568%;">
+<p>4800</p>
+</td>
+<td width="128" style="width: 20.804%;">
+<p>Ana Vélez</p>
+</td>
+<td width="76" style="width: 12.6633%;">
+<p>18</p>
+</td>
+<td width="142" style="width: 23.1156%;">
+<p>Cali</p>
+</td>
+<td width="189" style="width: 30.6533%;">
+<p>1</p>
+</td>
+</tr>
+<tr>
+<td width="68" style="width: 11.3568%;">
+<p>8500</p>
+</td>
+<td width="128" style="width: 20.804%;">
+<p>Patricia Calle</p>
+</td>
+<td width="76" style="width: 12.6633%;">
+<p>26</p>
+</td>
+<td width="142" style="width: 23.1156%;">
+<p>Bogotá</p>
+<p>Medellín</p>
+</td>
+<td width="189" style="width: 30.6533%;">
+<p>3</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;">La tabla Deportista contiene la cédula del deportista, su nombre, edad, número total de medallas obtenidas y <strong><u>las ciudades</u></strong> donde ha competido el deportista.</p>
+<p style="text-align: justify;">Hay que concluir que la tabla Deportista <strong><u>NO ESTÁ EN 1NF</u></strong> ya que el campo <strong>Ciudad-Competencia es MULTIVALORADO</strong>. Es decir, la tabla Deportista se dice que <strong>NO ESTÁ NORMALIZADA</strong>, no tiene el mínimo grado de eficiencia en su diseño.</p>
+<p style="text-align: justify;"><strong>Definición 1NF.</strong></p>
+<p style="text-align: justify;">Una tabla está en 1NF <strong><u>si TODOS sus atributos son univalorados (atómicos)</u></strong>. En otras palabras, una tabla está en 1NF <strong>si NO TIENE atributos multivalorados</strong>.</p>
+<p style="text-align: justify;">Como se puede ver, en la tabla Deportista, el atributo Ciudad-Competencia es multivalorado, es decir, puede tener varias ciudades dentro de una misma tupla. Por lo tanto, no está en 1NF.</p>
+<p style="text-align: justify;">La pregunta que surge es: <strong>“Qué tiene de malo tener atributos multivalorados en una tabla?”</strong></p>
+<p style="text-align: justify;">Suponga que una de las consultas más usada por el usuario es: <strong>“Listar los nombres de deportistas que han competido en Medellín.”</strong> Para este caso, la consulta se dificulta mucho porque habría que recorrer TODAS las tuplas y en cada una de ellas DESCOMPONER los valores del atributo Ciudad-Competencia hasta obtener las distintas ciudades que hay. Y de ahí preguntar si una de ellas es Medellín. Esta descomposición de la que se habla acá debe ser hecha a través de programación, es decir, se hace desde la aplicación que está accediendo a la base de datos. Como se puede observar, este campo multivalorado genera una dependencia no deseable entre la base de datos y la aplicación. Esa es la razón por la cual no es deseable tener atributos multivalorados en las tablas.</p>
+<p style="text-align: justify;">Importante.</p>
+<p style="text-align: justify;">Solo es deseable convertir un atributo multivalorado en univalorado en el caso de que se vayan a hacer consultas sobre la tabla por ese atributo. Si, de antemano, se sabe que sobre un atributo multivalorado nunca se van a hacer consultas, podría optar por dejarse la tabla NO NORMALIZADA.</p>
+<p style="text-align: justify;">Para normalizar la tabla Deportista, existen dos posibilidades:</p>
+<ul style="text-align: justify;">
+<li>Con redundancia de datos</li>
+<li>Sin redundancia de datos</li>
+</ul>
+<p style="text-align: justify;"><strong>Con redundancia de datos.</strong></p>
+<p style="text-align: justify;">Suponga los mismos datos de la tabla Deportista  pero grabados de la siguiente manera:</p>
+<table border="1" style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><span style="font-size: 12pt;"><strong>DEPORTISTA</strong></span></td>
+</tr>
+</tbody>
+</table>
+<table border="1" style="width: 98.593%;">
+<tbody>
+<tr>
+<td width="120" style="width: 19.6985%; text-align: center;">
+<p><strong>Cédula</strong></p>
+</td>
+<td width="120" style="width: 19.6985%; text-align: center;">
+<p><strong>Nombre</strong></p>
+</td>
+<td width="120" style="width: 19.6985%; text-align: center;">
+<p><strong>Edad</strong></p>
+</td>
+<td width="120" style="width: 19.6985%; text-align: center;">
+<p><strong>Ciudad-Compet.</strong></p>
+</td>
+<td width="120" style="width: 19.799%; text-align: center;">
+<p><strong>Número-Medalla</strong></p>
+</td>
+</tr>
+<tr>
+<td width="120" style="width: 19.6985%;">
+<p>2500</p>
+</td>
+<td width="120" style="width: 19.6985%;">
+<p>Juan Villa</p>
+</td>
+<td width="120" style="width: 19.6985%;">
+<p>25</p>
+</td>
+<td width="120" style="width: 19.6985%;">
+<p>Bogotá</p>
+</td>
+<td width="120" style="width: 19.799%;">
+<p>12</p>
+</td>
+</tr>
+<tr>
+<td width="120" style="width: 19.6985%;">
+<p>2500</p>
+</td>
+<td width="120" style="width: 19.6985%;">
+<p>Juan Villa</p>
+</td>
+<td width="120" style="width: 19.6985%;">
+<p>25</p>
+</td>
+<td width="120" style="width: 19.6985%;">
+<p>Medellín</p>
+</td>
+<td width="120" style="width: 19.799%;">
+<p>12</p>
+</td>
+</tr>
+<tr>
+<td width="120" style="width: 19.6985%;">
+<p>2500</p>
+</td>
+<td width="120" style="width: 19.6985%;">
+<p>Juan Villa</p>
+</td>
+<td width="120" style="width: 19.6985%;">
+<p>25</p>
+</td>
+<td width="120" style="width: 19.6985%;">
+<p>Cali</p>
+</td>
+<td width="120" style="width: 19.799%;">
+<p>12</p>
+</td>
+</tr>
+<tr>
+<td width="120" style="width: 19.6985%;">
+<p>3600</p>
+</td>
+<td width="120" style="width: 19.6985%;">
+<p>Lina Jaramillo</p>
+</td>
+<td width="120" style="width: 19.6985%;">
+<p>19</p>
+</td>
+<td width="120" style="width: 19.6985%;">
+<p>Medellín</p>
+</td>
+<td width="120" style="width: 19.799%;">
+<p>6</p>
+</td>
+</tr>
+<tr>
+<td width="120" style="width: 19.6985%;">
+<p>3600</p>
+</td>
+<td width="120" style="width: 19.6985%;">
+<p>Lina Jaramillo</p>
+</td>
+<td width="120" style="width: 19.6985%;">
+<p>19</p>
+</td>
+<td width="120" style="width: 19.6985%;">
+<p>Bello</p>
+</td>
+<td width="120" style="width: 19.799%;">
+<p>6</p>
+</td>
+</tr>
+<tr>
+<td width="120" style="width: 19.6985%;">
+<p>5800</p>
+</td>
+<td width="120" style="width: 19.6985%;">
+<p>Gregorio Torres</p>
+</td>
+<td width="120" style="width: 19.6985%;">
+<p>22</p>
+</td>
+<td width="120" style="width: 19.6985%;">
+<p>Bogotá</p>
+</td>
+<td width="120" style="width: 19.799%;">
+<p>3</p>
+</td>
+</tr>
+<tr>
+<td width="120" style="width: 19.6985%;">
+<p>5800</p>
+</td>
+<td width="120" style="width: 19.6985%;">
+<p>Gregorio Torres</p>
+</td>
+<td width="120" style="width: 19.6985%;">
+<p>22</p>
+</td>
+<td width="120" style="width: 19.6985%;">
+<p>Fusagasugá</p>
+</td>
+<td width="120" style="width: 19.799%;">
+<p>3</p>
+</td>
+</tr>
+<tr>
+<td width="120" style="width: 19.6985%;">
+<p>4800</p>
+</td>
+<td width="120" style="width: 19.6985%;">
+<p>Ana Vélez</p>
+</td>
+<td width="120" style="width: 19.6985%;">
+<p>18</p>
+</td>
+<td width="120" style="width: 19.6985%;">
+<p>Cali</p>
+</td>
+<td width="120" style="width: 19.799%;">
+<p>1</p>
+</td>
+</tr>
+<tr>
+<td width="120" style="width: 19.6985%;">
+<p>8500</p>
+</td>
+<td width="120" style="width: 19.6985%;">
+<p>Patricia Calle</p>
+</td>
+<td width="120" style="width: 19.6985%;">
+<p>26</p>
+</td>
+<td width="120" style="width: 19.6985%;">
+<p>Bogotá</p>
+</td>
+<td width="120" style="width: 19.799%;">
+<p>3</p>
+</td>
+</tr>
+<tr>
+<td width="120" style="width: 19.6985%;">
+<p>8500</p>
+</td>
+<td width="120" style="width: 19.6985%;">
+<p>Patricia Calle</p>
+</td>
+<td width="120" style="width: 19.6985%;">
+<p>26</p>
+</td>
+<td width="120" style="width: 19.6985%;">
+<p>Medellín</p>
+</td>
+<td width="120" style="width: 19.799%;">
+<p>3</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;">La estructura de la tabla se conserva pero hay una tupla por cada ciudad donde haya participado el deportista. Esta tabla está en 1NF CON REDUNDANCIA de información, es decir, tiene el primer grado de eficiencia, pero todavía tiene problemas de diseño.</p>
+<p style="text-align: justify;"><strong>Sin redundancia de datos.</strong></p>
+<p style="text-align: justify;"><strong>Para entender este caso, que es el que mejor resuelve el problema, recuerde la regla de traducción vista para el atributo multivalorado. Algo le va a parecer familiar en esta explicación.</strong></p>
+<p style="text-align: justify;">La otra manera de convertir la tabla Deportista a 1NF, sugiere partir la tabla original en las siguientes dos tablas:</p>
+<table border="1" style="width: 16.6834%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><strong>DEPORTISTA1</strong></td>
+</tr>
+<tr>
+<td style="width: 100%;">
+<p>Cedula     PK</p>
+<p>Nombre</p>
+<p>Edad</p>
+<p>Numero-Medallas</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;"> </p>
+<table border="1" style="width: 27.5377%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><strong>CIUDADDEP</strong></td>
+</tr>
+<tr>
+<td style="width: 100%;">
+<p>Ced-Deportista</p>
+<p>Ciudad-Competencia</p>
+</td>
+</tr>
+<tr>
+<td style="width: 100%;">
+<p>PK: Ced-Deportista, Ciudad-Competencia</p>
+</td>
+</tr>
+<tr>
+<td style="width: 100%;">
+<p>FK: Ced-Deportista referencia a DEPORTISTA1(Cedula)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;">Los datos correspondientes a estas dos tablas corresponden a los datos que se quieren almacenar originalmente en la tabla Deportista pero cumpliendo con la 1NF, es decir, ningún atributo es multivalorado.</p>
+<p style="text-align: justify;">Los datos de ambas tablas serían los siguientes:</p>
+<table border="1" style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><span style="font-size: 12pt;"><strong>DEPORTISTA1</strong></span></td>
+</tr>
+</tbody>
+</table>
+<table border="1" style="width: 98.7939%;">
+<tbody>
+<tr>
+<td width="150" style="width: 24.6231%; text-align: center;">
+<p><strong>Cédula</strong></p>
+</td>
+<td width="150" style="width: 24.7236%; text-align: center;">
+<p><strong>Nombre</strong></p>
+</td>
+<td width="150" style="width: 24.7236%; text-align: center;">
+<p><strong>Edad</strong></p>
+</td>
+<td width="150" style="width: 24.7236%; text-align: center;">
+<p><strong>Número-Medallas</strong></p>
+</td>
+</tr>
+<tr>
+<td width="150" style="width: 24.6231%;">
+<p>2500</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>Juan Villa</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>25</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>12</p>
+</td>
+</tr>
+<tr>
+<td width="150" style="width: 24.6231%;">
+<p>3600</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>Lina Jaramillo</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>19</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>6</p>
+</td>
+</tr>
+<tr>
+<td width="150" style="width: 24.6231%;">
+<p>5800</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>Gregorio Torres</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>22</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>3</p>
+</td>
+</tr>
+<tr>
+<td width="150" style="width: 24.6231%;">
+<p>4800</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>Ana Vélez</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>18</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>1</p>
+</td>
+</tr>
+<tr>
+<td width="150" style="width: 24.6231%;">
+<p>8500</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>Patricia Calle</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>26</p>
+</td>
+<td width="150" style="width: 24.7236%;">
+<p>3</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;"> </p>
+<table border="1" style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><span style="font-size: 12pt;"><strong>CIUDADDEP</strong></span></td>
+</tr>
+</tbody>
+</table>
+<table border="1" style="width: 99.1959%;">
+<tbody>
+<tr>
+<td width="299" style="width: 49.5477%; text-align: center;">
+<p><strong>Ced-deportista</strong></p>
+</td>
+<td width="299" style="width: 49.6482%; text-align: center;">
+<p><strong>Ciudad-Competencia</strong></p>
+</td>
+</tr>
+<tr>
+<td width="299" style="width: 49.5477%;">
+<p>2500</p>
+</td>
+<td width="299" style="width: 49.6482%;">
+<p>Bogotá</p>
+</td>
+</tr>
+<tr>
+<td width="299" style="width: 49.5477%;">
+<p>2500</p>
+</td>
+<td width="299" style="width: 49.6482%;">
+<p>Medellín</p>
+</td>
+</tr>
+<tr>
+<td width="299" style="width: 49.5477%;">
+<p>2500</p>
+</td>
+<td width="299" style="width: 49.6482%;">
+<p>Cali</p>
+</td>
+</tr>
+<tr>
+<td width="299" style="width: 49.5477%;">
+<p>3600</p>
+</td>
+<td width="299" style="width: 49.6482%;">
+<p>Medellín</p>
+</td>
+</tr>
+<tr>
+<td width="299" style="width: 49.5477%;">
+<p>3600</p>
+</td>
+<td width="299" style="width: 49.6482%;">
+<p>Bello</p>
+</td>
+</tr>
+<tr style="height: 47px;">
+<td style="height: 47px; width: 49.5477%;">
+<p>5800</p>
+</td>
+<td style="height: 47px; width: 49.6482%;">
+<p>Bogotá</p>
+</td>
+</tr>
+<tr style="height: 47px;">
+<td style="height: 47px; width: 49.5477%;">
+<p>5800</p>
+</td>
+<td style="height: 47px; width: 49.6482%;">
+<p>Fusagasugá</p>
+</td>
+</tr>
+<tr style="height: 47px;">
+<td style="height: 47px; width: 49.5477%;">
+<p>4800</p>
+</td>
+<td style="height: 47px; width: 49.6482%;">
+<p>Cali</p>
+</td>
+</tr>
+<tr style="height: 47px;">
+<td style="height: 47px; width: 49.5477%;">
+<p>8500</p>
+</td>
+<td style="height: 47px; width: 49.6482%;">
+<p>Bogotá</p>
+</td>
+</tr>
+<tr style="height: 47px;">
+<td style="height: 47px; width: 49.5477%;">
+<p>8500</p>
+</td>
+<td style="height: 47px; width: 49.6482%;">
+<p>Medellín</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;">Como se puede observar, con las tablas anteriores sabremos los datos de cada deportista y en qué ciudades ha competido. Pero la diferencia es que los atributos de las tablas son univalorados y, ademán, ho hay redundancia de datos.. Por lo tanto, las dos tablas (Deportista1 y CiudadDep) están en 1NF. (De hecho, también están en 2NF y 3NF).</p>
+<hr />
+<p style="text-align: justify;">Video:</p>
+<p style="text-align: justify;"><a href="https://youtu.be/ev85Bkmyr6A">Primera Forma Normal - 1NF</a></p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="formas_normales.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="segunda_forma_normal_2nf.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

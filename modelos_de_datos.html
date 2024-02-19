@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>MODELOS DE DATOS | FUNDAMENTOS Y DISEÑO DE BASES DE DATOS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="JORGE IVAN BEDOYA RESTREPO" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-11"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">FUNDAMENTOS Y DISEÑO DE BASES DE DATOS</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">FUNDAMENTOS Y DISEÑO DE BASES DE DATOS</a></li>
+   <li class="current-page-parent"><a href="conceptos_basicos.html" class="current-page-parent daddy">CONCEPTOS BASICOS</a>
+   <ul>
+      <li><a href="bases_de_datos_y_dbms.html" class="no-ch">BASES DE DATOS Y DBMS</a></li>
+      <li><a href="niveles_de_abstraccion_de_datos.html" class="no-ch">NIVELES DE ABSTRACCION DE DATOS</a></li>
+      <li><a href="ejemplar_y_esquema.html" class="no-ch">EJEMPLAR Y ESQUEMA</a></li>
+      <li><a href="lenguajes_de_bases_de_datos.html" class="no-ch">LENGUAJES DE BASES DE DATOS</a></li>
+      <li id="active"><a href="modelos_de_datos.html" class="active no-ch">MODELOS DE DATOS</a></li>
+      <li><a href="tipos_de_usuarios.html" class="no-ch">TIPOS DE USUARIOS</a></li>
+      <li><a href="dba__administrador_de_bases_de_datos.html" class="no-ch">DBA - ADMINISTRADOR DE BASES DE DATOS</a></li>
+      <li><a href="backups_y_tipos.html" class="no-ch">BACKUPS Y TIPOS</a></li>
+   </ul>
+   </li>
+   <li><a href="modelamiento_de_datos.html" class="daddy">MODELAMIENTO DE DATOS</a>
+   <ul class="other-section">
+      <li><a href="que_es.html" class="no-ch">QUE ES?</a></li>
+      <li><a href="modelo_entidad_relacion.html" class="daddy">MODELO ENTIDAD RELACION</a>
+      <ul class="other-section">
+         <li><a href="entidades_e_instancias.html" class="no-ch">ENTIDADES E INSTANCIAS</a></li>
+         <li><a href="atributos_y_tipos.html" class="no-ch">ATRIBUTOS Y TIPOS</a></li>
+         <li><a href="relaciones.html" class="no-ch">RELACIONES</a></li>
+         <li><a href="entidad_debil.html" class="no-ch">ENTIDAD DEBIL</a></li>
+         <li><a href="atributo_en_relacion.html" class="no-ch">ATRIBUTO EN RELACION</a></li>
+      </ul>
+      </li>
+      <li><a href="modelo_entidad_relacion_extendido.html" class="daddy">MODELO ENTIDAD RELACION EXTENDIDO</a>
+      <ul class="other-section">
+         <li><a href="especializacion.html" class="no-ch">ESPECIALIZACION</a></li>
+         <li><a href="generalizacion.html" class="no-ch">GENERALIZACION</a></li>
+      </ul>
+      </li>
+      <li><a href="diagrama_entidad_relacion.html" class="no-ch">DIAGRAMA ENTIDAD RELACION</a></li>
+      <li><a href="ejercicio_completo_de_modelamiento.html" class="no-ch">EJERCICIO COMPLETO DE MODELAMIENTO</a></li>
+   </ul>
+   </li>
+   <li><a href="modelo_relacional.html" class="daddy">MODELO RELACIONAL</a>
+   <ul class="other-section">
+      <li><a href="terminologia_tecnica.html" class="no-ch">TERMINOLOGIA TECNICA</a></li>
+      <li><a href="dominio_de_un_atributo.html" class="no-ch">DOMINIO DE UN ATRIBUTO</a></li>
+      <li><a href="tipos_de_claves.html" class="no-ch">TIPOS DE CLAVES</a></li>
+      <li><a href="reglas_de_mapeo__traduccion.html" class="daddy">REGLAS DE MAPEO / TRADUCCION</a>
+      <ul class="other-section">
+         <li><a href="cantidad_de_tablas.html" class="no-ch">CANTIDAD DE TABLAS</a></li>
+         <li><a href="entidad_normal__fuerte.html" class="no-ch">ENTIDAD NORMAL / FUERTE</a></li>
+         <li><a href="entidad_debil0.html" class="no-ch">ENTIDAD DEBIL</a></li>
+         <li><a href="atributo_multivalorado.html" class="no-ch">ATRIBUTO MULTIVALORADO</a></li>
+         <li><a href="relacion_uno_a_uno.html" class="no-ch">RELACION UNO A UNO</a></li>
+         <li><a href="relacion_uno_a_muchos.html" class="no-ch">RELACION UNO A MUCHOS</a></li>
+         <li><a href="relacion_muchos_a_muchos.html" class="no-ch">RELACION MUCHOS A MUCHOS</a></li>
+         <li><a href="atributo_en_relacion0.html" class="no-ch">ATRIBUTO EN RELACION</a></li>
+         <li><a href="especializacion0.html" class="no-ch">ESPECIALIZACION</a></li>
+         <li><a href="ejercicio_completo.html" class="no-ch">EJERCICIO COMPLETO</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="normalizacion_de_datos.html" class="daddy">NORMALIZACION DE DATOS</a>
+   <ul class="other-section">
+      <li><a href="introduccion.html" class="no-ch">INTRODUCCION</a></li>
+      <li><a href="anomalias_en_el_diseo.html" class="no-ch">ANOMALIAS EN EL DISEÑO</a></li>
+      <li><a href="tuplas_espurias.html" class="no-ch">TUPLAS ESPURIAS</a></li>
+      <li><a href="dependencia_funcional.html" class="no-ch">DEPENDENCIA FUNCIONAL</a></li>
+      <li><a href="formas_normales.html" class="daddy">FORMAS NORMALES</a>
+      <ul class="other-section">
+         <li><a href="primera_forma_normal_1nf.html" class="no-ch">PRIMERA FORMA NORMAL (1NF)</a></li>
+         <li><a href="segunda_forma_normal_2nf.html" class="no-ch">SEGUNDA FORMA NORMAL (2NF)</a></li>
+         <li><a href="tercera_forma_normal_3nf.html" class="no-ch">TERCERA FORMA NORMAL (3NF)</a></li>
+         <li><a href="ejercicio_completo0.html" class="no-ch">EJERCICIO COMPLETO</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="lenguajes_de_bases_de_datos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="tipos_de_usuarios.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">MODELOS DE DATOS</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id15">
+<div class="iDevice emphasis0" >
+<div id="ta15_114_2" class="block iDevice_content">
+<div class="exe-text"><p><strong>Modelos de Datos y su relación con las Bases de Datos</strong></p>
+<p style="text-align: justify;">Hablar de los modelos de datos es hablar de la historia de las bases de datos. Es decir, la explicación puntual de los diferentes modelos de datos que han existido nos da pie para poder explicar, con cierto detalle, como han evolucionado las bases de datos hasta lo que conocemos hoy como bases de datos relacionales.</p>
+<p style="text-align: justify;">Antes de entrar a explicar cuál es la relación de los modelos de datos con el mundo de las bases de datos, empecemos por definir el concepto "modelo de datos".</p>
+<p style="text-align: justify;">Qué es un modelo de datos?</p>
+<p style="text-align: justify;">Podemos empezar diciendo que sinónimos de modelo son patrón, ejemplo, formato, "esqueleto", representación, entre otros sinónimos. Es este último sinónimo el que mejor nos describe lo que es un modelo. Es la representación de algo que se quiere mostrar o ejemplificar.</p>
+<p style="text-align: justify;">Pues bien, un modelo de datos no es más que una representación gráfica de 4 elementos que están inmersos en cualquier problema de la vida real que se desee sistematizar informáticamente:</p>
+<ol style="text-align: justify;">
+<li>Los datos a manejar dentro del problema</li>
+<li>Las relaciones entre estos datos.</li>
+<li>La semántica de estos datos, es decir, su significado.</li>
+<li>Las reglas de integridad, si existieran. Es decir, las normas que deben cumplir estos datos para que sean correctos dentro del problema a solucionar.</li>
+</ol>
+<p style="text-align: justify;">Se debe recalcar que todo modelo de datos es gráfico, es decir, el resultado final es un dibujo que describe, en el mejor de los casos, los 4 elementos enunciados anteriormente.</p>
+<p style="text-align: justify;"> Existen múltiples modelos de datos para diferentes finalidades. La siguiente es una categorización estructural de los modelos de datos, desde el punto de vista de su construcción. Existen 3 categorías de modelos de datos:</p>
+<ol style="text-align: justify;">
+<li>Modelos de datos basados en objetos</li>
+<li>Modelos de datos basados en registros</li>
+<li>Modelos de datos físicos.</li>
+</ol>
+<p style="text-align: justify;"> A continuación detallaremos cada uno de los tipos de modelos, explicando su función y detallando qué modelos de datos específicos corresponden a cada categoría.</p>
+<p style="text-align: justify;"> <strong>Modelos de Datos Basados en Objetos</strong></p>
+<p style="text-align: justify;">El término objeto en este contexto no es el mismo del término de la programación orientada a objetos. Acá, en este contexto, no hay que ponerle mucho misterio al asunto.</p>
+<p style="text-align: justify;"> Todos sabemos que sinónimos de objeto son "cosa", "elemento", "ítem", entre otros. Y es precisamente por eso que estos modelos se llaman así. Su construcción está basada en cosas o elementos concretos tales como rectángulos, rombos, elipses, flechas, cuadrados, líneas punteadas, entre otras cosas, dependiendo del modelo del cual estemos hablando. En otras palabras, el dibujo que resulta de hacer un modelo de esta categoría está conformado por un subconjunto de esos objetos mencionados anteriormente.</p>
+<p style="text-align: justify;"> Dentro de los modelos basados en objetos, se destacan los siguientes:</p>
+<ol style="text-align: justify;">
+<li>Modelo Entidad / Relación</li>
+<li>Modelo Orientado a Objetos</li>
+<li>Modelo Semántico</li>
+<li>Modelo Funcional</li>
+</ol>
+<p style="text-align: justify;"> En el ámbito de las bases de datos es muy importante el Modelo Entidad/Relación. Los otros 3 modelos se utilizan en otros contextos. Por eso, a nivel de este manual, nos vamos a concentrar en el primer modelo y para eso nos concentraremos, en el módulo 2, en el tema del Modelo Entidad/Relación.</p>
+<p style="text-align: justify;"> <strong>Modelos de Datos Basados en Registros</strong></p>
+<p style="text-align: justify;">Siempre hemos dibujado un registro de la siguiente manera:</p>
+<p> <img src="REGISTRO.jpg" alt="Como se dibuja un registro?" width="619" height="146" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: center;"><strong><span style="font-size: 12pt;">Fuente Propia.</span></strong></p>
+<p style="text-align: justify;"> Pues bien, los modelos basados en registros se denominan de esa forma porque se dibujan con registros, tal y como se dibujó anteriormente.</p>
+<p style="text-align: justify;"> Es en esta categorización de los modelos donde podemos abarcar un poco acerca de la historia de las bases de datos y su evolución hasta lo que encontramos hoy con las bases de datos relacionales.</p>
+<p style="text-align: justify;"> Existen 3 modelos basados en registros y que dan buena cuenta de lo que han sido las bases de datos hasta hoy. Dichos modelos son los siguientes:</p>
+<ol style="text-align: justify;">
+<li>Modelo Jerárquico</li>
+<li>Modelo en Red</li>
+<li>Modelo Relacional</li>
+</ol>
+<p style="text-align: justify;">Para poder entender mejor cual es la diferencia entre estos tres modelos y su relación con la historia de las bases de datos, vamos a desarrollar un mismo ejemplo para los 3 modelos.</p>
+<p style="text-align: justify;">Cabe anotar que los modelos fueron surgiendo con base en problemas o desventajas que tenían los modelos antecesores. Es decir, el modelo en red nació por la necesidad de solucionar algo del modelo jerárquico; y el modelo relacional, por la necesidad de solucionar una desventaja del modelo en red.</p>
+<p style="text-align: justify;">Contextualizando el ejemplo a desarrollar, diremos que vamos a modelar los datos de los estudiantes de una universidad con las materias que está cursando cada estudiante dentro del semestre en curso. Es decir, tenemos dos grandes entes en el ejemplo: ESTUDIANTE y MATERIA. </p>
+<p style="text-align: justify;">Modelo Jerárquico </p>
+<p style="text-align: justify;">El diagrama siguiente muestra lo que sería el modelo jerárquico para el ejemplo de 5 estudiantes específicos de la universidad.</p>
+<p> <img src="JERARQUICO.jpg" alt="Modelo Jerarquico" width="892" height="354" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: center;"><strong>Fuente Propia.</strong></p>
+<p style="text-align: justify;">Por qué se llama modelo jerárquico? Como se puede ver, el modelo está construido en niveles de jerarquía. El esquema con el que se dibuja este modelo es en forma de árbol, es decir, con ramas y hojas. Existe un nodo superior que se denomina nodo raíz y es donde se coloca el nombre de la futura base de datos.</p>
+<p style="text-align: justify;">En dicho modelo, un nodo hijo no puede tener más de un nodo padre.</p>
+<p style="text-align: justify;">Visualmente es un modelo fácil de analizar. Por ejemplo, si se hiciera la pregunta de cuáles son las materias que está cursando actualmente el estudiante Juan Carlos Mesa, es fácil deducir que son Contabilidad de Costos y Álgebra Lineal. Visualmente es fácil seguir el "camino" de las materias de un estudiante específico.</p>
+<p style="text-align: justify;">Pero así como el modelo tiene sus ventajas, también tiene una gran desventaja. Cuál es? Si UNA MATERIA la están cursando varios estudiantes, el cual es un caso muy común, esta materia se debe dibujar tantas veces como estudiantes la cursen. En el ejemplo graficado, se ve que el nodo "Matemáticas I" está dibujado 3 veces ya que dicha materia está siendo cursada por Ana María López, Rosa Marín y Gustavo López.</p>
+<p style="text-align: justify;">Por lo tanto, la principal desventaja del modelo jerárquico es que produce REDUNDANCIA DE INFORMACIÓN.</p>
+<p style="text-align: justify;">En resumen, las principales características del modelo jerárquico son:</p>
+<ul style="text-align: justify;">
+<li>Se guía por jerarquías entre sus nodos</li>
+<li>Existe un nodo principal llamado nodo raíz.</li>
+<li>Visualmente es fácil de interpretar.</li>
+<li>Un nodo hijo no puede tener más de un nodo padre.</li>
+<li>Puede generar, en muchos casos y dependiendo de la información manejada, redundancia de datos.</li>
+</ul>
+<p style="text-align: justify;"> Las primeras bases de datos que surgieron fueron las bases de datos jerárquicas y su implementación física se basó en las características principales del modelo jerárquico. Este tipo de bases de datos nació iniciando la década de 1960 a 1970.</p>
+<p style="text-align: justify;">Modelo en Red </p>
+<p style="text-align: justify;">Para solucionar el problema de la redundancia del modelo jerárquico, surgió el modelo en red. A continuación se presenta el ejemplo de los estudiantes y sus materias, representado por el modelo en red: </p>
+<p><img src="RED.jpg" alt="Modelo en Red" width="646" height="370" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: center;"><strong>Fuente Propia.</strong></p>
+<p style="text-align: justify;">Como se puede apreciar, el problema de la redundancia de datos quedó superado con este modelo. A pesar de que la materia "Matemáticas I" está siendo vista por 3 estudiantes diferentes, solo aparece un nodo para dicha materia.</p>
+<p style="text-align: justify;">Por qué este modelo se llama modelo en red? Como se puede apreciar en el ejemplo, existe un conjunto de apuntadores que permiten unir a los estudiantes con las materias que está cursando. Estos apuntadores conforman una red (entiéndase como red el cruce "indiscriminado" de apuntadores en el dibujo). </p>
+<p style="text-align: justify;">Si notamos bien, en realidad, visualmente es más fácil realizar una consulta en el modelo jerárquico que en el modelo en red, debido a que si esta red de apuntadores crece, es difícil seguirle el rastro a las materias cursadas por un estudiante. </p>
+<p style="text-align: justify;">En resumen, el modelo en red tiene las siguientes características:</p>
+<ul style="text-align: justify;">
+<li>La relación entre registros se da con apuntadores.</li>
+<li>Todos los registros tienen la misma jerarquía.</li>
+<li>El manejo de la red de apuntadores es engorroso, si este tiende a crecer.</li>
+</ul>
+<p style="text-align: justify;">El tipo de bases de datos que nacieron con la concepción del modelo en red se llamaron bases de datos en red. El auge de este tipo de bases de datos se dio finalizando la década entre 1960 y 1970. </p>
+<p style="text-align: justify;">Modelo Relacional</p>
+<p style="text-align: justify;">Con el modelo relacional, los problemas de los modelos jerárquicos y en red desaparecen. Se supera el problema de la redundancia de datos y además se suprime el manejo de apuntadores para la relación entre los datos.</p>
+<p style="text-align: justify;">El diagrama que se muestra a continuación es una demostración de lo dicho anteriormente.</p>
+<p> <img src="RELACIONAL.jpg" alt="Modelo Relacional" width="646" height="317" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: center;"><strong>Fuente Propia.</strong></p>
+<p style="text-align: justify;">Como se puede apreciar, cada objeto dentro del problema se esquematiza con una estructura llamada tabla (más adelante se formalizará este concepto). Y lo que es más importante es que la relación entre los diferentes datos está dada por columnas comunes entre las tablas.</p>
+<p style="text-align: justify;">Es cierto que a nivel visual es mucho más fácil encontrar la información en el modelo jerárquico, pero el modelo relacional tiene, para su implementación, una profunda concepción matemática que lo vuelve un modelo  muy estable.</p>
+<p style="text-align: justify;">El modelo relacional no trabaja con apuntadores ni jerarquías. Solamente lo hace con estructuras más simples de manejar como son las tablas, las filas y las columnas de esas tablas. </p>
+<p style="text-align: justify;">En resumen, el modelo relacional sugiere:</p>
+<ul style="text-align: justify;">
+<li>El manejo de tablas, filas y columnas</li>
+<li>Supresión de apuntadores, los cuales hacen engorroso la captura y almacenamiento de datos.</li>
+<li>Relacionar los datos a través de columnas o campos en común.</li>
+<li>Una formalización de su manejo a través de una concepción matemática bien fundamentada. </li>
+</ul>
+<p style="text-align: justify;">El modelo relacional, en la década de los años 70, dio pie al nacimiento de las bases de datos relacionales, las cuales cumplen con las características anteriormente anotadas.</p>
+<p style="text-align: justify;">En este punto de la exposición del tema, no se ha preguntado usted por qué las bases de datos relacionales han persistido tanto en el tiempo, mientras que las bases de datos jerárquicas y en red solo duraron unos pocos años?</p>
+<p style="text-align: justify;">La concepción matemática del modelo relacional hace que sus bases sean muy sólidas y formales, lo cual sugiere que cualquier otra metodología de almacenamiento de datos que desee reemplazar al modelo relacional, debe pasar por encima de esta concepción matemática, lo cual es muy difícil. En el módulo referente al modelo relacional, se detallará mucho más en cuáles son los conceptos matemáticos involucrados en él. </p>
+<p style="text-align: justify;"><strong>Modelos de Datos Físicos</strong> </p>
+<p style="text-align: justify;">Los modelos de datos físicos son aquellos que permiten esquematizar la implementación física del almacenamiento de datos. Es decir, permite mostrar qué estructuras físicas de almacenamiento de datos se van a utilizar. Es un tipo de modelo muy utilizado por el DBA.</p>
+<p style="text-align: justify;">Dentro de los modelos de datos físicos se encuentran los siguientes: </p>
+<ol style="text-align: justify;">
+<li>Modelo de Unificación</li>
+<li>Modelo de Memoria por Marcos. </li>
+</ol>
+<p style="text-align: justify;">La descripción detallada de este tipo de modelos escapa del ámbito del tema de este curso.</p></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper MultiSelectIdevice em_iDevice" id="id80">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Pregunta de Selección Múltiple</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<div id="actitity-80_108">
+<form name="multi-select-form-80_108" action="#" class="activity-form multi-select-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion80_108" class="block question iDevice_content">
+<p>Una de sus grandes desventajas es la alta redundancia de datos que permite.</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op80_1080" class="sr-av"><a href="#answer-80_111">Opción 1</a></label><input type="checkbox" id="op80_1080" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-80_111"><div id="taans80_111" class="block iDevice_content">
+<p>Modelo Relacional</p>
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-80_1080" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op80_1081" class="sr-av"><a href="#answer-80_2642">Opción 2</a></label><input type="checkbox" id="op80_1081" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-80_2642"><div id="taans80_2642" class="block iDevice_content">
+<p>Modelo Jerárquico</p>
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-80_1081" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op80_1082" class="sr-av"><a href="#answer-80_2644">Opción 3</a></label><input type="checkbox" id="op80_1082" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-80_2644"><div id="taans80_2644" class="block iDevice_content">
+<p>Modelo en Red</p>
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-80_1082" style="display:none"></section>
+</section>
+</section>
+<div class="block iDevice_buttons feedback-button js-required">
+<p>
+<input type="button" name="submitSelect" class="feedbackbutton multi-select-feedback-toggler" value="Mostrar retroalimentación" id="multi-select-feedback-toggler-3-80_108" /> 
+</p>
+</div>
+<section id="f80_108" class="js-hidden js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+
+<div id="tafeedback80_108" class="feedback iDevice_content">
+<p>El modelo jerárquico tiene estructura de árbol, en el cual un mismo hijo puede tener varios nodos padres al mismo tiempo, lo cual hace que exista mucha redundancia en él.</p>
+</div>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-80_111" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-80_2642" class="right">Correcto</a></li>
+<li><a href="#answer-80_2644" class="wrong">Incorrecto</a></li>
+</ol>
+</section>
+</div>
+</section>
+<section class="question">
+<div id="actitity-80_2646">
+<form name="multi-select-form-80_2646" action="#" class="activity-form multi-select-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion80_2646" class="block question iDevice_content">
+<p>El orden de aparición de los diferentes modelos que han existido es el siguiente:</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op80_26460" class="sr-av"><a href="#answer-80_2649">Opción 1</a></label><input type="checkbox" id="op80_26460" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-80_2649"><div id="taans80_2649" class="block iDevice_content">
+<p>Relacional, En Red, Jerárquico</p>
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-80_26460" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op80_26461" class="sr-av"><a href="#answer-80_2651">Opción 2</a></label><input type="checkbox" id="op80_26461" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-80_2651"><div id="taans80_2651" class="block iDevice_content">
+<p>En Red, Relacional, Jerárquico</p>
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-80_26461" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op80_26462" class="sr-av"><a href="#answer-80_2653">Opción 3</a></label><input type="checkbox" id="op80_26462" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-80_2653"><div id="taans80_2653" class="block iDevice_content">
+<p>Relacional, Jerárquico, En Red</p>
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-80_26462" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op80_26463" class="sr-av"><a href="#answer-80_2655">Opción 4</a></label><input type="checkbox" id="op80_26463" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-80_2655"><div id="taans80_2655" class="block iDevice_content">
+<p>Jerárquico, En Red, Relacional</p>
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-80_26463" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op80_26464" class="sr-av"><a href="#answer-80_2657">Opción 5</a></label><input type="checkbox" id="op80_26464" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-80_2657"><div id="taans80_2657" class="block iDevice_content">
+<p>Jerárquico, Relacional, En Red</p>
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-80_26464" style="display:none"></section>
+</section>
+</section>
+<div class="block iDevice_buttons feedback-button js-required">
+<p>
+<input type="button" name="submitSelect" class="feedbackbutton multi-select-feedback-toggler" value="Mostrar retroalimentación" id="multi-select-feedback-toggler-5-80_2646" /> 
+</p>
+</div>
+<section id="f80_2646" class="js-hidden js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+
+<div id="tafeedback80_2646" class="feedback iDevice_content">
+<p>La historia de las bases de datos ha evolucionado, empezando por las bases de datos jerárquicas, continuando con las bases de datos en red y actualmente con las bases de datos relacionales.</p>
+</div>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-80_2649" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-80_2651" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-80_2653" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-80_2655" class="right">Correcto</a></li>
+<li><a href="#answer-80_2657" class="wrong">Incorrecto</a></li>
+</ol>
+</section>
+</div>
+</section>
+<section class="question">
+<div id="actitity-80_2659">
+<form name="multi-select-form-80_2659" action="#" class="activity-form multi-select-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion80_2659" class="block question iDevice_content">
+<p>El principal elemento que tenían las bases de datos en red era:</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op80_26590" class="sr-av"><a href="#answer-80_2662">Opción 1</a></label><input type="checkbox" id="op80_26590" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-80_2662"><div id="taans80_2662" class="block iDevice_content">
+<p>Puntero</p>
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-80_26590" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op80_26591" class="sr-av"><a href="#answer-80_2664">Opción 2</a></label><input type="checkbox" id="op80_26591" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-80_2664"><div id="taans80_2664" class="block iDevice_content">
+<p>Tabla</p>
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-80_26591" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op80_26592" class="sr-av"><a href="#answer-80_2666">Opción 3</a></label><input type="checkbox" id="op80_26592" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-80_2666"><div id="taans80_2666" class="block iDevice_content">
+<p>Variable</p>
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-80_26592" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op80_26593" class="sr-av"><a href="#answer-80_2668">Opción 4</a></label><input type="checkbox" id="op80_26593" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-80_2668"><div id="taans80_2668" class="block iDevice_content">
+<p>Columnas</p>
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-80_26593" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op80_26594" class="sr-av"><a href="#answer-80_2670">Opción 5</a></label><input type="checkbox" id="op80_26594" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-80_2670"><div id="taans80_2670" class="block iDevice_content">
+<p>Ninguna de las anteriores</p>
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-80_26594" style="display:none"></section>
+</section>
+</section>
+<div class="block iDevice_buttons feedback-button js-required">
+<p>
+<input type="button" name="submitSelect" class="feedbackbutton multi-select-feedback-toggler" value="Mostrar retroalimentación" id="multi-select-feedback-toggler-5-80_2659" /> 
+</p>
+</div>
+<section id="f80_2659" class="js-hidden js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+
+<div id="tafeedback80_2659" class="feedback iDevice_content">
+<p>El componente del modelo en red que permite relacionar los datos es el puntero.</p>
+</div>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-80_2662" class="right">Correcto</a></li>
+<li><a href="#answer-80_2664" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-80_2666" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-80_2668" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-80_2670" class="wrong">Incorrecto</a></li>
+</ol>
+</section>
+</div>
+</section>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper TrueFalseIdevice em_iDevice" id="id81">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Pregunta Verdadero-Falso</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta81_100" class="block iDevice_content">
+
+</div>
+<section class="question">
+<form name="true-false-form-0b81" action="#" class="activity-form">
+<h1 class="js-sr-av">Pregunta 1</h1>
+<div id="taquestion0b81" class="block iDevice_content">
+<p>En el modelo jerárquico, la relación entre los datos se da por medio de los niveles del árbol.</p>
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b81"><input type="radio" name="option0b81" id="true0b81" class="exe-radio-option exe-radio-option-0-2-0b81-truefalse" /> Verdadero</label> 
+<label for="false0b81"><input type="radio" name="option0b81" id="false0b81" class="exe-radio-option exe-radio-option-1-2-0b81-truefalse" /> Falso</label>
+</p>
+</form>
+<section id="s0b81" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p><strong id="s0b81-result" class="right">Verdadero</strong></p>
+<p>Por tener una estructura de árbol, los datos se relacionan por el enlace que hay entre los nodos padres y sus nodos hijos.</p>
+</section>
+</section>
+<section class="question">
+<form name="true-false-form-1b81" action="#" class="activity-form">
+<h1 class="js-sr-av">Pregunta 2</h1>
+<div id="taquestion1b81" class="block iDevice_content">
+<p>En el modelo relacional existe redundancia de datos</p>
+</div>
+<p class="iDevice_answer js-required">
+<label for="true1b81"><input type="radio" name="option1b81" id="true1b81" class="exe-radio-option exe-radio-option-0-2-1b81-truefalse" /> Verdadero</label> 
+<label for="false1b81"><input type="radio" name="option1b81" id="false1b81" class="exe-radio-option exe-radio-option-1-2-1b81-truefalse" /> Falso</label>
+</p>
+</form>
+<section id="s1b81" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p><strong id="s1b81-result" class="wrong">Falso</strong></p>
+<p>Al contrario, el modelo relacional resuelve los problemas de los otros dos modelos: redundancia del modelo jerárquico y manejo de punteros del modelo en red.</p>
+</section>
+</section>
+<section class="question">
+<form name="true-false-form-2b81" action="#" class="activity-form">
+<h1 class="js-sr-av">Pregunta 3</h1>
+<div id="taquestion2b81" class="block iDevice_content">
+<p>En el modelo relacional, los datos se relacionan por medio de campos en común que tengan las tablas.</p>
+</div>
+<p class="iDevice_answer js-required">
+<label for="true2b81"><input type="radio" name="option2b81" id="true2b81" class="exe-radio-option exe-radio-option-0-2-2b81-truefalse" /> Verdadero</label> 
+<label for="false2b81"><input type="radio" name="option2b81" id="false2b81" class="exe-radio-option exe-radio-option-1-2-2b81-truefalse" /> Falso</label>
+</p>
+</form>
+<section id="s2b81" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p><strong id="s2b81-result" class="right">Verdadero</strong></p>
+<p>Es la gran ventaja del modelo relacional. De esta manera, se evita el uso de punteros que dificultan las consultas.</p>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="lenguajes_de_bases_de_datos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="tipos_de_usuarios.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

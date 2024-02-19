@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>ESPECIALIZACION | FUNDAMENTOS Y DISEÑO DE BASES DE DATOS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="JORGE IVAN BEDOYA RESTREPO" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-40"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">FUNDAMENTOS Y DISEÑO DE BASES DE DATOS</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">FUNDAMENTOS Y DISEÑO DE BASES DE DATOS</a></li>
+   <li><a href="conceptos_basicos.html" class="daddy">CONCEPTOS BASICOS</a>
+   <ul class="other-section">
+      <li><a href="bases_de_datos_y_dbms.html" class="no-ch">BASES DE DATOS Y DBMS</a></li>
+      <li><a href="niveles_de_abstraccion_de_datos.html" class="no-ch">NIVELES DE ABSTRACCION DE DATOS</a></li>
+      <li><a href="ejemplar_y_esquema.html" class="no-ch">EJEMPLAR Y ESQUEMA</a></li>
+      <li><a href="lenguajes_de_bases_de_datos.html" class="no-ch">LENGUAJES DE BASES DE DATOS</a></li>
+      <li><a href="modelos_de_datos.html" class="no-ch">MODELOS DE DATOS</a></li>
+      <li><a href="tipos_de_usuarios.html" class="no-ch">TIPOS DE USUARIOS</a></li>
+      <li><a href="dba__administrador_de_bases_de_datos.html" class="no-ch">DBA - ADMINISTRADOR DE BASES DE DATOS</a></li>
+      <li><a href="backups_y_tipos.html" class="no-ch">BACKUPS Y TIPOS</a></li>
+   </ul>
+   </li>
+   <li><a href="modelamiento_de_datos.html" class="daddy">MODELAMIENTO DE DATOS</a>
+   <ul class="other-section">
+      <li><a href="que_es.html" class="no-ch">QUE ES?</a></li>
+      <li><a href="modelo_entidad_relacion.html" class="daddy">MODELO ENTIDAD RELACION</a>
+      <ul class="other-section">
+         <li><a href="entidades_e_instancias.html" class="no-ch">ENTIDADES E INSTANCIAS</a></li>
+         <li><a href="atributos_y_tipos.html" class="no-ch">ATRIBUTOS Y TIPOS</a></li>
+         <li><a href="relaciones.html" class="no-ch">RELACIONES</a></li>
+         <li><a href="entidad_debil.html" class="no-ch">ENTIDAD DEBIL</a></li>
+         <li><a href="atributo_en_relacion.html" class="no-ch">ATRIBUTO EN RELACION</a></li>
+      </ul>
+      </li>
+      <li><a href="modelo_entidad_relacion_extendido.html" class="daddy">MODELO ENTIDAD RELACION EXTENDIDO</a>
+      <ul class="other-section">
+         <li><a href="especializacion.html" class="no-ch">ESPECIALIZACION</a></li>
+         <li><a href="generalizacion.html" class="no-ch">GENERALIZACION</a></li>
+      </ul>
+      </li>
+      <li><a href="diagrama_entidad_relacion.html" class="no-ch">DIAGRAMA ENTIDAD RELACION</a></li>
+      <li><a href="ejercicio_completo_de_modelamiento.html" class="no-ch">EJERCICIO COMPLETO DE MODELAMIENTO</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="modelo_relacional.html" class="current-page-parent daddy">MODELO RELACIONAL</a>
+   <ul>
+      <li><a href="terminologia_tecnica.html" class="no-ch">TERMINOLOGIA TECNICA</a></li>
+      <li><a href="dominio_de_un_atributo.html" class="no-ch">DOMINIO DE UN ATRIBUTO</a></li>
+      <li><a href="tipos_de_claves.html" class="no-ch">TIPOS DE CLAVES</a></li>
+      <li class="current-page-parent"><a href="reglas_de_mapeo__traduccion.html" class="current-page-parent daddy">REGLAS DE MAPEO / TRADUCCION</a>
+      <ul>
+         <li><a href="cantidad_de_tablas.html" class="no-ch">CANTIDAD DE TABLAS</a></li>
+         <li><a href="entidad_normal__fuerte.html" class="no-ch">ENTIDAD NORMAL / FUERTE</a></li>
+         <li><a href="entidad_debil0.html" class="no-ch">ENTIDAD DEBIL</a></li>
+         <li><a href="atributo_multivalorado.html" class="no-ch">ATRIBUTO MULTIVALORADO</a></li>
+         <li><a href="relacion_uno_a_uno.html" class="no-ch">RELACION UNO A UNO</a></li>
+         <li><a href="relacion_uno_a_muchos.html" class="no-ch">RELACION UNO A MUCHOS</a></li>
+         <li><a href="relacion_muchos_a_muchos.html" class="no-ch">RELACION MUCHOS A MUCHOS</a></li>
+         <li><a href="atributo_en_relacion0.html" class="no-ch">ATRIBUTO EN RELACION</a></li>
+         <li id="active"><a href="especializacion0.html" class="active no-ch">ESPECIALIZACION</a></li>
+         <li><a href="ejercicio_completo.html" class="no-ch">EJERCICIO COMPLETO</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="normalizacion_de_datos.html" class="daddy">NORMALIZACION DE DATOS</a>
+   <ul class="other-section">
+      <li><a href="introduccion.html" class="no-ch">INTRODUCCION</a></li>
+      <li><a href="anomalias_en_el_diseo.html" class="no-ch">ANOMALIAS EN EL DISEÑO</a></li>
+      <li><a href="tuplas_espurias.html" class="no-ch">TUPLAS ESPURIAS</a></li>
+      <li><a href="dependencia_funcional.html" class="no-ch">DEPENDENCIA FUNCIONAL</a></li>
+      <li><a href="formas_normales.html" class="daddy">FORMAS NORMALES</a>
+      <ul class="other-section">
+         <li><a href="primera_forma_normal_1nf.html" class="no-ch">PRIMERA FORMA NORMAL (1NF)</a></li>
+         <li><a href="segunda_forma_normal_2nf.html" class="no-ch">SEGUNDA FORMA NORMAL (2NF)</a></li>
+         <li><a href="tercera_forma_normal_3nf.html" class="no-ch">TERCERA FORMA NORMAL (3NF)</a></li>
+         <li><a href="ejercicio_completo0.html" class="no-ch">EJERCICIO COMPLETO</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="atributo_en_relacion0.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="ejercicio_completo.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">ESPECIALIZACION</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id60">
+<div class="iDevice emphasis0" >
+<div id="ta60_111_2" class="block iDevice_content">
+<div class="exe-text"><p><strong>Como traducir una especialización disjunta?</strong></p>
+<p style="text-align: justify;">Como recordaremos en temas anteriores, hablábamos de la diferencia sustancial que existe entre una especialización disjunta y una solapada. Recordemos que la disjunta es aquella especialización donde las instancias de la entidad padre se pueden ver reflejadas en una sola entidad hija, no en dos o más.</p>
+<p style="text-align: justify;">Una especialización disjunta con N entidades hijas tiene dos posibles traducciones igualmente válidas:</p>
+<ul>
+<li style="text-align: justify;">Se traduce en N+1 tablas, cada tabla representando una entidad del diagrama. La entidad padre se traduce literalmente, es decir, aplicando la regla de traducción de la Entidad Normal. Cada entidad hija se traduce como una tabla cuyos atributos son la clave de la entidad padre junto con los atributos propios. La clave primaria de estas “tablas hijas” será la clave de la entidad padre.</li>
+<li style="text-align: justify;">Se traduce en N tablas, una por cada entidad hija. Cada tabla generada se compondrá de los atributos de la entidad padre junto con los atributos propios de la entidad hija. Y la clave primaria de cada tabla es la clave de la entidad padre.</li>
+</ul>
+<p><strong> </strong>Ejemplo:</p>
+<p> <img src="DISYUNTA.jpg" alt="DY" width="449" height="299" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: center;"><strong>Fuente Propia.</strong></p>
+<p> Apliquemos la primera posibilidad de traducción que existe:</p>
+<table border="1" style="width: 17.0854%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><strong>CARRO</strong></td>
+</tr>
+<tr>
+<td style="width: 100%;">
+<p>Placa      PK</p>
+<p>Marca</p>
+<p>Modelo</p>
+<p>Color</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<table border="1" style="width: 19.397%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><strong>PARTICULAR</strong></td>
+</tr>
+<tr>
+<td style="width: 100%;">
+<p>Placa    PK</p>
+<p>Fecha-Vencimiento-SOAT</p>
+</td>
+</tr>
+<tr>
+<td style="width: 100%;">
+<p>FK: Placa referencia a CARRO(Placa)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<table border="1" style="width: 19.2965%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><strong>PUBLICO</strong></td>
+</tr>
+<tr>
+<td width="206" style="width: 100%;">
+<p>Placa  PK</p>
+<p>Fecha-Vigencia-Permiso</p>
+</td>
+</tr>
+<tr>
+<td style="width: 100%;">
+<p>FK: Placa referencia a CARRO(Placa)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;">Como se puede ver en este caso, se está aplicando el concepto de herencia que hablamos en su momento, es decir, las entidades hijas heredaban los atributos de la entidad padre. Acá se manifiesta esto a través del concepto de que las “tablas hijas” tienen clave foráneas que apuntan a la “tabla padre” y de esta forma desde las hijas se captura la información del padre.</p>
+<p>Como comentario adicional, este es el único caso en el cual la clave primaria de una tabla es a la vez clave foránea de la misma.</p>
+<p>Aplicando la segunda posibilidad de traducción tenemos lo siguiente:</p>
+<table border="1" style="width: 19.196%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><strong>PARTICULAR</strong></td>
+</tr>
+<tr>
+<td style="width: 100%;">
+<p>Placa    PK</p>
+<p>Marca</p>
+<p>Modelo</p>
+<p>Color</p>
+<p>Fecha-Vencimiento-SOAT</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<table border="1" style="width: 19.4975%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><strong>PUBLICO</strong></td>
+</tr>
+<tr>
+<td style="width: 100%;">
+<p>Placa    PK</p>
+<p>Marca</p>
+<p>Modelo</p>
+<p>Color</p>
+<p>Fecha-Vigencia-Permiso</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Desprevenidamente podemos concluir que esta segunda traducción tiene redundancia de datos y que por lo tanto no es válida. Pero SÍ ES VALIDA Y NO TIENE REDUNDANCIA. Por qué?</p>
+<p>La decisión de utilizar una traducción u otra dependerá del diseñador de la base de datos, que tendrá criterios suficientes para determinar la mejor opción, de acuerdo a las consultas que se van a hacer sobre las tablas.</p>
+<p><strong> </strong><strong>Como traducir una especialización solapada?</strong></p>
+<p>Recordemos que una especialización solapada es aquella donde las instancias de la entidad padre pueden verse reflejadas en más de una  entidad hija.</p>
+<p>La especialización solapada, a diferencia de la disjunta, tiene una sola opción de traducción y corresponde a la primera regla de traducción enunciada en la especialización disjunta, es decir, N+1 tablas cada tabla representando una entidad del diagrama. La entidad padre se traduce literalmente, es decir, aplicando la regla de traducción de la Entidad Normal. Cada entidad hija se traduce como una tabla cuyos atributos son la clave de la entidad padre junto con los atributos propios. La clave primaria de estas “tablas hijas” será la clave de la entidad padre.</p>
+<p>Si a este tipo de especialización le aplicamos la segunda posibilidad de traducción de la disjunta, el diseño quedaría con redundancia de datos. Por qué?</p>
+<p>Ejemplo:</p>
+<p> <img src="SOLAPADA.jpg" alt="SP" width="529" height="316" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: center;"><strong>Fuente Propia.</strong></p>
+<p>Como podemos ver, la especialización del diagrama siguiente es solapada ya que un profesor puede ser a la vez de medio tiempo e investigador.</p>
+<p>Aplicando la regla de traducción, tenemos lo siguiente:</p>
+<table border="1" style="width: 15.1759%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><strong>PROFESOR</strong></td>
+</tr>
+<tr>
+<td style="width: 100%;">
+<p>Cedula     PK</p>
+<p>Nombre</p>
+<p>Edad</p>
+<p>Profesion</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<table border="1" style="width: 19.6985%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><strong>MEDIOTIEMPO</strong></td>
+</tr>
+<tr>
+<td style="width: 100%;">
+<p>Cedula    PK</p>
+<p>Horario-Atención</p>
+</td>
+</tr>
+<tr>
+<td style="width: 100%;">
+<p>FK: Cedula referencia a PROFESOR(Cedula)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<table border="1" style="width: 17.6884%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><strong>INVESTIGADOR</strong></td>
+</tr>
+<tr>
+<td style="width: 100%;">
+<p>Cedula    PK</p>
+<p>Tema-Proyecto</p>
+<p>Horas-Semanales</p>
+</td>
+</tr>
+<tr>
+<td style="width: 100%;">
+<p>FK: Cedula referencia a PROFESOR(Cedula)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Como podemos ver, la información que es común a cualquier tipo de profesor se tendrá en la tabla Profesor y lo que es específico de cada tipo se tiene en las tablas MedioTiempo e Investigador. Así podemos concluir que en este diseño no se genera redundancia de información.</p>
+<p>Conclusión:</p>
+<p>Aplicando estas reglas de traducción a cualquier modelo entidad relación, obtendremos como resultado un diseño de base de datos eficientemente diseñado. La razón de esta eficiencia se explicará en el siguiente módulo referente al tema de Normalización de Datos.</p>
+<hr />
+<p>Video:</p>
+<p><a href="https://youtu.be/YZ8pCXY0N6A">Traducción de Especialización</a></p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="atributo_en_relacion0.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="ejercicio_completo.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

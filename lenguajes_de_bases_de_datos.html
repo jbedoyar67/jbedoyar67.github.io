@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>LENGUAJES DE BASES DE DATOS | FUNDAMENTOS Y DISEÑO DE BASES DE DATOS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="JORGE IVAN BEDOYA RESTREPO" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-10"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">FUNDAMENTOS Y DISEÑO DE BASES DE DATOS</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">FUNDAMENTOS Y DISEÑO DE BASES DE DATOS</a></li>
+   <li class="current-page-parent"><a href="conceptos_basicos.html" class="current-page-parent daddy">CONCEPTOS BASICOS</a>
+   <ul>
+      <li><a href="bases_de_datos_y_dbms.html" class="no-ch">BASES DE DATOS Y DBMS</a></li>
+      <li><a href="niveles_de_abstraccion_de_datos.html" class="no-ch">NIVELES DE ABSTRACCION DE DATOS</a></li>
+      <li><a href="ejemplar_y_esquema.html" class="no-ch">EJEMPLAR Y ESQUEMA</a></li>
+      <li id="active"><a href="lenguajes_de_bases_de_datos.html" class="active no-ch">LENGUAJES DE BASES DE DATOS</a></li>
+      <li><a href="modelos_de_datos.html" class="no-ch">MODELOS DE DATOS</a></li>
+      <li><a href="tipos_de_usuarios.html" class="no-ch">TIPOS DE USUARIOS</a></li>
+      <li><a href="dba__administrador_de_bases_de_datos.html" class="no-ch">DBA - ADMINISTRADOR DE BASES DE DATOS</a></li>
+      <li><a href="backups_y_tipos.html" class="no-ch">BACKUPS Y TIPOS</a></li>
+   </ul>
+   </li>
+   <li><a href="modelamiento_de_datos.html" class="daddy">MODELAMIENTO DE DATOS</a>
+   <ul class="other-section">
+      <li><a href="que_es.html" class="no-ch">QUE ES?</a></li>
+      <li><a href="modelo_entidad_relacion.html" class="daddy">MODELO ENTIDAD RELACION</a>
+      <ul class="other-section">
+         <li><a href="entidades_e_instancias.html" class="no-ch">ENTIDADES E INSTANCIAS</a></li>
+         <li><a href="atributos_y_tipos.html" class="no-ch">ATRIBUTOS Y TIPOS</a></li>
+         <li><a href="relaciones.html" class="no-ch">RELACIONES</a></li>
+         <li><a href="entidad_debil.html" class="no-ch">ENTIDAD DEBIL</a></li>
+         <li><a href="atributo_en_relacion.html" class="no-ch">ATRIBUTO EN RELACION</a></li>
+      </ul>
+      </li>
+      <li><a href="modelo_entidad_relacion_extendido.html" class="daddy">MODELO ENTIDAD RELACION EXTENDIDO</a>
+      <ul class="other-section">
+         <li><a href="especializacion.html" class="no-ch">ESPECIALIZACION</a></li>
+         <li><a href="generalizacion.html" class="no-ch">GENERALIZACION</a></li>
+      </ul>
+      </li>
+      <li><a href="diagrama_entidad_relacion.html" class="no-ch">DIAGRAMA ENTIDAD RELACION</a></li>
+      <li><a href="ejercicio_completo_de_modelamiento.html" class="no-ch">EJERCICIO COMPLETO DE MODELAMIENTO</a></li>
+   </ul>
+   </li>
+   <li><a href="modelo_relacional.html" class="daddy">MODELO RELACIONAL</a>
+   <ul class="other-section">
+      <li><a href="terminologia_tecnica.html" class="no-ch">TERMINOLOGIA TECNICA</a></li>
+      <li><a href="dominio_de_un_atributo.html" class="no-ch">DOMINIO DE UN ATRIBUTO</a></li>
+      <li><a href="tipos_de_claves.html" class="no-ch">TIPOS DE CLAVES</a></li>
+      <li><a href="reglas_de_mapeo__traduccion.html" class="daddy">REGLAS DE MAPEO / TRADUCCION</a>
+      <ul class="other-section">
+         <li><a href="cantidad_de_tablas.html" class="no-ch">CANTIDAD DE TABLAS</a></li>
+         <li><a href="entidad_normal__fuerte.html" class="no-ch">ENTIDAD NORMAL / FUERTE</a></li>
+         <li><a href="entidad_debil0.html" class="no-ch">ENTIDAD DEBIL</a></li>
+         <li><a href="atributo_multivalorado.html" class="no-ch">ATRIBUTO MULTIVALORADO</a></li>
+         <li><a href="relacion_uno_a_uno.html" class="no-ch">RELACION UNO A UNO</a></li>
+         <li><a href="relacion_uno_a_muchos.html" class="no-ch">RELACION UNO A MUCHOS</a></li>
+         <li><a href="relacion_muchos_a_muchos.html" class="no-ch">RELACION MUCHOS A MUCHOS</a></li>
+         <li><a href="atributo_en_relacion0.html" class="no-ch">ATRIBUTO EN RELACION</a></li>
+         <li><a href="especializacion0.html" class="no-ch">ESPECIALIZACION</a></li>
+         <li><a href="ejercicio_completo.html" class="no-ch">EJERCICIO COMPLETO</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="normalizacion_de_datos.html" class="daddy">NORMALIZACION DE DATOS</a>
+   <ul class="other-section">
+      <li><a href="introduccion.html" class="no-ch">INTRODUCCION</a></li>
+      <li><a href="anomalias_en_el_diseo.html" class="no-ch">ANOMALIAS EN EL DISEÑO</a></li>
+      <li><a href="tuplas_espurias.html" class="no-ch">TUPLAS ESPURIAS</a></li>
+      <li><a href="dependencia_funcional.html" class="no-ch">DEPENDENCIA FUNCIONAL</a></li>
+      <li><a href="formas_normales.html" class="daddy">FORMAS NORMALES</a>
+      <ul class="other-section">
+         <li><a href="primera_forma_normal_1nf.html" class="no-ch">PRIMERA FORMA NORMAL (1NF)</a></li>
+         <li><a href="segunda_forma_normal_2nf.html" class="no-ch">SEGUNDA FORMA NORMAL (2NF)</a></li>
+         <li><a href="tercera_forma_normal_3nf.html" class="no-ch">TERCERA FORMA NORMAL (3NF)</a></li>
+         <li><a href="ejercicio_completo0.html" class="no-ch">EJERCICIO COMPLETO</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="ejemplar_y_esquema.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="modelos_de_datos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">LENGUAJES DE BASES DE DATOS</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id14">
+<div class="iDevice emphasis0" >
+<div id="ta14_113_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;"><strong>Lenguajes Utilizados con Bases de Datos</strong></p>
+<p style="text-align: justify;"><strong> </strong>Así como existen muchos lenguajes de programación en los cuales podemos implementar aplicaciones que manejen archivos convencionales de datos, también existen lenguajes que se crearon con el fin de optimizar el acceso a los datos de una base de datos.</p>
+<p style="text-align: justify;"> Antes de entrar a detallar en el tema de los lenguajes utilizados en bases de datos, debemos tener claro los conceptos de lenguajes procedimentales y lenguajes no procedimentales. Así que procedamos a introducir estos dos conceptos. Es de aclarar que la definición que se va a dar de esto dos conceptos estará enmarcado dentro de su utilidad en aplicaciones que accedan a datos desde archivos o bases de datos (o cualquier otra estructura existente).</p>
+<p style="text-align: justify;"> Qué es un lenguaje procedimental?</p>
+<p style="text-align: justify;">Si desarrollamos una aplicación que acceda a datos de cualquier medio a través de un lenguaje procedimental, debemos ser conscientes que vamos a tener que expresar en las instrucciones del programa, no solamente qué datos vamos a acceder, sino también la manera cómo vamos a acceder a ellos. Es decir, al escribir programas en este tipo de lenguajes, debemos estar atentos a especificar, además de los datos que necesitamos procesar, el algoritmo específico para recuperarlos del medio donde se encuentren.</p>
+<p style="text-align: justify;">Ejemplos típicos de este tipo de lenguajes son los lenguajes denominados de tercera generación: C, Visual Basic, Perl, entre otros.</p>
+<p style="text-align: justify;"> Qué es un lenguaje no procedimental?</p>
+<p style="text-align: justify;">Con la definición anterior, es fácil deducir qué se entiende por un lenguaje no procedimental. A diferencia de los lenguajes procedimentales, en este tipo de lenguajes solo es necesario especificar dentro de las instrucciones que accedan a datos, qué datos vamos a recuperar. En realidad no nos importa el mecanismo de búsqueda que se vaya a implementar para recuperar los datos. Esto sería problema de "otra persona o entidad".  Las instrucciones dentro de un lenguaje no procedimental son más concisas debido a su único requerimiento de especificación de datos a recuperar.</p>
+<p style="text-align: justify;">Los lenguajes de acceso a datos no procedimentales se conocen como lenguajes de cuarta generación y en realidad son lenguajes que muchas veces no tienen nombre propio. Esto debido a que son lenguajes que, la mayoría de las veces, vienen incorporados como módulos de los DBMS. (Recuerden que un DBMS consta de dos grandes partes y una de ellas es un conjunto de software que permite optimizar la manipulación de la base de datos. Dentro de este software están los lenguajes de cuarta generación). Hay motores como Oracle y SQL Server que tienen sus lenguajes de cuarta generación denominados PL/SQL y Transact SQL respectivamente. Hay otros motores como Informix que tienen su propio lenguaje de cuarta generación pero se le conoce como "el 4GL de Informix", es decir, no tiene un nombre específico.</p>
+<p style="text-align: justify;"> Vemos, con base en la exposición anterior, que obviamente los lenguajes procedimentales son mucho más complejos que los no procedimentales en cuanto al acceso de datos se refiere. Es decir, es mucho más fácil usar un lenguaje no procedimental que uno procedimental si de acceder datos de cualquier medio se trata.</p>
+<p style="text-align: justify;"><strong> </strong>Toda la contextualización anterior sirve para definir que el SQL, que es el lenguaje de consulta más utilizado en bases de datos, es un lenguaje no procedimental. Esto significa que el SQL es un lenguaje de cuarta generación. Lo que sucede es que, a diferencia de otros lenguajes, el SQL es un lenguaje que es aceptado como estándar mundial para acceso a bases de datos relacionales. Del tema de SQL como tal, hablaremos más adelante en este manual y estaremos ahondando en sus características generales y específicas.</p>
+<p style="text-align: justify;"> Por lo tanto, nos damos cuenta que pedirle al DBMS que nos recupere los datos de una base de datos a través de SQL es una labor muy sencilla. Lo verdaderamente complejo son los mecanismos que debe implementar el DBMS, a través de sus algoritmos internos, para poder acceder a dichos datos de la manera más óptima posible.</p>
+<p style="text-align: justify;"> De lo anterior se desprende que cuando yo invoco una instrucción de consulta en SQL, es el DBMS el responsable de implementar el "como" se van a acceder a los datos requeridos por dicha consulta. Es el DBMS el que haría lo que debería hacer el Analista/Programador si escribiera la misma consulta en un lenguaje procedimental.</p>
+<p style="text-align: justify;"> Debemos enunciar en este momento el hecho de que SQL, que es un lenguaje de cuarta generación, tiene tres tipos de instrucciones:</p>
+<ol style="text-align: justify;">
+<li>Instrucciones DDL</li>
+<li>Instrucciones DML</li>
+<li>Instrucciones DCL</li>
+</ol>
+<p style="text-align: justify;"> Veamos a continuación, de una manera genérica, a qué se refieren estos tipos de instrucciones.</p>
+<p style="text-align: justify;"> Qué son instrucciones DDL?</p>
+<p style="text-align: justify;">La sigla DDL significa Data Definition Language, es decir, Lenguaje de Definición de Datos. Es a través de este tipo de instrucciones que se pueden definir las estructuras que se van a crear en la base de datos para contener los datos, es decir, son las instrucciones para crear lo que se denominan las tablas de la base de datos. Además, con este tipo de instrucciones se pueden definir reglas de integridad de datos, es decir, normas que deben cumplir los datos para considerarlos correctos dentro del contexto que maneja la base de datos.</p>
+<p style="text-align: justify;">Como conclusión podemos decir que el DDL permite definir el ESQUEMA de la base de datos.</p>
+<p style="text-align: justify;"> Y qué significan instrucciones DML?</p>
+<p style="text-align: justify;">DML como sigla significa Data Manipulation Language. Es a través de este tipo de instrucciones que podemos manipular los datos que hay contenidos o grabados en la base de datos. En otras palabras, a través de instrucciones DML se pueden realizar las cuatro operaciones básicas sobre los datos: inserción de nuevos datos, actualización de datos ya existentes, borrado de datos y consulta de datos.</p>
+<p style="text-align: justify;"> Y el DCL?</p>
+<p style="text-align: justify;">La sigla DCL viene de Data Control Language, en otras palabras, Lenguaje de Control de Datos. Qué se puede realizar con este tipo de instrucciones? A través de las instrucciones DCL podemos controlar el acceso a los datos, es decir, podemos definir perfiles de usuarios con sus respectivos permisos. Es a través de este tipo de lenguaje que podemos administrar lo que se denomina CONTROL DE ACCESO en el mundo de las bases de datos.</p></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper MultiSelectIdevice em_iDevice" id="id70">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Pregunta de Selección Múltiple</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<div id="actitity-70_108">
+<form name="multi-select-form-70_108" action="#" class="activity-form multi-select-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion70_108" class="block question iDevice_content">
+<p>Una de las instrucciones DDL es...</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op70_1080" class="sr-av"><a href="#answer-70_111">Opción 1</a></label><input type="checkbox" id="op70_1080" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-70_111"><div id="taans70_111" class="block iDevice_content">
+<p>SELECT</p>
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-70_1080" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op70_1081" class="sr-av"><a href="#answer-70_985">Opción 2</a></label><input type="checkbox" id="op70_1081" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-70_985"><div id="taans70_985" class="block iDevice_content">
+<p>CREATE TABLE</p>
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-70_1081" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op70_1082" class="sr-av"><a href="#answer-70_992">Opción 3</a></label><input type="checkbox" id="op70_1082" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-70_992"><div id="taans70_992" class="block iDevice_content">
+<p>DELETE</p>
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-70_1082" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op70_1083" class="sr-av"><a href="#answer-70_994">Opción 4</a></label><input type="checkbox" id="op70_1083" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-70_994"><div id="taans70_994" class="block iDevice_content">
+<p>UPDATE</p>
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-70_1083" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op70_1084" class="sr-av"><a href="#answer-70_996">Opción 5</a></label><input type="checkbox" id="op70_1084" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-70_996"><div id="taans70_996" class="block iDevice_content">
+<p>INSERT</p>
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-70_1084" style="display:none"></section>
+</section>
+</section>
+<div class="block iDevice_buttons feedback-button js-required">
+<p>
+<input type="button" name="submitSelect" class="feedbackbutton multi-select-feedback-toggler" value="Mostrar retroalimentación" id="multi-select-feedback-toggler-5-70_108" /> 
+</p>
+</div>
+<section id="f70_108" class="js-hidden js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+
+<div id="tafeedback70_108" class="feedback iDevice_content">
+<p>Las instrucciones DDL - Data Definition Language - son aquellas que permiten gestionar las estructuras de datos.</p>
+</div>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-70_111" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-70_985" class="right">Correcto</a></li>
+<li><a href="#answer-70_992" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-70_994" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-70_996" class="wrong">Incorrecto</a></li>
+</ol>
+</section>
+</div>
+</section>
+<section class="question">
+<div id="actitity-70_998">
+<form name="multi-select-form-70_998" action="#" class="activity-form multi-select-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion70_998" class="block question iDevice_content">
+<p>SQL significa....</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op70_9980" class="sr-av"><a href="#answer-70_1001">Opción 1</a></label><input type="checkbox" id="op70_9980" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-70_1001"><div id="taans70_1001" class="block iDevice_content">
+<p>System Query Language</p>
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-70_9980" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op70_9981" class="sr-av"><a href="#answer-70_1003">Opción 2</a></label><input type="checkbox" id="op70_9981" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-70_1003"><div id="taans70_1003" class="block iDevice_content">
+<p>Software Query Language</p>
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-70_9981" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op70_9982" class="sr-av"><a href="#answer-70_1005">Opción 3</a></label><input type="checkbox" id="op70_9982" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-70_1005"><div id="taans70_1005" class="block iDevice_content">
+<p>Structured Query Language</p>
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-70_9982" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op70_9983" class="sr-av"><a href="#answer-70_1007">Opción 4</a></label><input type="checkbox" id="op70_9983" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-70_1007"><div id="taans70_1007" class="block iDevice_content">
+<p>Simulator Query Language</p>
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-70_9983" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op70_9984" class="sr-av"><a href="#answer-70_1009">Opción 5</a></label><input type="checkbox" id="op70_9984" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-70_1009"><div id="taans70_1009" class="block iDevice_content">
+<p>Ninguna de las anteriores</p>
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-70_9984" style="display:none"></section>
+</section>
+</section>
+<div class="block iDevice_buttons feedback-button js-required">
+<p>
+<input type="button" name="submitSelect" class="feedbackbutton multi-select-feedback-toggler" value="Mostrar retroalimentación" id="multi-select-feedback-toggler-5-70_998" /> 
+</p>
+</div>
+<section id="f70_998" class="js-hidden js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+
+<div id="tafeedback70_998" class="feedback iDevice_content">
+<p>SQL - Structured Query Language - Lenguaje de Consulta Estructurado.</p>
+</div>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-70_1001" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-70_1003" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-70_1005" class="right">Correcto</a></li>
+<li><a href="#answer-70_1007" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-70_1009" class="wrong">Incorrecto</a></li>
+</ol>
+</section>
+</div>
+</section>
+<section class="question">
+<div id="actitity-70_1011">
+<form name="multi-select-form-70_1011" action="#" class="activity-form multi-select-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion70_1011" class="block question iDevice_content">
+<p>Los lenguajes no procedimentales son más fáciles de aprender que los procedimentales porque.....</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op70_10110" class="sr-av"><a href="#answer-70_1014">Opción 1</a></label><input type="checkbox" id="op70_10110" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-70_1014"><div id="taans70_1014" class="block iDevice_content">
+<p>En los procedimentales no hay que "codificar" cómo acceder a los datos.</p>
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-70_10110" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op70_10111" class="sr-av"><a href="#answer-70_1016">Opción 2</a></label><input type="checkbox" id="op70_10111" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-70_1016"><div id="taans70_1016" class="block iDevice_content">
+<p>En los lenguajes no procedimentales hay instrucciones que permiten acceder, de manera lógica y fácil, los datos.</p>
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-70_10111" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op70_10112" class="sr-av"><a href="#answer-70_1025">Opción 3</a></label><input type="checkbox" id="op70_10112" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-70_1025"><div id="taans70_1025" class="block iDevice_content">
+<p>Los lenguajes procedimentales exigen decir qué datos acceder y, además, cómo acceder dichos datos.</p>
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-70_10112" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op70_10113" class="sr-av"><a href="#answer-70_1027">Opción 4</a></label><input type="checkbox" id="op70_10113" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-70_1027"><div id="taans70_1027" class="block iDevice_content">
+<p>Los lenguajes no procedimentales no permiten implementar procedimientos almacenados.</p>
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-70_10113" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op70_10114" class="sr-av"><a href="#answer-70_1029">Opción 5</a></label><input type="checkbox" id="op70_10114" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-70_1029"><div id="taans70_1029" class="block iDevice_content">
+<p>Ninguna de las anteriores.</p>
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-70_10114" style="display:none"></section>
+</section>
+</section>
+<div class="block iDevice_buttons feedback-button js-required">
+<p>
+<input type="button" name="submitSelect" class="feedbackbutton multi-select-feedback-toggler" value="Mostrar retroalimentación" id="multi-select-feedback-toggler-5-70_1011" /> 
+</p>
+</div>
+<section id="f70_1011" class="js-hidden js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-70_1014" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-70_1016" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-70_1025" class="right">Correcto</a></li>
+<li><a href="#answer-70_1027" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-70_1029" class="wrong">Incorrecto</a></li>
+</ol>
+</section>
+</div>
+</section>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="ejemplar_y_esquema.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="modelos_de_datos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

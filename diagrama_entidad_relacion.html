@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>DIAGRAMA ENTIDAD RELACION | FUNDAMENTOS Y DISEÑO DE BASES DE DATOS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="JORGE IVAN BEDOYA RESTREPO" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-25"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">FUNDAMENTOS Y DISEÑO DE BASES DE DATOS</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">FUNDAMENTOS Y DISEÑO DE BASES DE DATOS</a></li>
+   <li><a href="conceptos_basicos.html" class="daddy">CONCEPTOS BASICOS</a>
+   <ul class="other-section">
+      <li><a href="bases_de_datos_y_dbms.html" class="no-ch">BASES DE DATOS Y DBMS</a></li>
+      <li><a href="niveles_de_abstraccion_de_datos.html" class="no-ch">NIVELES DE ABSTRACCION DE DATOS</a></li>
+      <li><a href="ejemplar_y_esquema.html" class="no-ch">EJEMPLAR Y ESQUEMA</a></li>
+      <li><a href="lenguajes_de_bases_de_datos.html" class="no-ch">LENGUAJES DE BASES DE DATOS</a></li>
+      <li><a href="modelos_de_datos.html" class="no-ch">MODELOS DE DATOS</a></li>
+      <li><a href="tipos_de_usuarios.html" class="no-ch">TIPOS DE USUARIOS</a></li>
+      <li><a href="dba__administrador_de_bases_de_datos.html" class="no-ch">DBA - ADMINISTRADOR DE BASES DE DATOS</a></li>
+      <li><a href="backups_y_tipos.html" class="no-ch">BACKUPS Y TIPOS</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="modelamiento_de_datos.html" class="current-page-parent daddy">MODELAMIENTO DE DATOS</a>
+   <ul>
+      <li><a href="que_es.html" class="no-ch">QUE ES?</a></li>
+      <li><a href="modelo_entidad_relacion.html" class="daddy">MODELO ENTIDAD RELACION</a>
+      <ul class="other-section">
+         <li><a href="entidades_e_instancias.html" class="no-ch">ENTIDADES E INSTANCIAS</a></li>
+         <li><a href="atributos_y_tipos.html" class="no-ch">ATRIBUTOS Y TIPOS</a></li>
+         <li><a href="relaciones.html" class="no-ch">RELACIONES</a></li>
+         <li><a href="entidad_debil.html" class="no-ch">ENTIDAD DEBIL</a></li>
+         <li><a href="atributo_en_relacion.html" class="no-ch">ATRIBUTO EN RELACION</a></li>
+      </ul>
+      </li>
+      <li><a href="modelo_entidad_relacion_extendido.html" class="daddy">MODELO ENTIDAD RELACION EXTENDIDO</a>
+      <ul class="other-section">
+         <li><a href="especializacion.html" class="no-ch">ESPECIALIZACION</a></li>
+         <li><a href="generalizacion.html" class="no-ch">GENERALIZACION</a></li>
+      </ul>
+      </li>
+      <li id="active"><a href="diagrama_entidad_relacion.html" class="active no-ch">DIAGRAMA ENTIDAD RELACION</a></li>
+      <li><a href="ejercicio_completo_de_modelamiento.html" class="no-ch">EJERCICIO COMPLETO DE MODELAMIENTO</a></li>
+   </ul>
+   </li>
+   <li><a href="modelo_relacional.html" class="daddy">MODELO RELACIONAL</a>
+   <ul class="other-section">
+      <li><a href="terminologia_tecnica.html" class="no-ch">TERMINOLOGIA TECNICA</a></li>
+      <li><a href="dominio_de_un_atributo.html" class="no-ch">DOMINIO DE UN ATRIBUTO</a></li>
+      <li><a href="tipos_de_claves.html" class="no-ch">TIPOS DE CLAVES</a></li>
+      <li><a href="reglas_de_mapeo__traduccion.html" class="daddy">REGLAS DE MAPEO / TRADUCCION</a>
+      <ul class="other-section">
+         <li><a href="cantidad_de_tablas.html" class="no-ch">CANTIDAD DE TABLAS</a></li>
+         <li><a href="entidad_normal__fuerte.html" class="no-ch">ENTIDAD NORMAL / FUERTE</a></li>
+         <li><a href="entidad_debil0.html" class="no-ch">ENTIDAD DEBIL</a></li>
+         <li><a href="atributo_multivalorado.html" class="no-ch">ATRIBUTO MULTIVALORADO</a></li>
+         <li><a href="relacion_uno_a_uno.html" class="no-ch">RELACION UNO A UNO</a></li>
+         <li><a href="relacion_uno_a_muchos.html" class="no-ch">RELACION UNO A MUCHOS</a></li>
+         <li><a href="relacion_muchos_a_muchos.html" class="no-ch">RELACION MUCHOS A MUCHOS</a></li>
+         <li><a href="atributo_en_relacion0.html" class="no-ch">ATRIBUTO EN RELACION</a></li>
+         <li><a href="especializacion0.html" class="no-ch">ESPECIALIZACION</a></li>
+         <li><a href="ejercicio_completo.html" class="no-ch">EJERCICIO COMPLETO</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="normalizacion_de_datos.html" class="daddy">NORMALIZACION DE DATOS</a>
+   <ul class="other-section">
+      <li><a href="introduccion.html" class="no-ch">INTRODUCCION</a></li>
+      <li><a href="anomalias_en_el_diseo.html" class="no-ch">ANOMALIAS EN EL DISEÑO</a></li>
+      <li><a href="tuplas_espurias.html" class="no-ch">TUPLAS ESPURIAS</a></li>
+      <li><a href="dependencia_funcional.html" class="no-ch">DEPENDENCIA FUNCIONAL</a></li>
+      <li><a href="formas_normales.html" class="daddy">FORMAS NORMALES</a>
+      <ul class="other-section">
+         <li><a href="primera_forma_normal_1nf.html" class="no-ch">PRIMERA FORMA NORMAL (1NF)</a></li>
+         <li><a href="segunda_forma_normal_2nf.html" class="no-ch">SEGUNDA FORMA NORMAL (2NF)</a></li>
+         <li><a href="tercera_forma_normal_3nf.html" class="no-ch">TERCERA FORMA NORMAL (3NF)</a></li>
+         <li><a href="ejercicio_completo0.html" class="no-ch">EJERCICIO COMPLETO</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="generalizacion.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="ejercicio_completo_de_modelamiento.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">DIAGRAMA ENTIDAD RELACION</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id28">
+<div class="iDevice emphasis0" >
+<div id="ta28_116_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;"><strong>Diagrama Entidad Relación - Simbología</strong></p>
+<p style="text-align: justify;">En este apartado se mostrará en detalle la manera de desarrollar un Diagrama Entidad  / Relación que es un dibujo que esquematiza el Modelo Entidad / Relación.</p>
+<p style="text-align: justify;"> El diagrama Entidad / Relación es la forma de representar un Modelo Entidad / Relación.</p>
+<p style="text-align: justify;"> No perdamos de vista que el un modelo es una representación gráfica de una situación del mundo real. A través del Diagrama Entidad / Relación elaboramos esa representación gráfica.</p>
+<p style="text-align: justify;"> La representación que se muestra a continuación es una de las muchas representaciones que se utilizan en el medio. Todas las representaciones son igualmente válidas; lo único que las diferencian son su simbología.</p>
+<p style="text-align: justify;"> En la Tabla No. 7 se enuncian los símbolos utilizados para dibujar cada uno de los elementos de un modelo Entidad / Relación.</p>
+<table border="1" style="width: 99.1959%;">
+<tbody>
+<tr>
+<td width="299" style="width: 49.5477%;">
+<p><strong>Elemento</strong></p>
+</td>
+<td width="299" style="width: 49.6482%;">
+<p><strong>Símbolo Utilizado</strong></p>
+</td>
+</tr>
+<tr>
+<td width="299" style="width: 49.5477%;">
+<p>Entidad</p>
+</td>
+<td width="299" style="width: 49.6482%;">
+<p>Rectángulo</p>
+</td>
+</tr>
+<tr>
+<td width="299" style="width: 49.5477%;">
+<p>Entidad Débil</p>
+</td>
+<td width="299" style="width: 49.6482%;">
+<p>Doble Rectángulo</p>
+</td>
+</tr>
+<tr>
+<td width="299" style="width: 49.5477%;">
+<p>Atributos Simples, Compuestos, Univalorados y Nulos</p>
+</td>
+<td width="299" style="width: 49.6482%;">
+<p>Elipse Continua</p>
+</td>
+</tr>
+<tr>
+<td width="299" style="width: 49.5477%;">
+<p>Atributos Derivados</p>
+</td>
+<td width="299" style="width: 49.6482%;">
+<p>Elipse Punteada</p>
+</td>
+</tr>
+<tr>
+<td width="299" style="width: 49.5477%;">
+<p>Atributos Multivalorados</p>
+</td>
+<td width="299" style="width: 49.6482%;">
+<p>Doble Elipse</p>
+</td>
+</tr>
+<tr>
+<td width="299" style="width: 49.5477%;">
+<p>Atributo Clave</p>
+</td>
+<td width="299" style="width: 49.6482%;">
+<p>Elipse Continua con el Nombre del Atributo Subrayado.</p>
+</td>
+</tr>
+<tr>
+<td width="299" style="width: 49.5477%;">
+<p>Relaciones</p>
+</td>
+<td width="299" style="width: 49.6482%;">
+<p>Rombo en la mitad de las entidades involucradas, junto con líneas que unen dichas entidades con los rombos.</p>
+</td>
+</tr>
+<tr>
+<td width="299" style="width: 49.5477%;">
+<p>Cardinalidad de las Relaciones</p>
+</td>
+<td width="299" style="width: 49.6482%;">
+<p>Explicitamente se ponen 1 y/o M/N.</p>
+</td>
+</tr>
+<tr>
+<td width="299" style="width: 49.5477%;">
+<p>Participación Total de una Entidad en una Relación</p>
+</td>
+<td width="299" style="width: 49.6482%;">
+<p>Línea doble para unir la entidad con el rombo correspondiente a la relación</p>
+</td>
+</tr>
+<tr>
+<td width="299" style="width: 49.5477%;">
+<p>Participación Parcial de una Entidad en una Relación</p>
+</td>
+<td width="299" style="width: 49.6482%;">
+<p>Línea simple para unir la entidad con el rombo correspondiente a la relación.</p>
+</td>
+</tr>
+<tr>
+<td width="299" style="width: 49.5477%;">
+<p>Especialización</p>
+</td>
+<td width="299" style="width: 49.6482%;">
+<p>Un triángulo con la palabra ES dentro de si, que une la entidad padre con sus entidades hijas.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;"><strong>Tabla No. 7 Símbolos Usados en un Diagrama Entidad / Relación</strong></p>
+<p style="text-align: justify;"><strong> </strong>A continuación se esquematiza de una manera gráfica cada uno de los símbolos utilizados en el Diagrama Entidad / Relación.</p>
+<p style="text-align: justify;"><u>Entidad</u>                                                                     <u>Entidad Débil</u></p>
+<p style="text-align: justify;"><img src="ENTIDAD.jpg" alt="ENTIDAD" width="235" height="118" /> <img src="ENTIDAD_DEBIL.jpg" alt="ENTIDAD DEBIL" width="235" height="118" /></p>
+<p style="text-align: justify;"><u><span>Atributos Simples, Compuestos, Univalorados, Nulos</span></u></p>
+<p style="text-align: justify;"><span> <img src="SIMPLES.jpg" alt="SIMPLES" width="305" height="166" /></span></p>
+<p style="text-align: justify;"><u><span>Atributos Derivados</span></u></p>
+<p style="text-align: justify;"><span> <img src="DERIVADOS.jpg" alt="DERIVADOS" width="260" height="190" /></span></p>
+<p style="text-align: justify;"><u><span>Atributos Multivalorados</span></u></p>
+<p style="text-align: justify;"><span> <img src="MULTIVALORADOS.jpg" alt="MULTIVALORADOS" width="258" height="197" /></span></p>
+<p style="text-align: justify;"><u><span>Atributo Clave</span></u></p>
+<p style="text-align: justify;"><span> <img src="CLAVE.jpg" alt="CLAVE" width="235" height="132" /></span></p>
+<p style="text-align: justify;"><u><span>Relaciones</span></u></p>
+<p style="text-align: justify;"><span> <img src="RELACIONES.jpg" alt="RELACIONES" width="585" height="118" /></span></p>
+<p style="text-align: justify;"><u><span>Relaciones Uno a Uno</span></u></p>
+<p style="text-align: justify;"><span> <img src="UNO_A_UNO.jpg" alt="UNO A UNO" width="584" height="118" /></span></p>
+<p style="text-align: justify;">En el ejemplo anterior, <em>un</em> paciente tiene <em>una</em> sola historia clínica y, a su vez, <em>una</em> historia clínica corresponde a <em>un</em> solo paciente. </p>
+<p style="text-align: justify;"> <u>Relación Uno a Varios</u></p>
+<p style="text-align: justify;"> <img src="UNO_A_MUCHOS.jpg" alt="UNO A MUCHOS" width="580" height="118" /></p>
+<p style="text-align: justify;"><em><span>Un</span></em><span> departamento posee <em>varios</em> municipios y <em>un</em> municipio está localizado en <em>un</em> solo departamento. </span></p>
+<p style="text-align: justify;"><span> </span><u><span>Relación Varios a Varios</span></u></p>
+<p style="text-align: justify;"><span> <img src="MUCHOS_A_MUCHOS.jpg" alt="MUCHOS A MUCHOS" width="580" height="92" /></span></p>
+<p style="text-align: justify;"><u><span>Participación Total de una Entidad en una Relación</span></u></p>
+<p style="text-align: justify;"><span> <img src="PTOTAL.jpg" alt="PARTICIPACION TOTAL" width="582" height="92" /></span></p>
+<p style="text-align: justify;"><span>Todo alcalde está dirigiendo una ciudad y toda ciudad está siendo gobernada por un alcalde. En este caso, es una relación uno a uno porque se está analizando en un momento dado del tiempo. Tanto la entidad Alcalde como la entidad Ciudad participan en forma total en la relación Dirige y por lo tanto se dibuja doble línea como conector entre la entidad y la relación.</span></p>
+<p style="text-align: justify;"><span> </span><u><span>Participación Parcial de una Entidad en una Relación</span></u></p>
+<p style="text-align: justify;"><span> <img src="PPARCIAL.jpg" alt="PARTICIPACION PARCIAL" width="580" height="92" /></span></p>
+<p style="text-align: justify;"><span>Existen ciudadanos que no poseen pasaporte. Por esa razón, la participación de la entidad Ciudadano en la relación Tiene es parcial y se esquematiza con una sola línea. En cambio, la participación de la entidad Pasaporte en la relación Tiene es total (Por qué?) y se dibuja con doble línea.</span></p>
+<p style="text-align: justify;"><span> </span><u><span>Especialización</span></u></p>
+<p style="text-align: justify;"><span> <img src="ESPECIALIZACION.jpg" alt="ESPECIALIZACION" width="580" height="284" /></span></p>
+<p style="text-align: justify;">Antes de ilustrar el diagrama entidad / relación a través de unos cuantos ejemplos, es importante explicar que para empezar a desarrollar un diagrama de este tipo existen tres posibles puntos de partida:</p>
+<ul>
+<li style="text-align: justify;">Tener a la mano, en forma de documento, los requerimientos detallados del usuario. Esto se puede lograr, bien sea, pidiéndole al usuario que redacte en una hoja sus requerimientos (situación que casi nunca se da) o redactando uno mismo como analista / diseñador una hoja de requerimientos de acuerdo a las entrevistas que se tuvieron con el usuario.</li>
+<li style="text-align: justify;">Que el usuario le entregue al diseñador un ejemplo de un formato preimpreso que se desea sistematizar. Por ejemplo, una factura, una orden de compra, un listado con información importante.</li>
+<li style="text-align: justify;">Que el diseñador sea contratado por una empresa para sistematizar un área del negocio y, a partir de ahí, hacer el levantamiento de requerimientos.</li>
+</ul></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="generalizacion.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="ejercicio_completo_de_modelamiento.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

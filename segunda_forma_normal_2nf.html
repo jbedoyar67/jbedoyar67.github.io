@@ -1,0 +1,669 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>SEGUNDA FORMA NORMAL (2NF) | FUNDAMENTOS Y DISEÑO DE BASES DE DATOS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="JORGE IVAN BEDOYA RESTREPO" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-48"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">FUNDAMENTOS Y DISEÑO DE BASES DE DATOS</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">FUNDAMENTOS Y DISEÑO DE BASES DE DATOS</a></li>
+   <li><a href="conceptos_basicos.html" class="daddy">CONCEPTOS BASICOS</a>
+   <ul class="other-section">
+      <li><a href="bases_de_datos_y_dbms.html" class="no-ch">BASES DE DATOS Y DBMS</a></li>
+      <li><a href="niveles_de_abstraccion_de_datos.html" class="no-ch">NIVELES DE ABSTRACCION DE DATOS</a></li>
+      <li><a href="ejemplar_y_esquema.html" class="no-ch">EJEMPLAR Y ESQUEMA</a></li>
+      <li><a href="lenguajes_de_bases_de_datos.html" class="no-ch">LENGUAJES DE BASES DE DATOS</a></li>
+      <li><a href="modelos_de_datos.html" class="no-ch">MODELOS DE DATOS</a></li>
+      <li><a href="tipos_de_usuarios.html" class="no-ch">TIPOS DE USUARIOS</a></li>
+      <li><a href="dba__administrador_de_bases_de_datos.html" class="no-ch">DBA - ADMINISTRADOR DE BASES DE DATOS</a></li>
+      <li><a href="backups_y_tipos.html" class="no-ch">BACKUPS Y TIPOS</a></li>
+   </ul>
+   </li>
+   <li><a href="modelamiento_de_datos.html" class="daddy">MODELAMIENTO DE DATOS</a>
+   <ul class="other-section">
+      <li><a href="que_es.html" class="no-ch">QUE ES?</a></li>
+      <li><a href="modelo_entidad_relacion.html" class="daddy">MODELO ENTIDAD RELACION</a>
+      <ul class="other-section">
+         <li><a href="entidades_e_instancias.html" class="no-ch">ENTIDADES E INSTANCIAS</a></li>
+         <li><a href="atributos_y_tipos.html" class="no-ch">ATRIBUTOS Y TIPOS</a></li>
+         <li><a href="relaciones.html" class="no-ch">RELACIONES</a></li>
+         <li><a href="entidad_debil.html" class="no-ch">ENTIDAD DEBIL</a></li>
+         <li><a href="atributo_en_relacion.html" class="no-ch">ATRIBUTO EN RELACION</a></li>
+      </ul>
+      </li>
+      <li><a href="modelo_entidad_relacion_extendido.html" class="daddy">MODELO ENTIDAD RELACION EXTENDIDO</a>
+      <ul class="other-section">
+         <li><a href="especializacion.html" class="no-ch">ESPECIALIZACION</a></li>
+         <li><a href="generalizacion.html" class="no-ch">GENERALIZACION</a></li>
+      </ul>
+      </li>
+      <li><a href="diagrama_entidad_relacion.html" class="no-ch">DIAGRAMA ENTIDAD RELACION</a></li>
+      <li><a href="ejercicio_completo_de_modelamiento.html" class="no-ch">EJERCICIO COMPLETO DE MODELAMIENTO</a></li>
+   </ul>
+   </li>
+   <li><a href="modelo_relacional.html" class="daddy">MODELO RELACIONAL</a>
+   <ul class="other-section">
+      <li><a href="terminologia_tecnica.html" class="no-ch">TERMINOLOGIA TECNICA</a></li>
+      <li><a href="dominio_de_un_atributo.html" class="no-ch">DOMINIO DE UN ATRIBUTO</a></li>
+      <li><a href="tipos_de_claves.html" class="no-ch">TIPOS DE CLAVES</a></li>
+      <li><a href="reglas_de_mapeo__traduccion.html" class="daddy">REGLAS DE MAPEO / TRADUCCION</a>
+      <ul class="other-section">
+         <li><a href="cantidad_de_tablas.html" class="no-ch">CANTIDAD DE TABLAS</a></li>
+         <li><a href="entidad_normal__fuerte.html" class="no-ch">ENTIDAD NORMAL / FUERTE</a></li>
+         <li><a href="entidad_debil0.html" class="no-ch">ENTIDAD DEBIL</a></li>
+         <li><a href="atributo_multivalorado.html" class="no-ch">ATRIBUTO MULTIVALORADO</a></li>
+         <li><a href="relacion_uno_a_uno.html" class="no-ch">RELACION UNO A UNO</a></li>
+         <li><a href="relacion_uno_a_muchos.html" class="no-ch">RELACION UNO A MUCHOS</a></li>
+         <li><a href="relacion_muchos_a_muchos.html" class="no-ch">RELACION MUCHOS A MUCHOS</a></li>
+         <li><a href="atributo_en_relacion0.html" class="no-ch">ATRIBUTO EN RELACION</a></li>
+         <li><a href="especializacion0.html" class="no-ch">ESPECIALIZACION</a></li>
+         <li><a href="ejercicio_completo.html" class="no-ch">EJERCICIO COMPLETO</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="normalizacion_de_datos.html" class="current-page-parent daddy">NORMALIZACION DE DATOS</a>
+   <ul>
+      <li><a href="introduccion.html" class="no-ch">INTRODUCCION</a></li>
+      <li><a href="anomalias_en_el_diseo.html" class="no-ch">ANOMALIAS EN EL DISEÑO</a></li>
+      <li><a href="tuplas_espurias.html" class="no-ch">TUPLAS ESPURIAS</a></li>
+      <li><a href="dependencia_funcional.html" class="no-ch">DEPENDENCIA FUNCIONAL</a></li>
+      <li class="current-page-parent"><a href="formas_normales.html" class="current-page-parent daddy">FORMAS NORMALES</a>
+      <ul>
+         <li><a href="primera_forma_normal_1nf.html" class="no-ch">PRIMERA FORMA NORMAL (1NF)</a></li>
+         <li id="active"><a href="segunda_forma_normal_2nf.html" class="active no-ch">SEGUNDA FORMA NORMAL (2NF)</a></li>
+         <li><a href="tercera_forma_normal_3nf.html" class="no-ch">TERCERA FORMA NORMAL (3NF)</a></li>
+         <li><a href="ejercicio_completo0.html" class="no-ch">EJERCICIO COMPLETO</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="primera_forma_normal_1nf.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="tercera_forma_normal_3nf.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">SEGUNDA FORMA NORMAL (2NF)</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id44">
+<div class="iDevice emphasis0" >
+<div id="ta44_123_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;"><strong>SEGUNDA FORMA NORMAL (2NF)</strong></p>
+<p style="text-align: justify;">Para explicar la segunda forma normal, mostremos los posibles datos de la tabla EmpProy mostrada anteriormente:</p>
+<table border="1" style="width: 97.9899%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><span style="font-size: 12pt;"><strong>EMPPROY</strong></span></td>
+</tr>
+</tbody>
+</table>
+<table border="1" style="width: 98.191%;">
+<tbody>
+<tr>
+<td width="85" style="width: 13.8693%; text-align: center;">
+<p><strong>Cod-emp</strong></p>
+</td>
+<td width="85" style="width: 13.8693%; text-align: center;">
+<p><strong>Cod-proy</strong></p>
+</td>
+<td width="85" style="width: 13.8693%; text-align: center;">
+<p><strong>Nro-horas</strong></p>
+</td>
+<td width="86" style="width: 14.0704%; text-align: center;">
+<p><strong>Nom-empl</strong></p>
+</td>
+<td width="86" style="width: 14.1709%; text-align: center;">
+<p><strong>Titulo-pro</strong></p>
+</td>
+<td width="86" style="width: 14.1709%; text-align: center;">
+<p><strong>Valor-pro</strong></p>
+</td>
+<td width="86" style="width: 14.1709%; text-align: center;">
+<p><strong>Edad-emp</strong></p>
+</td>
+</tr>
+<tr>
+<td width="85" style="width: 13.8693%;">
+<p>10</p>
+</td>
+<td width="85" style="width: 13.8693%;">
+<p>1</p>
+</td>
+<td width="85" style="width: 13.8693%;">
+<p>52</p>
+</td>
+<td width="86" style="width: 14.0704%;">
+<p>Jorge Zea</p>
+</td>
+<td width="86" style="width: 14.1709%;">
+<p>ABD</p>
+</td>
+<td width="86" style="width: 14.1709%;">
+<p>520000</p>
+</td>
+<td width="86" style="width: 14.1709%;">
+<p>33</p>
+</td>
+</tr>
+<tr>
+<td width="85" style="width: 13.8693%;">
+<p>10</p>
+</td>
+<td width="85" style="width: 13.8693%;">
+<p>2</p>
+</td>
+<td width="85" style="width: 13.8693%;">
+<p>33</p>
+</td>
+<td width="86" style="width: 14.0704%;">
+<p>Jorge Zea</p>
+</td>
+<td width="86" style="width: 14.1709%;">
+<p>NHY</p>
+</td>
+<td width="86" style="width: 14.1709%;">
+<p>360000</p>
+</td>
+<td width="86" style="width: 14.1709%;">
+<p>33</p>
+</td>
+</tr>
+<tr>
+<td width="85" style="width: 13.8693%;">
+<p>10</p>
+</td>
+<td width="85" style="width: 13.8693%;">
+<p>3</p>
+</td>
+<td width="85" style="width: 13.8693%;">
+<p>5</p>
+</td>
+<td width="86" style="width: 14.0704%;">
+<p>Jorge Zea</p>
+</td>
+<td width="86" style="width: 14.1709%;">
+<p>LOK</p>
+</td>
+<td width="86" style="width: 14.1709%;">
+<p>690000</p>
+</td>
+<td width="86" style="width: 14.1709%;">
+<p>33</p>
+</td>
+</tr>
+<tr>
+<td width="85" style="width: 13.8693%;">
+<p>20</p>
+</td>
+<td width="85" style="width: 13.8693%;">
+<p>2</p>
+</td>
+<td width="85" style="width: 13.8693%;">
+<p>12</p>
+</td>
+<td width="86" style="width: 14.0704%;">
+<p>Lina Torres</p>
+</td>
+<td width="86" style="width: 14.1709%;">
+<p>NHY</p>
+</td>
+<td width="86" style="width: 14.1709%;">
+<p>360000</p>
+</td>
+<td width="86" style="width: 14.1709%;">
+<p>20</p>
+</td>
+</tr>
+<tr>
+<td width="85" style="width: 13.8693%;">
+<p>20</p>
+</td>
+<td width="85" style="width: 13.8693%;">
+<p>4</p>
+</td>
+<td width="85" style="width: 13.8693%;">
+<p>2</p>
+</td>
+<td width="86" style="width: 14.0704%;">
+<p>Lina Torres</p>
+</td>
+<td width="86" style="width: 14.1709%;">
+<p>HIL</p>
+</td>
+<td width="86" style="width: 14.1709%;">
+<p>500000</p>
+</td>
+<td width="86" style="width: 14.1709%;">
+<p>20</p>
+</td>
+</tr>
+<tr>
+<td width="85" style="width: 13.8693%;">
+<p>30</p>
+</td>
+<td width="85" style="width: 13.8693%;">
+<p>3</p>
+</td>
+<td width="85" style="width: 13.8693%;">
+<p>11</p>
+</td>
+<td width="86" style="width: 14.0704%;">
+<p>Juan Lopez</p>
+</td>
+<td width="86" style="width: 14.1709%;">
+<p>LOK</p>
+</td>
+<td width="86" style="width: 14.1709%;">
+<p>690000</p>
+</td>
+<td width="86" style="width: 14.1709%;">
+<p>44</p>
+</td>
+</tr>
+<tr>
+<td width="85" style="width: 13.8693%;">
+<p>40</p>
+</td>
+<td width="85" style="width: 13.8693%;">
+<p>1</p>
+</td>
+<td width="85" style="width: 13.8693%;">
+<p>12</p>
+</td>
+<td width="86" style="width: 14.0704%;">
+<p>Ana Perez</p>
+</td>
+<td width="86" style="width: 14.1709%;">
+<p>ABD</p>
+</td>
+<td width="86" style="width: 14.1709%;">
+<p>520000</p>
+</td>
+<td width="86" style="width: 14.1709%;">
+<p>19</p>
+</td>
+</tr>
+<tr>
+<td width="85" style="width: 13.8693%;">
+<p>40</p>
+</td>
+<td width="85" style="width: 13.8693%;">
+<p>4</p>
+</td>
+<td width="85" style="width: 13.8693%;">
+<p>15</p>
+</td>
+<td width="86" style="width: 14.0704%;">
+<p>Ana Perez</p>
+</td>
+<td width="86" style="width: 14.1709%;">
+<p>HIL</p>
+</td>
+<td width="86" style="width: 14.1709%;">
+<p>500000</p>
+</td>
+<td width="86" style="width: 14.1709%;">
+<p>19</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;">La tabla EmpProy tiene la intención de almacenar la información de los diferentes proyectos en los cuales está trabajando cada empleado de una empresa. Un empleado puede trabajar en varios proyectos y en un proyecto pueden estar trabajando varios empleados. Cabe aclarar que en el tercer atributo (numero-horas-semanales) se graba el número de horas semanales que trabaja un empleado en un proyecto dado.</p>
+<p style="text-align: justify;">Es indudable que la tabla EmpProy tiene anomalías. Eso se nota por la alta redundancia que tiene la tabla.</p>
+<p style="text-align: justify;">Por la definición de la primera forma normal (1NF) podemos concluir que la tabla <strong><u>EmpProy SÍ ESTÁ EN 1NF</u></strong>, ya que no tiene atributos multivalorados. Ahora la pregunta que cabe hacerse es si la tabla está en 2NF. Para responder a dicha pregunta, debemos analizar las dependencias funcionales que existen en dicha tabla:</p>
+<p style="text-align: justify;">DF1 : cod-empleado  <span>→</span> nombre-empleado</p>
+<p style="text-align: justify;">DF2 : cod-empleado <span>→</span> edad-empleado</p>
+<p style="text-align: justify;">DF3 : cod-proyecto <span>→</span> título-proyecto</p>
+<p style="text-align: justify;">DF4 : cod-proyecto <span>→</span> valor-proyecto</p>
+<p style="text-align: justify;">DF5: cod-empleado, cod-proyecto <span>→</span> numero-horas-semanales</p>
+<p style="text-align: justify;">Hay que recalcar que la clave primaria de la tabla EmpProy es compuesta por los atributos cod-empleado y cod-proyecto.</p>
+<p style="text-align: justify;">Analizando las cinco (5) dependencias funcionales que tiene la tabla, qué característica tiene la dependencia DF5 que no tengan las cuatro (4) anteriores (DF1, DF2, DF3 y DF4)? En DF5 el atributo de la derecha de la flecha depende funcionalmente de <strong><u>TODA LA CLAVE PRIMARIA DE LA TABLA</u></strong>. En cambio, en DF1, DF2, DF3 y DF4 el atributo del lado derecho de la flecha depende funcionalmente de <strong><u>UNA PARTE DE  LA CLAVE PRIMARIA</u></strong>.</p>
+<p style="text-align: justify;">Por lo tanto, podemos afirmar que la tabla EmpProy <strong>NO ESTÁ EN 2NF</strong> ya que hay dependencias funcionales que incluyen PARTE de la clave primaria.</p>
+<p style="text-align: justify;"><strong>Definición 2NF.</strong></p>
+<p style="text-align: justify;">Una tabla está en 2NF si cumple las siguientes dos (2) condiciones:</p>
+<ul style="text-align: justify;">
+<li>Está en 1NF</li>
+<li>Todo atributo NO CLAVE depende funcionalmente<strong>, EN FORMA TOTAL, NO PARCIAL</strong>, de la clave primaria</li>
+</ul>
+<p style="text-align: justify;">Para explicar cómo se normaliza la tabla EmpProy, tenga muy en mente la regla de traducción de la relación muchos a muchos y de la agregación.</p>
+<p style="text-align: justify;">Si pensamos de qué porción de diagrama entidad relación vienen los atributos de la tabla EmpProy, nos damos cuenta que vienen de dos entidades relacionadas a través de una relación MUCHOS A MUCHOS: Empleado y Proyecto.</p>
+<p style="text-align: justify;">Por lo tanto, la normalización de la tabla EmpProy a 2NF se hace generando tres (3) tablas que son las siguientes:</p>
+<table border="1" style="width: 20%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><strong>EMPLEADO</strong></td>
+</tr>
+<tr>
+<td style="width: 100%;">
+<p>Cod-Empleado    PK</p>
+<p>Nombre-Empleado</p>
+<p>Edad-Empleado</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;"> </p>
+<table border="1" style="width: 17.4874%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><strong>PROYECTO</strong></td>
+</tr>
+<tr>
+<td style="width: 100%;">
+<p>Cod-Proyecto    PK</p>
+<p>Titulo-Proyecto</p>
+<p>Valor-Proyecto</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;"></p>
+<table border="1" style="width: 24.2211%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><strong>PROYEMP</strong></td>
+</tr>
+<tr>
+<td style="width: 100%;">
+<p>Cod-Emp</p>
+<p>Cod-Proy</p>
+<p>Numero-Horas-Semanales</p>
+</td>
+</tr>
+<tr>
+<td style="width: 100%;">
+<p>PK: Cod-Emp, Cod-Proy</p>
+</td>
+</tr>
+<tr>
+<td style="width: 100%;">
+<p>FK:Cod-Emp referencia a EMPLEADO(Cod-Empleado)</p>
+<p>FK: Cod-Proy referencia a PROYECTO(Cod-Proyecto)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;">Las tres tablas anteriores están en 1NF y también en 2NF, ya que todo atributo no clave depende funcionalmente de la clave primaria <strong><u>COMPLETA</u></strong>, no de parte de la clave. (De hecho, también están en 3NF).</p>
+<p style="text-align: justify;">Los datos presentados en la tabla EmpProy quedarían de la siguiente manera en las tablas ya normalizadas:</p>
+<table border="1" style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><span style="font-size: 12pt;"><strong>EMPLEADO</strong></span></td>
+</tr>
+</tbody>
+</table>
+<table border="1" style="width: 98.9949%;">
+<tbody>
+<tr>
+<td width="199" style="width: 32.8643%; text-align: center;">
+<p><strong>Cod-empleado</strong></p>
+</td>
+<td width="200" style="width: 33.0653%; text-align: center;">
+<p><strong>Nombre-empleado</strong></p>
+</td>
+<td width="200" style="width: 33.0653%; text-align: center;">
+<p><strong>Edad-empleado</strong></p>
+</td>
+</tr>
+<tr>
+<td width="199" style="width: 32.8643%;">
+<p>10</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>Jorge Zea</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>33</p>
+</td>
+</tr>
+<tr>
+<td width="199" style="width: 32.8643%;">
+<p>20</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>Lina Torres</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>20</p>
+</td>
+</tr>
+<tr>
+<td width="199" style="width: 32.8643%;">
+<p>30</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>Juan Lopez</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>44</p>
+</td>
+</tr>
+<tr>
+<td width="199" style="width: 32.8643%;">
+<p>40</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>Ana Perez</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>19</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;"></p>
+<table border="1" style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><span style="font-size: 12pt;"><strong>PROYECTO</strong></span></td>
+</tr>
+</tbody>
+</table>
+<table border="1" style="width: 98.9949%;">
+<tbody>
+<tr>
+<td width="199" style="width: 32.8643%; text-align: center;">
+<p><strong>Cod-proyecto</strong></p>
+</td>
+<td width="200" style="width: 33.0653%; text-align: center;">
+<p><strong>Titulo-proyecto</strong></p>
+</td>
+<td width="200" style="width: 33.0653%; text-align: center;">
+<p><strong>Valor-proyecto</strong></p>
+</td>
+</tr>
+<tr>
+<td width="199" style="width: 32.8643%;">
+<p>1</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>ABD</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>520000</p>
+</td>
+</tr>
+<tr>
+<td width="199" style="width: 32.8643%;">
+<p>2</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>NHY</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>360000</p>
+</td>
+</tr>
+<tr>
+<td width="199" style="width: 32.8643%;">
+<p>3</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>LOK</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>690000</p>
+</td>
+</tr>
+<tr>
+<td width="199" style="width: 32.8643%;">
+<p>4</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>HIL</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>500000</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;"></p>
+<table border="1" style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><span style="font-size: 12pt;"><strong>PROYEMP</strong></span></td>
+</tr>
+</tbody>
+</table>
+<table border="1" style="width: 98.9949%;">
+<tbody>
+<tr>
+<td width="199" style="width: 32.8643%; text-align: center;">
+<p><strong>Cod-emp</strong></p>
+</td>
+<td width="200" style="width: 33.0653%; text-align: center;">
+<p><strong>Cod-proy</strong></p>
+</td>
+<td width="200" style="width: 33.0653%; text-align: center;">
+<p><strong>Numero-horas-semanales</strong></p>
+</td>
+</tr>
+<tr>
+<td width="199" style="width: 32.8643%;">
+<p>10</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>1</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>52</p>
+</td>
+</tr>
+<tr>
+<td width="199" style="width: 32.8643%;">
+<p>10</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>2</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>33</p>
+</td>
+</tr>
+<tr>
+<td width="199" style="width: 32.8643%;">
+<p>10</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>3</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>5</p>
+</td>
+</tr>
+<tr>
+<td width="199" style="width: 32.8643%;">
+<p>20</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>2</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>12</p>
+</td>
+</tr>
+<tr>
+<td width="199" style="width: 32.8643%;">
+<p>20</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>4</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>2</p>
+</td>
+</tr>
+<tr>
+<td width="199" style="width: 32.8643%;">
+<p>30</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>3</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>11</p>
+</td>
+</tr>
+<tr>
+<td width="199" style="width: 32.8643%;">
+<p>40</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>1</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>12</p>
+</td>
+</tr>
+<tr>
+<td width="199" style="width: 32.8643%;">
+<p>40</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>4</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>15</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;"><span style="font-size: 1.05em;">Como se puede apreciar, al normalizar la tabla EmpProy convirtiéndola en las tres (3) tablas anteriores, ya no existen anomalías de diseño. Y si no se ha percatado todavía de algo, nos podemos dar cuenta que lo que se hizo fue aplicar la regla de traducción de la relación muchos a muchos y de la agregación vistas en el capítulo pasado.</span></p>
+<hr />
+<p style="text-align: justify;">Video:</p>
+<p style="text-align: justify;"><a href="https://youtu.be/0j8InH4ybo4">Segunda Forma Normal - 2NF</a></p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="primera_forma_normal_1nf.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="tercera_forma_normal_3nf.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

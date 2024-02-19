@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>RELACIONES | FUNDAMENTOS Y DISEÑO DE BASES DE DATOS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="JORGE IVAN BEDOYA RESTREPO" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-19"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">FUNDAMENTOS Y DISEÑO DE BASES DE DATOS</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">FUNDAMENTOS Y DISEÑO DE BASES DE DATOS</a></li>
+   <li><a href="conceptos_basicos.html" class="daddy">CONCEPTOS BASICOS</a>
+   <ul class="other-section">
+      <li><a href="bases_de_datos_y_dbms.html" class="no-ch">BASES DE DATOS Y DBMS</a></li>
+      <li><a href="niveles_de_abstraccion_de_datos.html" class="no-ch">NIVELES DE ABSTRACCION DE DATOS</a></li>
+      <li><a href="ejemplar_y_esquema.html" class="no-ch">EJEMPLAR Y ESQUEMA</a></li>
+      <li><a href="lenguajes_de_bases_de_datos.html" class="no-ch">LENGUAJES DE BASES DE DATOS</a></li>
+      <li><a href="modelos_de_datos.html" class="no-ch">MODELOS DE DATOS</a></li>
+      <li><a href="tipos_de_usuarios.html" class="no-ch">TIPOS DE USUARIOS</a></li>
+      <li><a href="dba__administrador_de_bases_de_datos.html" class="no-ch">DBA - ADMINISTRADOR DE BASES DE DATOS</a></li>
+      <li><a href="backups_y_tipos.html" class="no-ch">BACKUPS Y TIPOS</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="modelamiento_de_datos.html" class="current-page-parent daddy">MODELAMIENTO DE DATOS</a>
+   <ul>
+      <li><a href="que_es.html" class="no-ch">QUE ES?</a></li>
+      <li class="current-page-parent"><a href="modelo_entidad_relacion.html" class="current-page-parent daddy">MODELO ENTIDAD RELACION</a>
+      <ul>
+         <li><a href="entidades_e_instancias.html" class="no-ch">ENTIDADES E INSTANCIAS</a></li>
+         <li><a href="atributos_y_tipos.html" class="no-ch">ATRIBUTOS Y TIPOS</a></li>
+         <li id="active"><a href="relaciones.html" class="active no-ch">RELACIONES</a></li>
+         <li><a href="entidad_debil.html" class="no-ch">ENTIDAD DEBIL</a></li>
+         <li><a href="atributo_en_relacion.html" class="no-ch">ATRIBUTO EN RELACION</a></li>
+      </ul>
+      </li>
+      <li><a href="modelo_entidad_relacion_extendido.html" class="daddy">MODELO ENTIDAD RELACION EXTENDIDO</a>
+      <ul class="other-section">
+         <li><a href="especializacion.html" class="no-ch">ESPECIALIZACION</a></li>
+         <li><a href="generalizacion.html" class="no-ch">GENERALIZACION</a></li>
+      </ul>
+      </li>
+      <li><a href="diagrama_entidad_relacion.html" class="no-ch">DIAGRAMA ENTIDAD RELACION</a></li>
+      <li><a href="ejercicio_completo_de_modelamiento.html" class="no-ch">EJERCICIO COMPLETO DE MODELAMIENTO</a></li>
+   </ul>
+   </li>
+   <li><a href="modelo_relacional.html" class="daddy">MODELO RELACIONAL</a>
+   <ul class="other-section">
+      <li><a href="terminologia_tecnica.html" class="no-ch">TERMINOLOGIA TECNICA</a></li>
+      <li><a href="dominio_de_un_atributo.html" class="no-ch">DOMINIO DE UN ATRIBUTO</a></li>
+      <li><a href="tipos_de_claves.html" class="no-ch">TIPOS DE CLAVES</a></li>
+      <li><a href="reglas_de_mapeo__traduccion.html" class="daddy">REGLAS DE MAPEO / TRADUCCION</a>
+      <ul class="other-section">
+         <li><a href="cantidad_de_tablas.html" class="no-ch">CANTIDAD DE TABLAS</a></li>
+         <li><a href="entidad_normal__fuerte.html" class="no-ch">ENTIDAD NORMAL / FUERTE</a></li>
+         <li><a href="entidad_debil0.html" class="no-ch">ENTIDAD DEBIL</a></li>
+         <li><a href="atributo_multivalorado.html" class="no-ch">ATRIBUTO MULTIVALORADO</a></li>
+         <li><a href="relacion_uno_a_uno.html" class="no-ch">RELACION UNO A UNO</a></li>
+         <li><a href="relacion_uno_a_muchos.html" class="no-ch">RELACION UNO A MUCHOS</a></li>
+         <li><a href="relacion_muchos_a_muchos.html" class="no-ch">RELACION MUCHOS A MUCHOS</a></li>
+         <li><a href="atributo_en_relacion0.html" class="no-ch">ATRIBUTO EN RELACION</a></li>
+         <li><a href="especializacion0.html" class="no-ch">ESPECIALIZACION</a></li>
+         <li><a href="ejercicio_completo.html" class="no-ch">EJERCICIO COMPLETO</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="normalizacion_de_datos.html" class="daddy">NORMALIZACION DE DATOS</a>
+   <ul class="other-section">
+      <li><a href="introduccion.html" class="no-ch">INTRODUCCION</a></li>
+      <li><a href="anomalias_en_el_diseo.html" class="no-ch">ANOMALIAS EN EL DISEÑO</a></li>
+      <li><a href="tuplas_espurias.html" class="no-ch">TUPLAS ESPURIAS</a></li>
+      <li><a href="dependencia_funcional.html" class="no-ch">DEPENDENCIA FUNCIONAL</a></li>
+      <li><a href="formas_normales.html" class="daddy">FORMAS NORMALES</a>
+      <ul class="other-section">
+         <li><a href="primera_forma_normal_1nf.html" class="no-ch">PRIMERA FORMA NORMAL (1NF)</a></li>
+         <li><a href="segunda_forma_normal_2nf.html" class="no-ch">SEGUNDA FORMA NORMAL (2NF)</a></li>
+         <li><a href="tercera_forma_normal_3nf.html" class="no-ch">TERCERA FORMA NORMAL (3NF)</a></li>
+         <li><a href="ejercicio_completo0.html" class="no-ch">EJERCICIO COMPLETO</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="atributos_y_tipos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="entidad_debil.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">RELACIONES</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id24">
+<div class="iDevice emphasis0" >
+<div id="ta24_112_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;"><strong>Relaciones</strong></p>
+<p style="text-align: justify;">Una relación es una asociación entre 2 o más entidades. Esta definición es poco clara y práctica. En mi concepto personal, considero que una mejor definición sería la siguiente:</p>
+<p style="text-align: justify;">“Una relación es una acción (verbo) que se ejerce entre dos o más entidades”.</p>
+<p style="text-align: justify;">Esta definición implica que la relación entre dos o más entidades se debe dar a  través de un verbo y que, por lo tanto, la lectura de esta relación se pueda dar por medio de frases cortas con mucho sentido dentro del contexto del problema que se está modelando. </p>
+<p style="text-align: justify;"> El nombre de una relación SIEMPRE debe ser un VERBO.</p>
+<p style="text-align: justify;"> Miremos este concepto a través de un pequeño ejemplo: Si estamos modelando el espacio problema de una exposición de moda textil (caso Colombiamoda o Colombiatex), cuatro de las principales entidades serían las siguientes: Diseñador, Modelo, Producto, Cliente. Si nos detenemos a pensar en la forma como vamos a relacionar estas 4 entidades, llegamos a la redacción de las siguientes frases simples con mucho significado dentro del problema:</p>
+<ul style="text-align: justify;">
+<li>El Diseñador <em>contrata</em> Modelos (o también, el/la Modelo <em>es contratada</em> por el Diseñador)</li>
+<li>El/la Modelo <em>exhibe</em> (modela) Productos (o el Producto <em>es exhibido</em> por el/la Modelo)</li>
+<li>El Producto <em>es ofrecido</em> al Cliente (o el Cliente <em>compra</em> Productos)</li>
+</ul>
+<p style="text-align: justify;"> Pero si tratamos de encontrar una frase con sentido que involucre a las entidades Cliente y Modelo, cual sería la más apropiada? Nos encontraremos con una dificultad para desarrollar dicha frase porque, en la vida real de una exposición de moda textil, no existe ninguna interacción entre el Cliente y el/la Modelo. Por lo tanto, deducimos que entre la entidad Cliente y la entidad Modelo no existe ninguna relación.</p>
+<p style="text-align: justify;"> Las relaciones entre entidades en el modelo Entidad / Relación se deben definir de una manera muy natural e intuitiva. No deben ser relaciones forzadas que no produzcan frases con sentido.</p>
+<p style="text-align: justify;"><strong> Ejercicio.</strong></p>
+<p style="text-align: justify;"> En el ejemplo que hemos venido desarrollando, existirá relación entre las siguientes duplas de entidades? Y si existe, cual sería su nombre?</p>
+<ul style="text-align: justify;">
+<li>Paciente – Médico</li>
+<li>Enfermera – Médico</li>
+<li>Medicamento – Paciente</li>
+<li>Diagnóstico – Enfermera</li>
+<li>Paciente – Síntoma</li>
+<li>Cita – Medicamento</li>
+<li>Historia Clínica – Enfermera</li>
+<li>Paciente – Historia Clínica</li>
+</ul>
+<p style="text-align: justify;"><strong>Participación de una Entidad en una Relación</strong></p>
+<p style="text-align: justify;">Antes de definir el concepto, es importante resaltar que la participación es algo que se da entre una Entidad y una Relación, independiente de las otras entidades que estén involucradas en la misma relación. Por ejemplo, si tenemos la siguiente relación:</p>
+<p style="text-align: justify;">            Médico ======= Atiende ========= Paciente</p>
+<p style="text-align: justify;">Es importante analizar, por separado, la participación de la entidad Médico en la relación Atiende y la participación de la entidad Paciente en la relación Atiende.</p>
+<p style="text-align: justify;">Por definición, siempre que una entidad esté ligada a otra u otras a través de una relación, se dice que esa entidad <em>participa</em> en la relación en cuestión.</p>
+<p style="text-align: justify;">En el ejemplo anterior, la entidad Médico participa en la relación Atiende.</p>
+<p style="text-align: justify;">Y también, la entidad Paciente <em>participa</em> en la relación Atiende.</p>
+<p style="text-align: justify;"><strong>Tipos de Participación</strong></p>
+<p style="text-align: justify;">Existen 2 tipos de participación:</p>
+<ul style="text-align: justify;">
+<li>Participación Total</li>
+<li>Participación Parcial </li>
+</ul>
+<p style="text-align: justify;">Para comprender el concepto, el cual es muy importante para el enriquecimiento de la semántica del modelo Entidad / Relación, desarrollemos un ejemplo que nos ilustre los dos casos mencionados. </p>
+<p style="text-align: justify;">Suponga la siguiente relación con base en el ejemplo de la exposición de moda textil que mencionamos anteriormente:</p>
+<p style="text-align: justify;">            Modelo =============== Exhibe ==============Producto</p>
+<p style="text-align: justify;">Es indudable, por lo dicho anteriormente, que la entidad Modelo <em>participa</em> en la relación Exhibe y también que la entidad Producto <em>participa</em> en la misma relación. Pero de qué forma participan? </p>
+<p style="text-align: justify;">Para analizar la participación de la entidad Modelo en la relación Exhibe, hagámonos la siguiente pregunta: “Todos los/las modelos exhiben productos?” Creo que la respuesta es SI, ya que si existiera un(a) modelo que no exhibiera productos, pues su razón de ser en la exposición de moda textil no tendría sentido. Por lo tanto, como todas las instancias de la entidad Modelo participan en la relación Exhibe, podemos deducir que Modelo tiene Participación Total en la relación Exhibe.</p>
+<p style="text-align: justify;">Una entidad tiene participación TOTAL en una relación cuando TODAS sus instancias participan en la relación.</p>
+<p style="text-align: justify;">Ahora, analicemos la participación de la entidad Producto en la relación Exhibe. Cual es su participación? Haciendo el mismo análisis, llegamos a la conclusión de que la participación es PARCIAL, debido a que pueden existir Productos que no son exhibidos por ningún(a) Modelo, es decir, existen instancias de Producto que NO participan de la relación Exhibe. </p>
+<p style="text-align: justify;">Una entidad tiene participación PARCIAL en una relación cuando existen instancias que NO participan en la relación. </p>
+<p style="text-align: justify;">Con el anterior ejemplo se puede ver claramente el concepto expuesto con respecto a que la participación se da entre una entidad y una relación, independiente de la(s) otra(s) entidad(es) con las cuales esté relacionada.</p>
+<p style="text-align: justify;"><strong>Ejercicio:</strong></p>
+<p style="text-align: justify;">Realizar el análisis de la participación que poseen las siguientes entidades en las relaciones expuestas.</p>
+<ul style="text-align: justify;">
+<li>Carro ========== Matriculado En ================Oficina de Tránsito</li>
+<li>Lotero ========= Vende ====================== Billete Ganador</li>
+<li>Póliza de Seguro ======Corresponde a ============ Motocicleta</li>
+<li>Facultad ============= Conforma ========== Semillero de Investigación</li>
+<li>Persona ============= Posee ============= Computador Portátil</li>
+<li>Pasajero ============= Viaja en ============= Avión</li>
+</ul>
+<p style="text-align: justify;"><strong> Cardinalidad de una Relación</strong></p>
+<p style="text-align: justify;"> La cardinalidad de una relación se define como el número de instancias de una entidad con las cuales se puede relacionar cada una de las instancias de otra entidad.</p>
+<p style="text-align: justify;"> Desde ese punto de vista, se pueden definir cuatro tipos de cardinalidades:</p>
+<ul style="text-align: justify;">
+<li>Relación Uno a Uno</li>
+<li>Relación Uno a Varios</li>
+<li>Relación Varios a Uno</li>
+<li>Relación Varios a Varios </li>
+</ul>
+<p style="text-align: justify;"><u>Relación Uno a Uno</u></p>
+<p style="text-align: justify;">Se define una relación uno a uno como aquella donde cada instancia de una primera entidad solo se puede relacionar con una y solo una instancia de una segunda entidad y viceversa. </p>
+<p style="text-align: justify;">Supongamos la siguiente relación:</p>
+<p style="text-align: justify;">Paciente ================ Posee ================Historia Clínica </p>
+<p style="text-align: justify;">Al analizar esta relación tenemos lo siguiente: Un paciente (instancia de Paciente) posee una sola historia clínica (instancia de Historia Clínica) y una historia clínica corresponde a un solo paciente. Es decir, cada instancia de una entidad solo se relaciona con una instancia de la otra entidad y por eso llegamos a la conclusión de que la relación “Posee” es una relación uno a uno. </p>
+<p style="text-align: justify;">Es importante anotar que cuando se va a analizar la cardinalidad de una relación, se debe analizar en ambos sentidos, es decir, de izquierda a derecha y de derecha a izquierda. Por eso, en el anterior ejemplo, no basta con decir que la relación es uno a uno debido a que un paciente tiene una sola historia clínica (izquierda a derecha). Faltaría analizar una historia clínica a cuantos pacientes corresponden (derecha a izquierda).</p>
+<p style="text-align: justify;">Siempre que se analice la cardinalidad de una relación, se debe proceder en ambos sentidos de la misma, es decir, de izquierda a derecha y viceversa.</p>
+<p style="text-align: justify;">En el análisis de la cardinalidad de una relación, siempre se debe partir de UNA y solo UNA instancia de la entidad “origen” para ver con cuantas instancias se relaciona en la entidad “destino”.</p>
+<p style="text-align: justify;"><u>Relación Uno a Varios.</u></p>
+<p style="text-align: justify;">Sea la siguiente relación:</p>
+<p style="text-align: justify;">Facultad ================ Contiene ==================== Carrera </p>
+<p style="text-align: justify;">Es una relación uno a varios porque <em>una </em>facultad (entidad origen) puede contener <em>varias </em>carreras (entidad destino) y a su vez, <em>una </em>carrera (entidad origen) solo pertenece a <em>una </em>facultad (entidad destino). </p>
+<p style="text-align: justify;"><u>Relación Varios a Uno.</u> </p>
+<p style="text-align: justify;">Es la misma situación de la relación Uno a Varios. La diferencia radica en que partimos de hacer el análisis en sentido contrario a como se hace en una relación Uno a Varios. Pero la relación sigue siendo la misma y con el mismo significado. Por lo tanto, se considera que en realidad existen 3 tipos de cardinalidades y no 4.</p>
+<p style="text-align: justify;">En realidad, existen 3 cardinalidades diferentes y no 4, ya que las relaciones uno a varios y varios a uno tienen el mismo significado. </p>
+<p style="text-align: justify;"><u>Relación Varios a Varios.</u> </p>
+<p style="text-align: justify;">Es el tipo de relación más común en la vida real. Analicemos la siguiente relación: </p>
+<p style="text-align: justify;">Estudiante ============== Cursa =================== Materia</p>
+<p style="text-align: justify;">La relación “Cursa” es una relación Varios a Varios ya que <em>un</em> estudiante puede cursar <em>varias</em> materias y, a su vez, <em>una</em> materia puede estar siendo cursada por <em>varios</em> estudiantes.</p>
+<p style="text-align: justify;">Miremos el siguiente ejemplo para clarificar un concepto importante:</p>
+<p style="text-align: justify;">Ciudad ============== Gobernada por ================== Alcalde</p>
+<p style="text-align: justify;">Esta relación puede tener 2 formas de analizarse, dependiendo de los requerimientos del usuario. Las 2 formas de analizar la relación difieren en el lapso de tiempo en el cual se desea que se dé la relación. Por ejemplo:</p>
+<ul style="text-align: justify;">
+<li>En un lapso de tiempo, <em>una</em> ciudad puede ser gobernada por <em>varios</em> alcaldes y <em>un</em> alcalde pudo haber gobernado <em>varias</em> ciudades (si la ley lo permite). Por lo tanto, en este caso ésta sería una relación Varios a Varios.</li>
+<li>En un momento dado del tiempo (en este instante, por ejemplo), <em>una</em> ciudad es gobernada por <em>un</em> solo alcalde y <em>un</em> alcalde puede gobernar <em>una</em> sola ciudad. Para este caso, la relación es Uno a Uno. </li>
+</ul>
+<p style="text-align: justify;">El primer análisis sería válido si lo que desea el usuario es guardar el registro histórico de los diferentes alcaldes que han gobernado cada ciudad, mientras que el segundo caso es válido solo en el caso en que el usuario desee saber quien es el alcalde de una ciudad en un momento dado. </p>
+<p style="text-align: justify;">La cardinalidad de una relación se tiene que analizar PARA EL MISMO LAPSO DE TIEMPO en ambos sentidos, es decir, de izquierda a derecha y viceversa.</p>
+<p style="text-align: justify;"><strong>Ejercicio.</strong></p>
+<p style="text-align: justify;">Analizar la cardinalidad de cada una de las siguientes relaciones: </p>
+<ul>
+<li style="text-align: justify;">Madre Biológica ============== Concibe ============== Hijo</li>
+<li style="text-align: justify;">Estudiante ================== Estudia =============== Carrera</li>
+<li style="text-align: justify;">Artículo ==================== Escrito por ============= Periodista</li>
+<li style="text-align: justify;">Empleado ===================Tiene ================ Hoja de Vida</li>
+<li style="text-align: justify;">Profesor ==================== Dicta ================ Materia</li>
+<li style="text-align: justify;">Finca ====================== Posee ================ Mayordomo</li>
+<li style="text-align: justify;">Casa de Software ============= Desarrolla ============= Software</li>
+</ul>
+<hr />
+<p>Videos:</p>
+<table border="1" style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;"><a href="https://youtu.be/9hmFIbPNqgs">Modelo Entidad Relación - Concepto de Relación</a></td>
+<td style="width: 50%; text-align: center;"><a href="https://youtu.be/JzKnVcjLh6Y">Modelo Entidad Relación - Grado de una Relación</a></td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;"><a href="https://youtu.be/aeMmXhpmvXA">Modelo Entidad Relación - Participación de una Entidad en una Relación</a></td>
+<td style="width: 50%; text-align: center;"><a href="https://youtu.be/Rd2bn5HzKiM">Modelo Entidad Relación - Cardinalidad de una Relación</a></td>
+</tr>
+</tbody>
+</table>
+<p></p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="atributos_y_tipos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="entidad_debil.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

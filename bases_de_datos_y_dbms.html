@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>BASES DE DATOS Y DBMS | FUNDAMENTOS Y DISEÑO DE BASES DE DATOS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="JORGE IVAN BEDOYA RESTREPO" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-7"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">FUNDAMENTOS Y DISEÑO DE BASES DE DATOS</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">FUNDAMENTOS Y DISEÑO DE BASES DE DATOS</a></li>
+   <li class="current-page-parent"><a href="conceptos_basicos.html" class="current-page-parent daddy">CONCEPTOS BASICOS</a>
+   <ul>
+      <li id="active"><a href="bases_de_datos_y_dbms.html" class="active no-ch">BASES DE DATOS Y DBMS</a></li>
+      <li><a href="niveles_de_abstraccion_de_datos.html" class="no-ch">NIVELES DE ABSTRACCION DE DATOS</a></li>
+      <li><a href="ejemplar_y_esquema.html" class="no-ch">EJEMPLAR Y ESQUEMA</a></li>
+      <li><a href="lenguajes_de_bases_de_datos.html" class="no-ch">LENGUAJES DE BASES DE DATOS</a></li>
+      <li><a href="modelos_de_datos.html" class="no-ch">MODELOS DE DATOS</a></li>
+      <li><a href="tipos_de_usuarios.html" class="no-ch">TIPOS DE USUARIOS</a></li>
+      <li><a href="dba__administrador_de_bases_de_datos.html" class="no-ch">DBA - ADMINISTRADOR DE BASES DE DATOS</a></li>
+      <li><a href="backups_y_tipos.html" class="no-ch">BACKUPS Y TIPOS</a></li>
+   </ul>
+   </li>
+   <li><a href="modelamiento_de_datos.html" class="daddy">MODELAMIENTO DE DATOS</a>
+   <ul class="other-section">
+      <li><a href="que_es.html" class="no-ch">QUE ES?</a></li>
+      <li><a href="modelo_entidad_relacion.html" class="daddy">MODELO ENTIDAD RELACION</a>
+      <ul class="other-section">
+         <li><a href="entidades_e_instancias.html" class="no-ch">ENTIDADES E INSTANCIAS</a></li>
+         <li><a href="atributos_y_tipos.html" class="no-ch">ATRIBUTOS Y TIPOS</a></li>
+         <li><a href="relaciones.html" class="no-ch">RELACIONES</a></li>
+         <li><a href="entidad_debil.html" class="no-ch">ENTIDAD DEBIL</a></li>
+         <li><a href="atributo_en_relacion.html" class="no-ch">ATRIBUTO EN RELACION</a></li>
+      </ul>
+      </li>
+      <li><a href="modelo_entidad_relacion_extendido.html" class="daddy">MODELO ENTIDAD RELACION EXTENDIDO</a>
+      <ul class="other-section">
+         <li><a href="especializacion.html" class="no-ch">ESPECIALIZACION</a></li>
+         <li><a href="generalizacion.html" class="no-ch">GENERALIZACION</a></li>
+      </ul>
+      </li>
+      <li><a href="diagrama_entidad_relacion.html" class="no-ch">DIAGRAMA ENTIDAD RELACION</a></li>
+      <li><a href="ejercicio_completo_de_modelamiento.html" class="no-ch">EJERCICIO COMPLETO DE MODELAMIENTO</a></li>
+   </ul>
+   </li>
+   <li><a href="modelo_relacional.html" class="daddy">MODELO RELACIONAL</a>
+   <ul class="other-section">
+      <li><a href="terminologia_tecnica.html" class="no-ch">TERMINOLOGIA TECNICA</a></li>
+      <li><a href="dominio_de_un_atributo.html" class="no-ch">DOMINIO DE UN ATRIBUTO</a></li>
+      <li><a href="tipos_de_claves.html" class="no-ch">TIPOS DE CLAVES</a></li>
+      <li><a href="reglas_de_mapeo__traduccion.html" class="daddy">REGLAS DE MAPEO / TRADUCCION</a>
+      <ul class="other-section">
+         <li><a href="cantidad_de_tablas.html" class="no-ch">CANTIDAD DE TABLAS</a></li>
+         <li><a href="entidad_normal__fuerte.html" class="no-ch">ENTIDAD NORMAL / FUERTE</a></li>
+         <li><a href="entidad_debil0.html" class="no-ch">ENTIDAD DEBIL</a></li>
+         <li><a href="atributo_multivalorado.html" class="no-ch">ATRIBUTO MULTIVALORADO</a></li>
+         <li><a href="relacion_uno_a_uno.html" class="no-ch">RELACION UNO A UNO</a></li>
+         <li><a href="relacion_uno_a_muchos.html" class="no-ch">RELACION UNO A MUCHOS</a></li>
+         <li><a href="relacion_muchos_a_muchos.html" class="no-ch">RELACION MUCHOS A MUCHOS</a></li>
+         <li><a href="atributo_en_relacion0.html" class="no-ch">ATRIBUTO EN RELACION</a></li>
+         <li><a href="especializacion0.html" class="no-ch">ESPECIALIZACION</a></li>
+         <li><a href="ejercicio_completo.html" class="no-ch">EJERCICIO COMPLETO</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="normalizacion_de_datos.html" class="daddy">NORMALIZACION DE DATOS</a>
+   <ul class="other-section">
+      <li><a href="introduccion.html" class="no-ch">INTRODUCCION</a></li>
+      <li><a href="anomalias_en_el_diseo.html" class="no-ch">ANOMALIAS EN EL DISEÑO</a></li>
+      <li><a href="tuplas_espurias.html" class="no-ch">TUPLAS ESPURIAS</a></li>
+      <li><a href="dependencia_funcional.html" class="no-ch">DEPENDENCIA FUNCIONAL</a></li>
+      <li><a href="formas_normales.html" class="daddy">FORMAS NORMALES</a>
+      <ul class="other-section">
+         <li><a href="primera_forma_normal_1nf.html" class="no-ch">PRIMERA FORMA NORMAL (1NF)</a></li>
+         <li><a href="segunda_forma_normal_2nf.html" class="no-ch">SEGUNDA FORMA NORMAL (2NF)</a></li>
+         <li><a href="tercera_forma_normal_3nf.html" class="no-ch">TERCERA FORMA NORMAL (3NF)</a></li>
+         <li><a href="ejercicio_completo0.html" class="no-ch">EJERCICIO COMPLETO</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="conceptos_basicos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="niveles_de_abstraccion_de_datos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">BASES DE DATOS Y DBMS</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id9">
+<div class="iDevice emphasis0" >
+<div id="ta9_108_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;"><strong>Qué es una Base de Datos?</strong></p>
+<p style="text-align: justify;"> Es una gran colección de información almacenada y relacionada entre sí y que concierne a un tema de interés para una empresa. Las bases de datos nacieron para darle a los usuarios la posibilidad de tener la información centralizada, pero con el transcurrir del tiempo y de la tecnología, las necesidades del usuario han ido evolucionando a tal punto que encontramos hoy día bases de datos con la información dispersa en diferentes servidores; esto es lo que se llaman bases de datos distribuidas.</p>
+<p style="text-align: justify;"> <strong>Entonces cual es la diferencia entre un sistema de archivos tradicional y una base de datos?</strong></p>
+<p style="text-align: justify;"> Si miramos la definición de Base de Datos nos encontramos con la misma definición de sistema de archivos. Con un conjunto de archivos se puede tener también un conjunto de datos relacionados entre sí, posiblemente centralizados, y que también conciernen a un tema en particular de la empresa. Es decir, una Base de Datos se puede considerar como un sistema de archivos desde el punto de vista de su objetivo final, más no desde el punto de vista de su utilización. Es decir, con un conjunto de archivos bien diseñados acerca de la nómina de una empresa yo puedo obtener los mismos resultados que con una base de datos del mismo tema y que contenga los mismos datos. Lo que sucede es que la forma de obtener estos resultados es mucho más práctico y fácil con una base de datos que con un sistema de archivos.</p>
+<p style="text-align: justify;">El elemento que hace que en una base de datos los resultados se obtengan de una manera más fácil se llama el DBMS.</p>
+<p style="text-align: justify;"><strong>Qué es el DBMS?</strong></p>
+<p style="text-align: justify;"> La sigla DBMS significa DataBase Management System (Sistema Manejador de Bases de Datos) y es lo que comúnmente conocemos como "motor" de bases de datos.</p>
+<p style="text-align: justify;">Los términos DBMS y Bases de Datos se utilizan, en el argot cotidiano, sin distingo pero en realidad no significan lo mismo.</p>
+<p style="text-align: justify;">Cabe decir que una base de datos es parte de un DBMS. En otras palabras, un DBMS es un software que contiene 2 grandes módulos:</p>
+<p style="text-align: justify;">  Repositorio de Datos: Es propiamente el sitio donde el usuario va a guardar los datos propios. Es la base de datos como tal.</p>
+<p style="text-align: justify;">  Software de Manipulación de Datos: Es un software que viene incorporado al DBMS y que sirve para manipular directamente los datos que existen en la base de datos. Por ser un software nativo del DBMS, el acceso a dichos datos se hace de una manera mucho más rápida y efectiva.</p>
+<p style="text-align: justify;">Es este segundo componente el que diferencia a un ambiente de Archivos con uno de Bases de Datos. En un sistema de archivos los datos deben ser manipulados por programas escritos en lenguajes de programación convencionales (de tercera generación), los cuales dependen mucho de la estructura física de almacenamiento de los datos. En cambio, en un sistema de Bases de Datos, los datos son manipulados por el mismo DBMS o por programas escritos en lenguajes de cuarta generación que vienen incorporados al módulo de software del DBMS.</p>
+<p style="text-align: justify;"><strong>Ejemplos de DBMS</strong></p>
+<p style="text-align: justify;"> El siguiente es un listado de DBMS existentes comercialmente:</p>
+<ul style="text-align: justify;">
+<li> Oracle</li>
+<li><span style="color: #333333; font-size: 1.05em;">Informix</span></li>
+<li><span style="color: #333333; font-size: 1.05em;">DB2</span></li>
+<li><span style="color: #333333; font-size: 1.05em;">Sybase</span></li>
+<li><span style="color: #333333; font-size: 1.05em;">Progress</span></li>
+<li><span style="color: #333333; font-size: 1.05em;">SQL Server</span></li>
+<li><span style="color: #333333; font-size: 1.05em;">MySQL</span></li>
+<li><span style="color: #333333; font-size: 1.05em;">Paradox</span></li>
+<li><span style="color: #333333; font-size: 1.05em;">Fox Pro</span></li>
+<li><span style="color: #333333; font-size: 1.05em;">Access</span></li>
+<li><span style="color: #333333; font-size: 1.05em;">Postgresql</span></li>
+<li><span style="color: #333333; font-size: 1.05em;">Firebird</span></li>
+<li><span style="color: #333333; font-size: 1.05em;">MongoDB</span></li>
+<li><span style="color: #333333; font-size: 1.05em;">Neo4J</span></li>
+</ul>
+<p style="text-align: justify;">Etc.</p>
+<p style="text-align: justify;"> <strong>Ventajas de los DBMS</strong></p>
+<p style="text-align: justify;"> El hecho de que la tecnología de bases de datos haya desplazado a los sistemas manejados por archivos tradicionales no es gratuito. Existen un conjunto de ventajas de las bases de datos sobre los archivos, que hacen que desarrollar aplicaciones con esta tecnología sea mucho más atractivo para la empresa. A continuación, se explican en detalle cuales son las ventajas de la tecnología de bases de datos:</p>
+<p style="text-align: justify;">1. Centralización de datos.</p>
+<p style="text-align: justify;"> Una de las características que tienen los sistemas de archivos es la situación que se denomina "aislamiento de datos". Esto se refiere al hecho de que, cuando en una empresa se empiezan a manejar archivos de datos, éstos se van convirtiendo en islas de información, es decir, datos aislados entre si. Este aislamiento se va dando debido a que cada dependencia de la empresa va almacenando en sus propios archivos los datos que ella necesita, sin contar que podría ser que en otros archivos de la empresa ya existieran dichos datos. Es decir, cada dependencia se va convirtiendo en una "isla de información" aislada de las demás.</p>
+<p style="text-align: justify;">Con las bases de datos esto no sucede. La filosofía de centralización de datos que maneja esta tecnología hace que toda la información empresarial se encuentre en un solo repositorio y por lo tanto es poco factible que la información se encuentre replicada. Tenemos un único contenido de información que suple las necesidades de todas las dependencias de la empresa.</p>
+<p style="text-align: justify;">Por lo tanto, la centralización nos evita la REDUNDANCIA de datos, es decir, no vamos a encontrar datos duplicados (o n-plicados) dentro de la base de datos, a no ser que voluntariamente el diseñador o usuario así lo requiera.</p>
+<p style="text-align: justify;"> 2. <span style="color: #3a4749; font-size: 1.05em;">Consistencia de los datos.</span></p>
+<p style="text-align: justify;">Cuando tenemos islas de información, tal y como se expuso en el numeral anterior, la probabilidad de que existan inconsistencias en los datos es muy alta, debido a las múltiples copias que se manejan de los mismos. Por ejemplo, el departamento de Nómina puede tener grabado dentro de sus archivos la dirección de residencia de cada uno de sus empleados. Lo mismo puede suceder con el departamento de Contabilidad. Si en algún momento uno de los empleados cambia de dirección de residencia y solo es informado el departamento de Nómina de esta situación, el archivo de datos de Nómina quedará actualizado, mas no el archivo de Contabilidad. Por lo tanto, el archivo de datos de Contabilidad estará desactualizado. Y lo que es más grave aún es que un mismo empleado aparecerá con dos direcciones diferentes en los archivos de la empresa. La consecuencia de esto es que cada vez que se necesite actualizar un dato, se deben actualizar tantas veces como copias existan del mismo.</p>
+<p style="text-align: justify;">Por la centralización de datos, en las bases de datos es poco probable que esto suceda debido a que lo que se promulga es la no duplicación (o nplicación) de los datos. La consistencia de datos es mucho más fácil de mantener en un ambiente de bases de datos.</p>
+<p style="text-align: justify;">3. Seguridad</p>
+<p style="text-align: justify;"> La seguridad, en un ambiente de manejo de datos, tiene mucho que ver con lo que se denomina control de acceso. Es decir, se encarga de definir exactamente lo que cada usuario estará en capacidad de ver de todo el conjunto de datos que se tiene grabados.</p>
+<p style="text-align: justify;">Manejar la seguridad en un ambiente de archivos es mucho más complejo que en una base de datos; esto debido a que los sistemas de archivos, por si mismos, no tienen implementados módulos que permitan hacer esto, mientras que las bases de datos sí. Lo que sucede en una base de datos es que se define una sola vez estos controles de acceso y éstos quedan grabados en el catálogo del sistema (sitio  de la base de datos en el cual se guardan los metadatos, es decir, datos acerca de los datos). Posteriormente si existe una aplicación que trata de violar esos controles de acceso, es decir si un usuario trata de ver información para la cual no está autorizado, el motor de la base de datos AUTOMATICAMENTE saca el mensaje de error indicando la negativa para poder realizar dicha acción.</p>
+<p style="text-align: justify;">En un ambiente de archivos esto no es automático. Recordemos que una cosa es la estructura de datos que escojamos para almacenar los datos (en este caso los archivos) y otra el lenguaje escogido para desarrollar las aplicaciones que manipularán dichos datos. Este control de acceso debería ser implementado en las aplicaciones, en todo programa en el cual se requiera hacer el control.</p>
+<p style="text-align: justify;">Por lo tanto, mientras que en una base de datos el módulo de seguridad ya existe, en un sistema de archivos debe ser implementado por el analista/programador.</p>
+<p style="text-align: justify;">4. Fácil acceso a los datos</p>
+<p style="text-align: justify;"> Suponga el siguiente caso típico en las empresas: usted, que es analista/programador del departamento de sistemas, recibe un pedido urgente del gerente de la compañía en el cual le solicita generarle un informe con las ventas realizadas por producto en cada uno de los 3 meses anteriores. Esto con el fin de contar con material de trabajo para una reunión con la junta directiva en horas de la tarde del mismo día. Usted, muy diligente que es, empieza a hacer su trabajo y luego de unos minutos tiene generado el informe. Pero faltando 10 minutos para la reunión, llega el gerente y le cambia el panorama diciéndole que el listado solicitado en la mañana ya no es el que necesita sino que necesita otro con las ventas en cada una de las sucursales en los últimos 6 meses. Cuál sería su reacción? De desespero o de tranquilidad?</p>
+<p style="text-align: justify;">Todo depende del ambiente tecnológico en el cual esté trabajando. Si es en ambiente de sistemas de archivos la reacción sería de desespero, pero si es en bases de datos habría una reacción de tranquilidad. La razón de esta diferencia es que el acceso a los datos en un ambiente de bases de datos es mucho más fácil que en un sistema de archivos, debido a la existencia del software de manipulación de datos que viene incorporado al DBMS y del cual ya hablamos en apartados anteriores. A través de este software y del lenguaje SQL que viene incorporado con el DBMS, hacer cualquier consulta y generar un informe sobre la base de datos es cuestión de unas cuantas instrucciones. Mientras que en un sistema de archivos, cualquier informe requerido representa desarrollar un programa completo para cumplir con las especificaciones requeridas. En el caso expuesto, en un sistema de archivos a usted como analista le hubiera tocado hacer OTRO PROGRAMA en el lenguaje utilizado para poder suplir la necesidad del gerente. Y hacerlo en 10 minutos! Mientras que en un ambiente de bases de datos, sería cuestión de reformular la consulta de SQL ya ejecutada para consolidar los datos por sucursal.</p>
+<p style="text-align: justify;">El software adicional que viene con el DBMS hace que el acceso a los datos sea mucho más inmediato y fácil. </p>
+<p style="text-align: justify;">5. Atomicidad de transacciones</p>
+<p style="text-align: justify;">Como veremos más adelante, una transacción en bases de datos corresponde a una unidad lógica de proceso que afecta la base de datos. Por ejemplo, una consignación bancaria, una transferencia de fondos, una aplicación de un inventario físico, entre otras cosas.</p>
+<p style="text-align: justify;">Si en un sistema de archivos hay una falla en la mitad del procesamiento de una transferencia de fondos, posiblemente los datos acerca de las cuentas involucradas en la transferencia podrían quedar inconsistentes. Se puede dar la posibilidad de que la falla se produzca inmediatamente después de haber debitado el valor de la cuenta origen y justo antes de acreditarla a la cuenta destino. Esto haría que la cuenta origen tuviera su saldo restado pero no sumado a la cuenta destino. Obviamente, en este momento los datos estarían inconsistentes y le tocaría al analista corregir esta situación, cambiando los datos de los archivos en forma manual o, si el problema es de muchos más datos, generando un programa de emergencia que permita recorrer los archivos en búsqueda de datos inconsistentes para ser corregidos.</p>
+<p style="text-align: justify;">Por el contrario, en un ambiente de bases de datos esto no sucederá. Cuando una transacción sufre una falla en el transcurso de su ejecución, el motor tiene la capacidad AUTOMATICA de deshacer lo que dicha transacción había hecho hasta el momento de la falla, dejando la base de datos en el estado en el que estaba al iniciar la ejecución de la transacción.</p>
+<p style="text-align: justify;">Se le llama atomicidad de las transacciones por el hecho de que el motor trata al procesamiento de transacciones como si fuera una sola unidad de procesamiento, a pesar de que éstas constan de múltiples instrucciones.</p>
+<p style="text-align: justify;">6. Manejo del Control de Concurrencia</p>
+<p style="text-align: justify;">Se entiende por concurrencia a la situación en la cual varios usuarios al mismo tiempo están accediendo, para consulta o actualización, a los mismos datos. En este contexto, si en un sistema de archivos ocurre esto, y los usuarios involucrados están tratando de hacer una actualización sobre el mismo dato, se podría generar un problema de consistencia de datos ya que las "transacciones" involucradas no se están viendo entre sí.</p>
+<p style="text-align: justify;">En un motor de bases de datos, está situación está siendo controlada por módulos del DBMS que cumplen esta función. Es decir, AUTOMATICAMENTE el motor hace una planeación de cómo va a ejecutar transacciones concurrentes sin que estas se interfieran entre sí, pudiendo dejar datos inconsistentes.</p>
+<p style="text-align: justify;">El tema de Control de Concurrencia será manejado en módulos posteriores de una manera más detallada.</p>
+<p style="text-align: justify;">7. Independencia de la Estructura de Almacenamiento</p>
+<p style="text-align: justify;">Cuando se tienen N programas que acceden a un archivo en particular y se da la situación de cambiarle la estructura física de ese archivo (adicionarle un nuevo campo, modificar el tamaño de un campo existente, borrar un campo, etc.), se debe modificar cada uno de los N programas para que reconozca la nueva estructura del archivo. Es así como en COBOL, por ejemplo, si esto sucede se debe modificar la estructura del archivo expuesta en el DATA DIVISION. Es decir, las aplicaciones son dependientes de la estructura de almacenamiento.</p>
+<p style="text-align: justify;">Con bases de datos esto no sucederá. Si hay que cambiar la estructura de una tabla, lo que se verá afectado será el catálogo del sistema (y esto lo modifica AUTOMATICAMENTE el motor de la base de datos) y no las aplicaciones, a no ser que éstas vayan a utilizar el campo (o campos) modificados de la tabla. En bases de datos, hay plena independencia entre la estructura de almacenamiento y los programas de aplicación. </p>
+<p style="text-align: justify;"><strong>Cuando no se justifica manejar bases de datos?</strong></p>
+<p style="text-align: justify;">Hay ocasiones en las cuales manejar una base de datos en la empresa no sería de gran utilidad. No son muchas las justificaciones pero en las siguientes ocasiones habría que pensar en permanecer en un sistema de archivos, más que en migrar a un ambiente de bases de datos:</p>
+<p style="padding-left: 30px; text-align: justify;">a) Cuando la cantidad de datos a manejar no es importante, es decir, cuando tenemos la certeza de que el número de datos que vamos a mantener no va a crecer demasiado.</p>
+<p style="padding-left: 30px; text-align: justify;"> b) Cuando el número de consultas a realizar no es muy alto, o cuando la cantidad de registros a consultar es muy limitada.</p>
+<p style="padding-left: 30px; text-align: justify;"> c) Cuando se van a mantener muchos archivos maestros y pocos archivos de novedades. Es decir, cuando la información es muy estática y por lo tanto no se modifica muy constantemente.</p></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper TrueFalseIdevice em_iDevice" id="id64">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Pregunta Verdadero-Falso</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta64_100" class="block iDevice_content">
+
+</div>
+<section class="question">
+<form name="true-false-form-0b64" action="#" class="activity-form">
+<h1 class="js-sr-av">Pregunta 1</h1>
+<div id="taquestion0b64" class="block iDevice_content">
+<p>Una base de datos es un conjunto de datos almacenados y relacionados entre sí, que corresponden a un tema en particular.</p>
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b64"><input type="radio" name="option0b64" id="true0b64" class="exe-radio-option exe-radio-option-0-2-0b64-truefalse" /> Verdadero</label> 
+<label for="false0b64"><input type="radio" name="option0b64" id="false0b64" class="exe-radio-option exe-radio-option-1-2-0b64-truefalse" /> Falso</label>
+</p>
+</form>
+<section id="s0b64" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p><strong id="s0b64-result" class="right">Verdadero</strong></p>
+<p>Son las tres características de una base de datos: datos almacenados, relacionados y de un tema.</p>
+</section>
+</section>
+<section class="question">
+<form name="true-false-form-1b64" action="#" class="activity-form">
+<h1 class="js-sr-av">Pregunta 2</h1>
+<div id="taquestion1b64" class="block iDevice_content">
+<p>Una de las ventajas de las bases de datos, con respecto a un sistema de archivos, es el aislamiento de los datos.</p>
+</div>
+<p class="iDevice_answer js-required">
+<label for="true1b64"><input type="radio" name="option1b64" id="true1b64" class="exe-radio-option exe-radio-option-0-2-1b64-truefalse" /> Verdadero</label> 
+<label for="false1b64"><input type="radio" name="option1b64" id="false1b64" class="exe-radio-option exe-radio-option-1-2-1b64-truefalse" /> Falso</label>
+</p>
+</form>
+<section id="s1b64" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p><strong id="s1b64-result" class="wrong">Falso</strong></p>
+<p>Al contrario, esa es una desventaja que tenían los sistemas de archivos. En los sistemas de archivos, los datos estaban dispersos a lo largo de las dependencias de la compañía. Esto hacía que cada archivo de datos estuviera "aislado" de los demás, sin percatarse de la posible redundancia de datos existente.</p>
+</section>
+</section>
+<section class="question">
+<form name="true-false-form-2b64" action="#" class="activity-form">
+<h1 class="js-sr-av">Pregunta 3</h1>
+<div id="taquestion2b64" class="block iDevice_content">
+<p>Excel es un motor de bases de datos.</p>
+</div>
+<p class="iDevice_answer js-required">
+<label for="true2b64"><input type="radio" name="option2b64" id="true2b64" class="exe-radio-option exe-radio-option-0-2-2b64-truefalse" /> Verdadero</label> 
+<label for="false2b64"><input type="radio" name="option2b64" id="false2b64" class="exe-radio-option exe-radio-option-1-2-2b64-truefalse" /> Falso</label>
+</p>
+</form>
+<section id="s2b64" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p><strong id="s2b64-result" class="wrong">Falso</strong></p>
+<p>A pesar de que tiene funcionalidades existentes en un motor de bases de datos (almacenamiento de datos, cálculos varios, funciones agregadas, etc.), Excel es una hoja de cálculo, no un motor de bases de datos.</p>
+</section>
+</section>
+<section class="question">
+<form name="true-false-form-3b64" action="#" class="activity-form">
+<h1 class="js-sr-av">Pregunta 4</h1>
+<div id="taquestion3b64" class="block iDevice_content">
+<p>Los cuatro motores de bases de datos de mayor capacidad son Oracle, Informix, DB2 y SQL Server.</p>
+</div>
+<p class="iDevice_answer js-required">
+<label for="true3b64"><input type="radio" name="option3b64" id="true3b64" class="exe-radio-option exe-radio-option-0-2-3b64-truefalse" /> Verdadero</label> 
+<label for="false3b64"><input type="radio" name="option3b64" id="false3b64" class="exe-radio-option exe-radio-option-1-2-3b64-truefalse" /> Falso</label>
+</p>
+</form>
+<section id="s3b64" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p><strong id="s3b64-result" class="right">Verdadero</strong></p>
+<p>Son los cuatro motores con alcances mayores para grandes volúmenes de datos.</p>
+</section>
+</section>
+<section class="question">
+<form name="true-false-form-4b64" action="#" class="activity-form">
+<h1 class="js-sr-av">Pregunta 5</h1>
+<div id="taquestion4b64" class="block iDevice_content">
+<p>La concurrencia es la situación en la cual una transacción aborta y retrocede automáticamente todas las operaciones que se habían hecho hasta el momento.</p>
+</div>
+<p class="iDevice_answer js-required">
+<label for="true4b64"><input type="radio" name="option4b64" id="true4b64" class="exe-radio-option exe-radio-option-0-2-4b64-truefalse" /> Verdadero</label> 
+<label for="false4b64"><input type="radio" name="option4b64" id="false4b64" class="exe-radio-option exe-radio-option-1-2-4b64-truefalse" /> Falso</label>
+</p>
+</form>
+<section id="s4b64" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p><strong id="s4b64-result" class="wrong">Falso</strong></p>
+<p>La concurrencia sucede cuando varios usuarios / transacciones están trabajando sobre la base de datos, al mismo tiempo.</p>
+</section>
+</section>
+<section class="question">
+<form name="true-false-form-5b64" action="#" class="activity-form">
+<h1 class="js-sr-av">Pregunta 6</h1>
+<div id="taquestion5b64" class="block iDevice_content">
+<p>Una de las ventajas de las bases de datos, frente al sistema de archivos, es la atomicidad, la cual asegura que siempre los datos almacenados van a estar consistentes, a pesar de posibles fallos que puedan tener las transacciones que se están ejecutando.</p>
+</div>
+<p class="iDevice_answer js-required">
+<label for="true5b64"><input type="radio" name="option5b64" id="true5b64" class="exe-radio-option exe-radio-option-0-2-5b64-truefalse" /> Verdadero</label> 
+<label for="false5b64"><input type="radio" name="option5b64" id="false5b64" class="exe-radio-option exe-radio-option-1-2-5b64-truefalse" /> Falso</label>
+</p>
+</form>
+<section id="s5b64" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p><strong id="s5b64-result" class="right">Verdadero</strong></p>
+<p>La atomicidad es una propiedad de las bases de datos que permite revertir las operaciones hechas hasta el momento de un fallo en la ejecución de una transacción. Esto asegura que la base de datos, debido al fallo presentado, no vaya a quedar en estado inconsistente.</p>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="conceptos_basicos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="niveles_de_abstraccion_de_datos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

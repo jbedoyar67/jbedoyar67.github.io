@@ -1,0 +1,797 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>ATRIBUTO EN RELACION | FUNDAMENTOS Y DISEÑO DE BASES DE DATOS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="JORGE IVAN BEDOYA RESTREPO" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-41"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">FUNDAMENTOS Y DISEÑO DE BASES DE DATOS</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">FUNDAMENTOS Y DISEÑO DE BASES DE DATOS</a></li>
+   <li><a href="conceptos_basicos.html" class="daddy">CONCEPTOS BASICOS</a>
+   <ul class="other-section">
+      <li><a href="bases_de_datos_y_dbms.html" class="no-ch">BASES DE DATOS Y DBMS</a></li>
+      <li><a href="niveles_de_abstraccion_de_datos.html" class="no-ch">NIVELES DE ABSTRACCION DE DATOS</a></li>
+      <li><a href="ejemplar_y_esquema.html" class="no-ch">EJEMPLAR Y ESQUEMA</a></li>
+      <li><a href="lenguajes_de_bases_de_datos.html" class="no-ch">LENGUAJES DE BASES DE DATOS</a></li>
+      <li><a href="modelos_de_datos.html" class="no-ch">MODELOS DE DATOS</a></li>
+      <li><a href="tipos_de_usuarios.html" class="no-ch">TIPOS DE USUARIOS</a></li>
+      <li><a href="dba__administrador_de_bases_de_datos.html" class="no-ch">DBA - ADMINISTRADOR DE BASES DE DATOS</a></li>
+      <li><a href="backups_y_tipos.html" class="no-ch">BACKUPS Y TIPOS</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="modelamiento_de_datos.html" class="current-page-parent daddy">MODELAMIENTO DE DATOS</a>
+   <ul>
+      <li><a href="que_es.html" class="no-ch">QUE ES?</a></li>
+      <li class="current-page-parent"><a href="modelo_entidad_relacion.html" class="current-page-parent daddy">MODELO ENTIDAD RELACION</a>
+      <ul>
+         <li><a href="entidades_e_instancias.html" class="no-ch">ENTIDADES E INSTANCIAS</a></li>
+         <li><a href="atributos_y_tipos.html" class="no-ch">ATRIBUTOS Y TIPOS</a></li>
+         <li><a href="relaciones.html" class="no-ch">RELACIONES</a></li>
+         <li><a href="entidad_debil.html" class="no-ch">ENTIDAD DEBIL</a></li>
+         <li id="active"><a href="atributo_en_relacion.html" class="active no-ch">ATRIBUTO EN RELACION</a></li>
+      </ul>
+      </li>
+      <li><a href="modelo_entidad_relacion_extendido.html" class="daddy">MODELO ENTIDAD RELACION EXTENDIDO</a>
+      <ul class="other-section">
+         <li><a href="especializacion.html" class="no-ch">ESPECIALIZACION</a></li>
+         <li><a href="generalizacion.html" class="no-ch">GENERALIZACION</a></li>
+      </ul>
+      </li>
+      <li><a href="diagrama_entidad_relacion.html" class="no-ch">DIAGRAMA ENTIDAD RELACION</a></li>
+      <li><a href="ejercicio_completo_de_modelamiento.html" class="no-ch">EJERCICIO COMPLETO DE MODELAMIENTO</a></li>
+   </ul>
+   </li>
+   <li><a href="modelo_relacional.html" class="daddy">MODELO RELACIONAL</a>
+   <ul class="other-section">
+      <li><a href="terminologia_tecnica.html" class="no-ch">TERMINOLOGIA TECNICA</a></li>
+      <li><a href="dominio_de_un_atributo.html" class="no-ch">DOMINIO DE UN ATRIBUTO</a></li>
+      <li><a href="tipos_de_claves.html" class="no-ch">TIPOS DE CLAVES</a></li>
+      <li><a href="reglas_de_mapeo__traduccion.html" class="daddy">REGLAS DE MAPEO / TRADUCCION</a>
+      <ul class="other-section">
+         <li><a href="cantidad_de_tablas.html" class="no-ch">CANTIDAD DE TABLAS</a></li>
+         <li><a href="entidad_normal__fuerte.html" class="no-ch">ENTIDAD NORMAL / FUERTE</a></li>
+         <li><a href="entidad_debil0.html" class="no-ch">ENTIDAD DEBIL</a></li>
+         <li><a href="atributo_multivalorado.html" class="no-ch">ATRIBUTO MULTIVALORADO</a></li>
+         <li><a href="relacion_uno_a_uno.html" class="no-ch">RELACION UNO A UNO</a></li>
+         <li><a href="relacion_uno_a_muchos.html" class="no-ch">RELACION UNO A MUCHOS</a></li>
+         <li><a href="relacion_muchos_a_muchos.html" class="no-ch">RELACION MUCHOS A MUCHOS</a></li>
+         <li><a href="atributo_en_relacion0.html" class="no-ch">ATRIBUTO EN RELACION</a></li>
+         <li><a href="especializacion0.html" class="no-ch">ESPECIALIZACION</a></li>
+         <li><a href="ejercicio_completo.html" class="no-ch">EJERCICIO COMPLETO</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="normalizacion_de_datos.html" class="daddy">NORMALIZACION DE DATOS</a>
+   <ul class="other-section">
+      <li><a href="introduccion.html" class="no-ch">INTRODUCCION</a></li>
+      <li><a href="anomalias_en_el_diseo.html" class="no-ch">ANOMALIAS EN EL DISEÑO</a></li>
+      <li><a href="tuplas_espurias.html" class="no-ch">TUPLAS ESPURIAS</a></li>
+      <li><a href="dependencia_funcional.html" class="no-ch">DEPENDENCIA FUNCIONAL</a></li>
+      <li><a href="formas_normales.html" class="daddy">FORMAS NORMALES</a>
+      <ul class="other-section">
+         <li><a href="primera_forma_normal_1nf.html" class="no-ch">PRIMERA FORMA NORMAL (1NF)</a></li>
+         <li><a href="segunda_forma_normal_2nf.html" class="no-ch">SEGUNDA FORMA NORMAL (2NF)</a></li>
+         <li><a href="tercera_forma_normal_3nf.html" class="no-ch">TERCERA FORMA NORMAL (3NF)</a></li>
+         <li><a href="ejercicio_completo0.html" class="no-ch">EJERCICIO COMPLETO</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="entidad_debil.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="modelo_entidad_relacion_extendido.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">ATRIBUTO EN RELACION</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id26">
+<div class="iDevice emphasis0" >
+<div id="ta26_114_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;"><strong>Atributos en Relaciones</strong></p>
+<p style="text-align: justify;">El siguiente es el ejemplo de una orden de compra que se desea sistematizar a través de una base de datos:</p>
+<table border="1" style="width: 63.9234%;">
+<tbody>
+<tr>
+<td style="width: 100%;">
+<p style="text-align: center;"><strong>Empresa de Energía “Corriente Alterna S.A.”</strong></p>
+<p style="text-align: center;"><strong>Carrera 76 No. 54 – 70</strong></p>
+<p style="text-align: center;"><strong>Barrio Las Estrellas</strong></p>
+<p style="text-align: center;"><strong>Teléfono 5 14 76 23</strong></p>
+<p style="text-align: center;"><strong>Medellín</strong></p>
+<p style="text-align: center;"><strong></strong></p>
+<p style="text-align: center;"><strong>ORDEN DE COMPRA</strong></p>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="1" style="width: 64.0703%;">
+<tbody>
+<tr>
+<td style="width: 26.503%;">Numero: 303</td>
+<td style="width: 22.1634%;">Fecha: 12/05/2012</td>
+<td style="width: 15.3795%;">Nit Proveedor: 800.630.520-1</td>
+</tr>
+<tr>
+<td style="width: 26.503%;"></td>
+<td style="width: 22.1634%;"></td>
+<td style="width: 15.3795%;"></td>
+</tr>
+<tr>
+<td width="109" style="width: 26.503%; text-align: center;">
+<p><strong>Código</strong></p>
+</td>
+<td width="255" style="width: 22.1634%; text-align: center;">
+<p><strong>Descripción</strong></p>
+</td>
+<td width="235" style="width: 15.3795%; text-align: center;">
+<p><strong>Precio Unitario</strong></p>
+</td>
+</tr>
+<tr>
+<td width="109" style="width: 26.503%;">
+<p>105060</p>
+</td>
+<td width="255" style="width: 22.1634%;">
+<p>Lápiz Mirado No. 2</p>
+</td>
+<td width="235" style="width: 15.3795%;">
+<p>$   1200</p>
+</td>
+</tr>
+<tr>
+<td width="109" style="width: 26.503%;">
+<p>503069</p>
+</td>
+<td width="255" style="width: 22.1634%;">
+<p>Block Rayado Tamaño Oficio</p>
+</td>
+<td width="235" style="width: 15.3795%;">
+<p>$   3800</p>
+</td>
+</tr>
+<tr>
+<td width="109" style="width: 26.503%;">
+<p>603040</p>
+</td>
+<td width="255" style="width: 22.1634%;">
+<p>Compás Laminado en Cobre</p>
+</td>
+<td width="235" style="width: 15.3795%;">
+<p>$   5900</p>
+</td>
+</tr>
+<tr>
+<td style="width: 26.503%;">
+<p></p>
+</td>
+<td style="width: 22.1634%;">
+<p></p>
+</td>
+<td style="width: 15.3795%;">
+<p></p>
+</td>
+</tr>
+<tr>
+<td width="109" style="width: 26.503%;">
+<p> </p>
+</td>
+<td width="255" style="width: 22.1634%;">
+<p><strong>SUBTOTAL:</strong></p>
+</td>
+<td width="235" style="width: 15.3795%;">
+<p><strong>$10,900</strong></p>
+</td>
+</tr>
+<tr>
+<td width="109" style="width: 26.503%;">
+<p> </p>
+</td>
+<td width="255" style="width: 22.1634%;">
+<p><strong>IVA (16 %):</strong></p>
+</td>
+<td width="235" style="width: 15.3795%;">
+<p><strong>$  1,744</strong></p>
+</td>
+</tr>
+<tr>
+<td width="109" style="width: 26.503%;">
+<p> </p>
+</td>
+<td width="255" style="width: 22.1634%;">
+<p><strong>TOTAL:</strong></p>
+</td>
+<td width="235" style="width: 15.3795%;">
+<p><strong>$12,644</strong></p>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="1" style="width: 64.1207%;">
+<tbody>
+<tr>
+<td style="width: 100%;">
+<p style="text-align: center;"><strong>Proveedor:</strong></p>
+<p style="text-align: center;"><strong>Papelería Mundial S.A.</strong></p>
+<p style="text-align: center;"><strong>Calle 52 No. 10 – 65</strong></p>
+<p style="text-align: center;"><strong>Tel: 4 16 54 33</strong></p>
+<p style="text-align: center;"><strong>Buenos Aires</strong></p>
+<p style="text-align: center;"><strong>Argentina</strong></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;">Es de anotar que en la anterior orden de compra, se está asumiendo que se va a pedir una unidad de cada producto impreso en ella; por eso es que no existe una columna de cantidad pedida. Más adelante se desarrollará este caso.</p>
+<p style="text-align: justify;"> A partir de esta orden de compra, desarrollar el diagrama entidad / relación correspondiente a la información que se maneja en ella.</p>
+<p style="text-align: justify;"> Solución:</p>
+<p style="text-align: justify;"> Primero que todo identifiquemos las entidades que hay involucradas en el problema:</p>
+<ul style="text-align: justify;">
+<li>Orden de Compra</li>
+<li>Producto</li>
+<li>Proveedor</li>
+</ul>
+<p style="text-align: justify;">De cada entidad, identifiquemos los atributos que se manejan en la orden de compra: </p>
+<ul style="text-align: justify;">
+<li>Orden de Compra
+<ul>
+<li>Número</li>
+<li>Fecha</li>
+<li>IVA</li>
+<li>Valor Total</li>
+</ul>
+</li>
+<li>Producto
+<ul>
+<li>Código</li>
+<li>Descripción</li>
+<li>Precio Unitario</li>
+</ul>
+</li>
+<li>Proveedor
+<ul>
+<li>Nit</li>
+<li>Nombre</li>
+<li>Dirección</li>
+<li>Teléfono</li>
+<li>Ciudad</li>
+<li>País</li>
+</ul>
+</li>
+</ul>
+<p style="text-align: justify;">Al repasar la orden de compra impresa, nos damos cuenta que no nos está haciendo falta inventariar ningún dato, excepto por el encabezado de la misma. Pero, por qué no se tuvo en cuenta dentro del anterior inventario de entidades y atributos a la empresa de energía Corriente Alterna S.A.? Pues sencillamente porque el dueño del modelo que se va a construir es precisamente Corriente Alterna S.A. Además, si modeláramos la entidad “Corriente Alterna S.A.”, cuantas instancias tendría esta entidad? Una. Y hay que recordar que toda entidad debe poseer mínimo 2 instancias. </p>
+<p style="text-align: justify;">Por lo tanto, el diagrama que vamos a dibujar consta de 3 entidades. El siguiente paso consiste en determinar cuales van a ser las relaciones relevantes entre las entidades. Debemos tener en cuenta que es a través de las relaciones que se obtiene la información valiosa de un modelo.</p>
+<p><img src="MODELO1.jpg" alt="Modelo 1" width="742" height="343" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: center;"><span style="font-size: 8pt;">Fuente Propia.</span></p>
+<p style="text-align: justify;">Para este caso, la forma más simplista de relacionar las entidades del modelo a través de 3 relaciones que permita relacionar todo con todo, es decir, una orden tiene asignado un proveedor, una orden tiene productos y los productos son suministrados por proveedores. De tal forma, que el modelo quedaría de la siguiente manera:<span> </span></p>
+<p><span><img src="MODELO_2.jpg" alt="Modelo 2" width="746" height="348" style="display: block; margin-left: auto; margin-right: auto;" /></span></p>
+<p style="text-align: center;"><span><span style="font-size: 8pt;">Fuente Propia</span>.</span></p>
+<p style="text-align: justify;"><span>En un diagrama Entidad / Relación, en lo posible, no deben existir relaciones cerradas (circulares).</span></p>
+<p style="text-align: justify;"><span>Lo anterior significa que si en un diagrama entidad / relación existe un conjunto de relaciones que dan como resultado un ciclo, y esta condición cíclica se puede evitar, lo que se va a generar es redundancia en la base de datos. Habrán ocasiones en las cuales la condición cíclica de las relaciones no se podrán evitar y en este caso el diagrama se debe dejar así. En estos últimos casos, no se generará redundancia en la base de datos futura.</span></p>
+<p style="text-align: justify;"><span>Como podemos ver en el ejemplo, existe una condición cíclica en las relaciones que, si es posible, debemos evitar. Pero, cual es el procedimiento a seguir para determinar si una condición cíclica en una conjunto de relaciones se puede evitar? Vamos a explicar el procedimiento en el ejemplo que venimos desarrollando.</span><span> </span></p>
+<p style="text-align: justify;"><span>Para “quebrar” la circularidad existente en el diagrama referente a la orden de compra, existen 3 posibilidades:</span><span> </span></p>
+<ul style="text-align: justify;">
+<li>Eliminar la relación “posee”.</li>
+<li>Eliminar la relación “tiene”.</li>
+<li>Eliminar la relación “suministra”. </li>
+</ul>
+<p style="text-align: justify;">Con cualquiera de las 3 cosas que se haga, se eliminará la circularidad. Pero como saber cual es la relación que se puede eliminar? </p>
+<p style="text-align: justify;">El concepto sugiere que debemos eliminar una relación que, al no existir en el modelo, nos siga permitiendo obtener la misma información que si existiera. Este punto es muy importante para tomar la decisión correcta. Por lo tanto, debemos empezar a hacer un análisis de qué información obtenemos con y sin cada una de las 3 relaciones existentes.</p>
+<p style="text-align: justify;">Para empezar, consideremos la posibilidad de eliminar la relación “posee”. Qué información obtenemos directamente a través de esta relación? Con esta relación podemos responder a la consulta “Dada una orden de compra, cual es su proveedor?”. Debemos analizar si eliminando esta relación, podremos seguir contando con esta información a través de las dos relaciones restantes. Miremos si, a través de las relaciones “tiene” y “suministra”, logramos obtener la respuesta a la anterior consulta. Para hacer este análisis debemos tener muy en cuenta las cardinalidades de las relaciones. Con respecto a esto tenemos lo siguiente: </p>
+<p style="text-align: justify;">Una orden tiene muchos productos y un producto es suministrado por muchos proveedores. De esta manera estoy llegando, indirectamente, desde la entidad ORDEN a la entidad PROVEEDOR. Para hacer un análisis más concreto del asunto, manejemos los siguientes datos de ejemplo:</p>
+<table border="1" style="width: 98.9949%;">
+<tbody>
+<tr>
+<td width="199" style="width: 32.8643%;">
+<p><strong>ORDEN</strong></p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p><strong>PRODUCTO</strong></p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p><strong>PROVEEDOR</strong></p>
+</td>
+</tr>
+<tr>
+<td width="199" style="width: 32.8643%;">
+<p>520</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>635290</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>801.500.220-1</p>
+</td>
+</tr>
+<tr>
+<td width="199" style="width: 32.8643%;">
+<p> </p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p> </p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>400.500.121-1</p>
+</td>
+</tr>
+<tr>
+<td width="199" style="width: 32.8643%;">
+<p> </p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>698520</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>801.500.220-1</p>
+</td>
+</tr>
+<tr>
+<td width="199" style="width: 32.8643%;">
+<p> </p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p> </p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>400.500.121-1</p>
+</td>
+</tr>
+<tr>
+<td width="199" style="width: 32.8643%;">
+<p> </p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p> </p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>415.801.780-1</p>
+</td>
+</tr>
+<tr>
+<td width="199" style="width: 32.8643%;">
+<p> </p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>630520</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>400.500.121-1</p>
+</td>
+</tr>
+<tr>
+<td width="199" style="width: 32.8643%;">
+<p> </p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p> </p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>801.500.220-1</p>
+</td>
+</tr>
+<tr>
+<td width="199" style="width: 32.8643%;">
+<p>630</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>580400</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>150.420.250-1</p>
+</td>
+</tr>
+<tr>
+<td width="199" style="width: 32.8643%;">
+<p> </p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p> </p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>360.520.400-1</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;"><span style="font-size: 1.05em;">En la anterior tabla, vemos un análisis de los datos obtenidos, teniendo muy en cuenta las cardinalidades de las relaciones. Podemos ver claramente como </span><em style="font-size: 1.05em;">una</em><span style="font-size: 1.05em;"> orden de compra tiene </span><em style="font-size: 1.05em;">varios</em><span style="font-size: 1.05em;"> productos y como </span><em style="font-size: 1.05em;">un</em><span style="font-size: 1.05em;"> producto es suministrado por </span><em style="font-size: 1.05em;">varios</em><span style="font-size: 1.05em;"> proveedores. Con esta información obtenida, podemos deducir cual es el proveedor que suministra la orden de compra No. 630? Y cual proveedor suministra la orden de compra No. 520? La respuesta es No!</span></p>
+<p style="text-align: justify;">Lo único que podemos asegurar es que el proveedor de la orden No. 630 es aquel cuyo nit es el 150.420.250-1 o el que tiene nit 360.520.400-1, pero no se puede asegurar cual de los 2 es. Lo mismo sucede con la orden No. 520. No hay certeza de cual es el proveedor que la suministra.</p>
+<p style="text-align: justify;">Por lo tanto, si se elimina la relación “posee”, se estará perdiendo la información que se obtiene si ésta existiera. Así que NO SE PUEDE ELIMINAR LA RELACION “posee”.</p>
+<p style="text-align: justify;"> A continuación, se hace un análisis similar con la relación “tiene”.La información obtenida directamente con esta relación es “Qué productos están siendo pedidos en una orden de compra en particular?”. Vamos a analizar la posible eliminación de esta relación de forma similar al análisis hecho anteriormente.</p>
+<table border="1" style="width: 98.9949%;">
+<tbody>
+<tr>
+<td width="199" style="width: 32.8643%;">
+<p><strong>ORDEN</strong></p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p><strong>PROVEEDOR</strong></p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p><strong>PRODUCTO</strong></p>
+</td>
+</tr>
+<tr>
+<td width="199" style="width: 32.8643%;">
+<p>520</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>800.500.320-1</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>635240</p>
+</td>
+</tr>
+<tr>
+<td width="199" style="width: 32.8643%;">
+<p> </p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p> </p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>635250</p>
+</td>
+</tr>
+<tr>
+<td width="199" style="width: 32.8643%;">
+<p> </p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p> </p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>635260</p>
+</td>
+</tr>
+<tr>
+<td width="199" style="width: 32.8643%;">
+<p> </p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p> </p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>635270</p>
+</td>
+</tr>
+<tr>
+<td width="199" style="width: 32.8643%;">
+<p>360</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>400.155.155-1</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>621550</p>
+</td>
+</tr>
+<tr>
+<td width="199" style="width: 32.8643%;">
+<p> </p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p> </p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>621560</p>
+</td>
+</tr>
+<tr>
+<td width="199" style="width: 32.8643%;">
+<p> </p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p> </p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>621570</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;"><span style="font-size: 1.05em;">Con la anterior información, podremos saber una orden qué productos contiene? Se puede asegurar que los productos que contiene la orden No. 520 son los productos cuyo código son 635240, 635250, 635260 y 635270? No lo podemos asegurar! Solo sabemos que esos son los productos que suministra el proveedor cuyo nit es 800.500.320-1. Por lo tanto, NO SE PUEDE ELIMINAR LA RELACION “tiene”.</span></p>
+<p style="text-align: justify;">Nos queda una relación por analizar y es la relación “suministra”. En caso de que esta relación no se pudiera eliminar, entonces se puede concluir que el modelo quedaría con la circularidad en las relaciones y que no se generaría redundancia en la base de datos futura.</p>
+<p style="text-align: justify;"> Hagamos el análisis en forma similar a como lo hemos hecho hasta ahora. La pregunta que resuelve esta relación es “Un producto dado, qué proveedor lo suministra?” Miremos los datos con los cuales hacemos el análisis.</p>
+<table border="1" style="width: 98.9949%;">
+<tbody>
+<tr>
+<td width="199" style="width: 32.8643%;">
+<p><strong>ORDEN</strong></p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p><strong>PROVEEDOR</strong></p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p><strong>PRODUCTO</strong></p>
+</td>
+</tr>
+<tr>
+<td width="199" style="width: 32.8643%;">
+<p>520</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>800.500.320-1</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>524120</p>
+</td>
+</tr>
+<tr>
+<td width="199" style="width: 32.8643%;">
+<p> </p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p> </p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>365241</p>
+</td>
+</tr>
+<tr>
+<td width="199" style="width: 32.8643%;">
+<p> </p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p> </p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>854120</p>
+</td>
+</tr>
+<tr>
+<td width="199" style="width: 32.8643%;">
+<p>300</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>900.150.333-1</p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>415260</p>
+</td>
+</tr>
+<tr>
+<td width="199" style="width: 32.8643%;">
+<p> </p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p> </p>
+</td>
+<td width="200" style="width: 33.0653%;">
+<p>805030</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;">Con estos datos es claro que tenemos certeza de que el proveedor de la orden No. 520 es aquel cuyo nit es 800.500.320-1 y que los artículos de esa orden son el 524120, 365241 y 854120. Y con esta información podemos concluir que los productos 524120, 365241 y 854120 son suministrados por el proveedor 800.500.320-1 en esa orden. Por lo tanto, LA RELACION “suministra” DEBE SER ELIMINADA y no se pierde la información obtenida si estuviera en el modelo. Por lo tanto, el diagrama Entidad / Relación definitivo queda de la siguiente forma:</p>
+<p><img src="modelo_3.jpg" alt="Modelo 3" width="619" height="303" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: center;"><span style="font-size: 8pt;">Fuente Propia.</span></p>
+<p style="text-align: justify;">Es claro que con este esquema no podremos saber cuales son todos los productos que suministra un proveedor dado, pero también es claro que esa no es la intención de sistematizar una orden de compra. Por lo tanto, no hay información de interés que se esté perdiendo. Lo único relevante que se debe saber es qué proveedor suministra una orden y cuales son los productos que se están pidiendo.</p>
+<table border="1" style="width: 58.2915%;">
+<tbody>
+<tr>
+<td style="width: 100%;">
+<p style="text-align: center;"><strong>Empresa de Energía “Corriente Alterna S.A.”</strong></p>
+<p style="text-align: center;"><strong>Carrera 76 No. 54 – 70</strong></p>
+<p style="text-align: center;"><strong>Barrio Las Estrellas</strong></p>
+<p style="text-align: center;"><strong>Teléfono 5 14 76 23</strong></p>
+<p style="text-align: center;"><strong>Medellín</strong></p>
+<p style="text-align: center;"><strong></strong></p>
+<p style="text-align: center;"><strong>ORDEN DE COMPRA</strong></p>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="1" style="width: 58.1372%;">
+<tbody>
+<tr>
+<td width="120" style="width: 20.0692%;">
+<p><strong>Número: </strong>303</p>
+</td>
+<td width="228" style="width: 8.57979%;">
+<p><strong>Fecha:</strong> 05/12/2005</p>
+</td>
+<td width="256" style="width: 29.4397%;">
+<p><strong>Nit Proveedor:</strong> 800.630.520 - 1</p>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="1" style="width: 58.017%; height: 392px;">
+<tbody>
+<tr style="height: 68px;">
+<td width="120" style="width: 9.81864%; text-align: center; height: 68px;">
+<p><strong>Código</strong></p>
+</td>
+<td width="121" style="width: 11.861%; text-align: center; height: 68px;">
+<p><strong>Descripción</strong></p>
+</td>
+<td width="107" style="width: 11.5624%; text-align: center; height: 68px;">
+<p><strong>Cantidad</strong></p>
+</td>
+<td width="135" style="width: 12.1091%; text-align: center; height: 68px;">
+<p><strong>Precio Unitario</strong></p>
+</td>
+<td width="120" style="width: 12.6659%; text-align: center; height: 68px;">
+<p><strong>Valor Total</strong></p>
+</td>
+</tr>
+<tr style="height: 47px;">
+<td width="120" style="width: 9.81864%; height: 47px;">
+<p>105060</p>
+</td>
+<td width="121" style="width: 11.861%; height: 47px;">
+<p>Lapiz Mirado No. 2</p>
+</td>
+<td width="107" style="width: 11.5624%; height: 47px;">
+<p>3</p>
+</td>
+<td width="135" style="width: 12.1091%; height: 47px;">
+<p>$1,200</p>
+</td>
+<td width="120" style="width: 12.6659%; height: 47px;">
+<p>$3,600</p>
+</td>
+</tr>
+<tr style="height: 68px;">
+<td width="120" style="width: 9.81864%; height: 68px;">
+<p>503069</p>
+</td>
+<td width="121" style="width: 11.861%; height: 68px;">
+<p>Block Rayado Tamaño Oficio</p>
+</td>
+<td width="107" style="width: 11.5624%; height: 68px;">
+<p>2</p>
+</td>
+<td width="135" style="width: 12.1091%; height: 68px;">
+<p>$3,800</p>
+</td>
+<td width="120" style="width: 12.6659%; height: 68px;">
+<p>$7,600</p>
+</td>
+</tr>
+<tr style="height: 68px;">
+<td width="120" style="width: 9.81864%; height: 68px;">
+<p>603040</p>
+</td>
+<td width="121" style="width: 11.861%; height: 68px;">
+<p>Compás Laminado en Cobre</p>
+</td>
+<td width="107" style="width: 11.5624%; height: 68px;">
+<p>4</p>
+</td>
+<td width="135" style="width: 12.1091%; height: 68px;">
+<p>$5,900</p>
+</td>
+<td width="120" style="width: 12.6659%; height: 68px;">
+<p>$23,600</p>
+</td>
+</tr>
+<tr style="height: 47px;">
+<td width="120" style="width: 9.81864%; height: 47px;">
+<p> </p>
+</td>
+<td width="121" style="width: 11.861%; height: 47px;">
+<p> </p>
+</td>
+<td width="107" style="width: 11.5624%; height: 47px;">
+<p><strong>SUBTOTAL:</strong></p>
+</td>
+<td width="135" style="width: 12.1091%; height: 47px;">
+<p> </p>
+</td>
+<td width="120" style="width: 12.6659%; height: 47px;">
+<p><strong>$34,800</strong></p>
+</td>
+</tr>
+<tr style="height: 47px;">
+<td width="120" style="width: 9.81864%; height: 47px;">
+<p> </p>
+</td>
+<td width="121" style="width: 11.861%; height: 47px;">
+<p> </p>
+</td>
+<td width="107" style="width: 11.5624%; height: 47px;">
+<p><strong>IVA (16 %):</strong></p>
+</td>
+<td width="135" style="width: 12.1091%; height: 47px;">
+<p> </p>
+</td>
+<td width="120" style="width: 12.6659%; height: 47px;">
+<p><strong>$  5,568</strong></p>
+</td>
+</tr>
+<tr style="height: 47px;">
+<td width="120" style="width: 9.81864%; height: 47px;">
+<p> </p>
+</td>
+<td width="121" style="width: 11.861%; height: 47px;">
+<p> </p>
+</td>
+<td width="107" style="width: 11.5624%; height: 47px;">
+<p><strong>TOTAL:</strong></p>
+</td>
+<td width="135" style="width: 12.1091%; height: 47px;">
+<p> </p>
+</td>
+<td width="120" style="width: 12.6659%; height: 47px;">
+<p><strong>$40,368</strong></p>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="1" style="width: 58.392%;">
+<tbody>
+<tr>
+<td style="width: 100%;">
+<p style="text-align: center;"><strong>Proveedor:</strong></p>
+<p style="text-align: center;"><strong>Papelería Mundial S.A.</strong></p>
+<p style="text-align: center;"><strong>Calle 52 No. 10 – 65</strong></p>
+<p style="text-align: center;"><strong>Tel: 4 16 54 33</strong></p>
+<p style="text-align: center;"><strong>Buenos Aires</strong></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;"><span style="font-size: 1.05em;">Para introducir un nuevo concepto, y también con el fin de mostrar un ejemplo mucho más práctico y real, vamos a considerar la misma orden de compra de la Empresa de Energía “Corriente Alterna S.A.”, pero incluyéndole dos datos más de interés en el detalle de la misma. Vamos a incluir la cantidad de unidades a pedir de cada artículo y el valor total de cada artículo pedido, es decir, el resultado de la cantidad pedida multiplicado por el precio unitario.</span></p>
+<p style="text-align: justify;"> El desarrollo del ejercicio es igual al anterior, a excepción de estos 2 nuevos datos. La pregunta que surge entonces es “donde van modelados los 2 nuevos datos en el diagrama”?</p>
+<p style="text-align: justify;"> Consideremos inicialmente el dato “Cantidad”. Al analizar donde se podría modelar este dato, tenemos 2 posibilidades:</p>
+<ul style="text-align: justify;">
+<li>Que “Cantidad” sea atributo de la Entidad “Producto”</li>
+<li>Que “Cantidad” sea atributo de la Entidad “Orden”</li>
+</ul>
+<p style="text-align: justify;"> Consideremos el primer caso, cuyo diagrama está a continuación:</p>
+<p><img src="AGREGACION_1.jpg" alt="AGREGACION 1" width="619" height="302" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: center;"><span style="font-size: 8pt;">Fuente Propia.</span></p>
+<p style="text-align: justify;"> Colocando el dato “Cantidad” como atributo de la Entidad “Producto”, tendremos directamente la información de cuanta cantidad se pidió de un producto. Por ejemplo, con este modelo es factible directamente saber que se pidieron 3 unidades de Lápices Mirado No. 2. Pero entonces la pregunta que surge es “en cual orden de compra se pidieron 3 Lápices Mirado No. 2?” Esta pregunta surge debido a que Lápices Mirado No. 2 se pudieron haber pedido en múltiples órdenes de compra, tal y como lo constata la cardinalidad de la relación entre “Orden” y “Producto”. La respuesta a esa pregunta queda sin resolver.</p>
+<p style="text-align: justify;"> Contemplemos la segunda posibilidad, cuyo diagrama se muestra a continuación:</p>
+<p><img src="AGREGACION_2.jpg" alt="AGREGACION 2" width="619" height="272" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: center;"><span style="font-size: 8pt;">Fuente Propia.</span></p>
+<p style="text-align: justify;"> Colocando el dato “Cantidad” como atributo de la Entidad “Orden”, tendremos directamente la información de cuanta cantidad se pidió en una orden dada. Por ejemplo, con este modelo es factible directamente saber que se pidieron 3 unidades en la orden No.303. Pero entonces la pregunta que surge es “En la orden 303 se pidieron 3 unidades de cuál artículo?” Esta pregunta surge debido a que en una orden de compra se pudieron haber pedido varios productos, tal y como lo constata la cardinalidad de la relación entre “Orden” y “Producto”. La respuesta a esa pregunta queda sin resolver.</p>
+<p style="text-align: justify;"> Por lo tanto, surge la necesidad de colocar el atributo “Cantidad” en un sitio donde quede plasmada <strong><em>cuánta cantidad se pide de un producto dado, en una orden dada.</em></strong> Es decir, un sitio donde “Cantidad” quede dependiendo de las dos entidades. La solución es la que se muestra en el siguiente diagrama:</p>
+<p><img src="AGREGACION_3.jpg" alt="AGREGACION 3" width="619" height="288" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: center;"><span style="font-size: 8pt;">Fuente Propia.</span></p>
+<p style="text-align: justify;"> Como se puede observar, se está colocando “Cantidad” como atributo de la relación “Tiene” (relación entre Orden y Producto).</p>
+<p style="text-align: justify;"> Los atributos en una relación se utilizan cuando existen atributos que deben depender, a la vez, de dos (o mas) entidades relacionadas.</p>
+<hr />
+<p style="text-align: justify;">Videos:</p>
+<table border="1" style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;"><a href="https://youtu.be/S-yo9Al6kXs">Modelo Entidad Relación - Atributo en una Relación</a></td>
+<td style="width: 50%; text-align: center;"><a href="https://youtu.be/Y7QqJXR2PME">Modelo Entidad Relación - Circularidad de Relaciones</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="entidad_debil.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="modelo_entidad_relacion_extendido.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

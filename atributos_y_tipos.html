@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>ATRIBUTOS Y TIPOS | FUNDAMENTOS Y DISEÑO DE BASES DE DATOS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="JORGE IVAN BEDOYA RESTREPO" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-18"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">FUNDAMENTOS Y DISEÑO DE BASES DE DATOS</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">FUNDAMENTOS Y DISEÑO DE BASES DE DATOS</a></li>
+   <li><a href="conceptos_basicos.html" class="daddy">CONCEPTOS BASICOS</a>
+   <ul class="other-section">
+      <li><a href="bases_de_datos_y_dbms.html" class="no-ch">BASES DE DATOS Y DBMS</a></li>
+      <li><a href="niveles_de_abstraccion_de_datos.html" class="no-ch">NIVELES DE ABSTRACCION DE DATOS</a></li>
+      <li><a href="ejemplar_y_esquema.html" class="no-ch">EJEMPLAR Y ESQUEMA</a></li>
+      <li><a href="lenguajes_de_bases_de_datos.html" class="no-ch">LENGUAJES DE BASES DE DATOS</a></li>
+      <li><a href="modelos_de_datos.html" class="no-ch">MODELOS DE DATOS</a></li>
+      <li><a href="tipos_de_usuarios.html" class="no-ch">TIPOS DE USUARIOS</a></li>
+      <li><a href="dba__administrador_de_bases_de_datos.html" class="no-ch">DBA - ADMINISTRADOR DE BASES DE DATOS</a></li>
+      <li><a href="backups_y_tipos.html" class="no-ch">BACKUPS Y TIPOS</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="modelamiento_de_datos.html" class="current-page-parent daddy">MODELAMIENTO DE DATOS</a>
+   <ul>
+      <li><a href="que_es.html" class="no-ch">QUE ES?</a></li>
+      <li class="current-page-parent"><a href="modelo_entidad_relacion.html" class="current-page-parent daddy">MODELO ENTIDAD RELACION</a>
+      <ul>
+         <li><a href="entidades_e_instancias.html" class="no-ch">ENTIDADES E INSTANCIAS</a></li>
+         <li id="active"><a href="atributos_y_tipos.html" class="active no-ch">ATRIBUTOS Y TIPOS</a></li>
+         <li><a href="relaciones.html" class="no-ch">RELACIONES</a></li>
+         <li><a href="entidad_debil.html" class="no-ch">ENTIDAD DEBIL</a></li>
+         <li><a href="atributo_en_relacion.html" class="no-ch">ATRIBUTO EN RELACION</a></li>
+      </ul>
+      </li>
+      <li><a href="modelo_entidad_relacion_extendido.html" class="daddy">MODELO ENTIDAD RELACION EXTENDIDO</a>
+      <ul class="other-section">
+         <li><a href="especializacion.html" class="no-ch">ESPECIALIZACION</a></li>
+         <li><a href="generalizacion.html" class="no-ch">GENERALIZACION</a></li>
+      </ul>
+      </li>
+      <li><a href="diagrama_entidad_relacion.html" class="no-ch">DIAGRAMA ENTIDAD RELACION</a></li>
+      <li><a href="ejercicio_completo_de_modelamiento.html" class="no-ch">EJERCICIO COMPLETO DE MODELAMIENTO</a></li>
+   </ul>
+   </li>
+   <li><a href="modelo_relacional.html" class="daddy">MODELO RELACIONAL</a>
+   <ul class="other-section">
+      <li><a href="terminologia_tecnica.html" class="no-ch">TERMINOLOGIA TECNICA</a></li>
+      <li><a href="dominio_de_un_atributo.html" class="no-ch">DOMINIO DE UN ATRIBUTO</a></li>
+      <li><a href="tipos_de_claves.html" class="no-ch">TIPOS DE CLAVES</a></li>
+      <li><a href="reglas_de_mapeo__traduccion.html" class="daddy">REGLAS DE MAPEO / TRADUCCION</a>
+      <ul class="other-section">
+         <li><a href="cantidad_de_tablas.html" class="no-ch">CANTIDAD DE TABLAS</a></li>
+         <li><a href="entidad_normal__fuerte.html" class="no-ch">ENTIDAD NORMAL / FUERTE</a></li>
+         <li><a href="entidad_debil0.html" class="no-ch">ENTIDAD DEBIL</a></li>
+         <li><a href="atributo_multivalorado.html" class="no-ch">ATRIBUTO MULTIVALORADO</a></li>
+         <li><a href="relacion_uno_a_uno.html" class="no-ch">RELACION UNO A UNO</a></li>
+         <li><a href="relacion_uno_a_muchos.html" class="no-ch">RELACION UNO A MUCHOS</a></li>
+         <li><a href="relacion_muchos_a_muchos.html" class="no-ch">RELACION MUCHOS A MUCHOS</a></li>
+         <li><a href="atributo_en_relacion0.html" class="no-ch">ATRIBUTO EN RELACION</a></li>
+         <li><a href="especializacion0.html" class="no-ch">ESPECIALIZACION</a></li>
+         <li><a href="ejercicio_completo.html" class="no-ch">EJERCICIO COMPLETO</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="normalizacion_de_datos.html" class="daddy">NORMALIZACION DE DATOS</a>
+   <ul class="other-section">
+      <li><a href="introduccion.html" class="no-ch">INTRODUCCION</a></li>
+      <li><a href="anomalias_en_el_diseo.html" class="no-ch">ANOMALIAS EN EL DISEÑO</a></li>
+      <li><a href="tuplas_espurias.html" class="no-ch">TUPLAS ESPURIAS</a></li>
+      <li><a href="dependencia_funcional.html" class="no-ch">DEPENDENCIA FUNCIONAL</a></li>
+      <li><a href="formas_normales.html" class="daddy">FORMAS NORMALES</a>
+      <ul class="other-section">
+         <li><a href="primera_forma_normal_1nf.html" class="no-ch">PRIMERA FORMA NORMAL (1NF)</a></li>
+         <li><a href="segunda_forma_normal_2nf.html" class="no-ch">SEGUNDA FORMA NORMAL (2NF)</a></li>
+         <li><a href="tercera_forma_normal_3nf.html" class="no-ch">TERCERA FORMA NORMAL (3NF)</a></li>
+         <li><a href="ejercicio_completo0.html" class="no-ch">EJERCICIO COMPLETO</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="entidades_e_instancias.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="relaciones.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">ATRIBUTOS Y TIPOS</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id23">
+<div class="iDevice emphasis0" >
+<div id="ta23_111_2" class="block iDevice_content">
+<div class="exe-text"><h6><span style="font-size: 12pt;">Atributos</span></h6>
+<p style="text-align: justify;">En el apartado anterior hablábamos de que toda entidad tiene características propias, es decir, tiene información asociada a ella. En realidad, esto es lo que es un atributo. Por definición, un atributo es <em>una característica propia de una entidad de la cual se puede obtener información.</em></p>
+<p>Es de aclarar que todo atributo de una entidad tiene 3 componentes implícitos:</p>
+<ol>
+<li>Nombre: Es el conjunto de caracteres con el cual se va a identificar un atributo dentro de la entidad.</li>
+<li>Valor: Es el contenido del atributo en un momento determinado del tiempo.</li>
+<li>Dominio: Es el conjunto de posibles valores que puede tomar el atributo.</li>
+</ol>
+<p>Para seguir con el ejemplo anterior, podemos enunciar los siguientes atributos para las entidades propuestas:</p>
+<table border="1" style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><span style="font-size: 12pt;"><strong>ATRIBUTOS</strong></span></td>
+</tr>
+</tbody>
+</table>
+<table border="1" style="width: 98.7939%;">
+<tbody>
+<tr>
+<td width="128" style="width: 21.206%; text-align: center;">
+<p><span style="font-size: 10pt;"><strong>Entidad</strong></span></p>
+</td>
+<td width="198" style="width: 32.4623%; text-align: center;">
+<h1><span style="font-size: 10pt;">Nombre</span></h1>
+</td>
+<td width="170" style="width: 28.0402%; text-align: center;">
+<h1><span style="font-size: 10pt;">Dominio</span></h1>
+</td>
+<td width="102" style="width: 17.0854%; text-align: center;">
+<h1><span style="font-size: 10pt;">Valor</span></h1>
+</td>
+</tr>
+<tr>
+<td width="128" style="width: 21.206%;">
+<p>Paciente</p>
+</td>
+<td width="198" style="width: 32.4623%;">
+<p>Cédula – Paciente</p>
+<p>Nombre – Paciente</p>
+<p>Edad – Paciente</p>
+<p>Sexo – Paciente</p>
+</td>
+<td width="170" style="width: 28.0402%;">
+<p>Números de 8 dígitos</p>
+<p>Hasta 30 caracteres</p>
+<p>Números de 3 dígitos</p>
+<p>M o F</p>
+</td>
+<td width="102" style="width: 17.0854%;">
+<p>98541785</p>
+<p>Juan Pérez</p>
+<p>54</p>
+<h5><span>M</span></h5>
+</td>
+</tr>
+<tr>
+<td width="128" style="width: 21.206%;">
+<p>Enfermera</p>
+</td>
+<td width="198" style="width: 32.4623%;">
+<p>Código – Enfermera</p>
+<p>Nombre – Enfermera</p>
+<p>Teléfono – Enfermera</p>
+<p>Dirección – Enfermera</p>
+</td>
+<td width="170" style="width: 28.0402%;">
+<p>Alfanumérico (4)</p>
+<p>Hasta 30 caracteres</p>
+<p>Numero de 10 dígitos</p>
+<p>Hasta 35 caracteres</p>
+</td>
+<td width="102" style="width: 17.0854%;">
+<p>30B5</p>
+<p>Ana López</p>
+<p>3105159073</p>
+<p>Calle 6  4-10</p>
+</td>
+</tr>
+<tr>
+<td width="128" style="width: 21.206%;">
+<p>Medicamento</p>
+</td>
+<td width="198" style="width: 32.4623%;">
+<p>Numero – Lote</p>
+<p>Nombre – Medicamento</p>
+<p>Nombre – Laboratorio – Fabricante</p>
+<p>Fecha – Elaboración</p>
+</td>
+<td width="170" style="width: 28.0402%;">
+<p>Alfanumérico (6)</p>
+<p>Hasta 30 caracteres</p>
+<p>Hasta 30 caracteres</p>
+<p> </p>
+<p>Dd/mm/yyyy</p>
+</td>
+<td width="102" style="width: 17.0854%;">
+<p>600LAB</p>
+<p>DOLEX</p>
+<p>Quifarma</p>
+<p> </p>
+<p>12/08/2005</p>
+</td>
+</tr>
+<tr>
+<td width="128" style="width: 21.206%;">
+<p>Cita</p>
+</td>
+<td width="198" style="width: 32.4623%;">
+<p>Fecha – Cita</p>
+<p>Hora – Iniciación – Cita</p>
+<p>Hora – Finalización – Cita</p>
+<p>Número – Consultorio</p>
+</td>
+<td width="170" style="width: 28.0402%;">
+<p>Dd/mm/yyyy</p>
+<p>Hh:mm</p>
+<p>Hh:mm</p>
+<p>Número de 3 dígitos</p>
+</td>
+<td width="102" style="width: 17.0854%;">
+<p>15/04/2006</p>
+<p>09:30</p>
+<p>10:05</p>
+<p>303</p>
+</td>
+</tr>
+<tr>
+<td width="128" style="width: 21.206%;">
+<p>Historia Clínica</p>
+</td>
+<td width="198" style="width: 32.4623%;">
+<p>Número – Historia</p>
+<p>Fecha – Elaboración</p>
+<p>Síntomas – Presentados</p>
+<p>Fecha – Primera - Revisión</p>
+</td>
+<td width="170" style="width: 28.0402%;">
+<p>Número de 3 dígitos</p>
+<p>Dd/mm/yyyy</p>
+<p>Hasta 100 caracteres</p>
+<p>Dd/mm/yyyy</p>
+</td>
+<td width="102" style="width: 17.0854%;">
+<p>502</p>
+<p>19/09/2004</p>
+<p>Mareos</p>
+<p>20/09/2004</p>
+<p> </p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong> Tabla No. 1 Atributos de Entidades – Ejemplo Hospital</strong></p>
+<p style="text-align: justify;"><span>Toda entidad debe poseer, como mínimo, 2 atributos para que tenga sentido su existencia.</span></p>
+<p style="text-align: justify;"><span>Además, generalmente todas las entidades tienen uno o más atributos que identifican en forma única a cada una de las instancias de la entidad. Estos atributos se conocen como <em>atributos claves</em> de la entidad.</span></p>
+<p style="text-align: justify;">El (los) atributo(s) clave de la entidad es aquel conjunto de atributos que identifican en forma única cada instancia de una entidad, es decir, para n instancias diferentes habrá n valores distintos de ese atributo. </p>
+<h3><span style="font-size: 12pt; color: #000000;"><strong>Tipos de Atributos</strong></span></h3>
+<p><span> </span><span>De acuerdo a ciertas características que se exponen a continuación, existen 6 tipos de atributos. Algunos son excluyentes entre sí, otros son incluyentes.</span></p>
+<p> Para explicar los diferentes tipos de atributos que existen, seguiré exponiendo el ejemplo del hospital San Juan de Dios.</p>
+<p> Los tipos de atributos existentes son los siguientes: </p>
+<ol>
+<li>Simples</li>
+<li>Compuestos</li>
+<li>Univalorados</li>
+<li>Multivalorados</li>
+<li>Derivados</li>
+<li>Nulos </li>
+</ol>
+<p><em>Atributos Simples</em>: Son atributos cuyos valores no pueden ser descompuestos en partes más pequeñas sin perder significado.</p>
+<p><em>Atributos Compuestos</em>: Son aquellos cuyo valor puede ser descompuesto en partes más pequeñas sin perder significado.</p>
+<p>Estos dos tipos de atributos son excluyentes entre sí, es decir, un atributo es simple o es compuesto pero no los dos a la vez.</p>
+<p> En la Tabla No. 2 se expresan algunos ejemplos para mostrar la diferencia entre atributos simples y compuestos.</p>
+<table border="1" style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><span style="font-size: 12pt;"><strong>ATRIBUTOS SIMPLES / COMPUESTOS</strong></span></td>
+</tr>
+</tbody>
+</table>
+<table border="1" style="width: 99.1959%;">
+<tbody>
+<tr>
+<td width="299" style="width: 49.5477%; text-align: center;">
+<p><strong>Tipo de Atributo</strong></p>
+</td>
+<td width="299" style="width: 49.6482%; text-align: center;">
+<p><strong>Ejemplos</strong></p>
+</td>
+</tr>
+<tr>
+<td rowspan="5" width="299" style="width: 49.5477%;">
+<p>Atributos Simples</p>
+</td>
+<td width="299" style="width: 49.6482%;">
+<p>Sexo - Paciente</p>
+</td>
+</tr>
+<tr>
+<td width="299" style="width: 49.6482%;">
+<p>Número Historia – Clínica</p>
+</td>
+</tr>
+<tr>
+<td width="299" style="width: 49.6482%;">
+<p>Nombre – Laboratorio</p>
+</td>
+</tr>
+<tr>
+<td width="299" style="width: 49.6482%;">
+<p>Nombre – Medicamento</p>
+</td>
+</tr>
+<tr>
+<td width="299" style="width: 49.6482%;">
+<p>Código – Enfermera</p>
+</td>
+</tr>
+<tr>
+<td rowspan="4" width="299" style="width: 49.5477%;">
+<p>Atributos Compuestos</p>
+</td>
+<td width="299" style="width: 49.6482%;">
+<p>Fecha – Cita</p>
+</td>
+</tr>
+<tr>
+<td width="299" style="width: 49.6482%;">
+<p>Dirección – Residencia – Médico</p>
+</td>
+</tr>
+<tr>
+<td width="299" style="width: 49.6482%;">
+<p>Hora – Finalización – Cita</p>
+</td>
+</tr>
+<tr>
+<td width="299" style="width: 49.6482%;">
+<p>Edad - Paciente</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><span style="font-size: 12pt; color: #000000;"><strong>Tabla No. 2  Ejemplos de Atributos Simples y Compuestos</strong></span></p>
+<p><span> </span><span>Analicemos un poco más en detalle la Tabla No. 2 y respondamos a las siguientes preguntas:</span></p>
+<ul>
+<li>Por qué la Fecha de la Cita es un atributo compuesto? Porque es un atributo cuyo valor lo puedo descomponer en día, mes y año y cada uno de estas descomposiciones tiene significado.</li>
+<li>Cual es la razón para que la hora de la finalización de la cita sea un atributo compuesto? Está compuesto de horas y minutos.</li>
+<li>En contraposición a las dos preguntas anteriores, por qué el número de la historia clínica es simple? Porque, en términos generales, éste es un atributo que se distingue por ser un número el cual no se puede descomponer en dígitos sin perder significado. Es así, por ejemplo, como la historia clínica de Juan Pérez es la 560. Y dentro de esta información, ni el 5 ni el 6 ni el 0 como dígitos independientes significan algo.</li>
+<li>Igual sucede con el sexo del paciente, verdad? Es M o F y cada una de estas dos letras no se pueden descomponer más.</li>
+<li>Y por qué la edad del paciente se puede considerar un atributo compuesto? Habría posibilidad de considerar la edad del paciente como un atributo simple? En qué casos?</li>
+<li>En que categoría ubicaría usted el atributo cédula del médico? Por qué?</li>
+</ul>
+<p style="text-align: justify;">Para responder estas dos últimas preguntas recuerde que el modelo a construir depende en gran medida de los requerimientos del usuario y de la percepción que tenga el diseñador del problema a resolver.</p>
+<p><em>Atributos Univalorados</em>: Son aquellos que tienen un solo valor para cada una de las instancias de la entidad.</p>
+<p> <em>Atributos Multivalorados</em>: Son los atributos que pueden tener muchos valores para cada una de las instancias de la entidad.</p>
+<p> Al igual que los atributos simples y compuestos, estos dos tipos de atributos también son excluyentes.</p>
+<p> En la tabla No. 4 se expresan algunos ejemplos de atributos univalorados y multivalorados.</p>
+<table border="1" style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><span style="font-size: 12pt;"><strong>ATRIBUTOS UNIVALORADOS / MULTIVALORADOS</strong></span></td>
+</tr>
+</tbody>
+</table>
+<table border="1" style="width: 99.1959%;">
+<tbody>
+<tr>
+<td width="299" style="width: 49.5477%; text-align: center;">
+<p><strong>Tipo de Atributo</strong></p>
+</td>
+<td width="299" style="width: 49.6482%; text-align: center;">
+<p><strong>Ejemplos</strong></p>
+</td>
+</tr>
+<tr>
+<td style="width: 49.5477%;">
+<h4>Atributos Univalorados</h4>
+<p><strong> </strong></p>
+</td>
+<td width="299" style="width: 49.6482%;">
+<h4><strong>Edad – Enfermera</strong></h4>
+<p></p>
+</td>
+</tr>
+<tr>
+<td style="width: 49.5477%;"></td>
+<td width="299" style="width: 49.6482%;">
+<p>Cédula – Paciente</p>
+</td>
+</tr>
+<tr>
+<td style="width: 49.5477%;"></td>
+<td width="299" style="width: 49.6482%;">
+<p>Sexo – Médico</p>
+</td>
+</tr>
+<tr>
+<td style="width: 49.5477%;"></td>
+<td width="299" style="width: 49.6482%;">
+<p>Número – Lote – Fabricación</p>
+</td>
+</tr>
+<tr>
+<td style="width: 49.5477%;"></td>
+<td width="299" style="width: 49.6482%;">
+<p>Número – Historia – Clínica</p>
+</td>
+</tr>
+<tr>
+<td style="width: 49.5477%;">
+<h4>Atributos Multivalorados</h4>
+</td>
+<td width="299" style="width: 49.6482%;">
+<p>Teléfono Paciente</p>
+</td>
+</tr>
+<tr>
+<td style="width: 49.5477%;"></td>
+<td width="299" style="width: 49.6482%;">
+<p>Nombre – Laboratorio – Productor</p>
+</td>
+</tr>
+<tr>
+<td style="width: 49.5477%;"></td>
+<td width="299" style="width: 49.6482%;">
+<p>Nombre - Medicamento</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><span style="color: #000000;"><strong> Tabla No. 4  Ejemplos de Atributos Univalorados y Multivalorados</strong></span></p>
+<p> Respondamos las siguientes preguntas referentes a la Tabla No. 4:</p>
+<ul>
+<li style="text-align: justify;">Por qué la edad de la enfermera es univalorado? Porque no existe ninguna enfermera en particular (instancia) que tenga más de una edad.</li>
+<li style="text-align: justify;">Por qué el número de lote de fabricación de un medicamento es univalorado si existen muchos lotes de fabricación? A pesar de que existen muchos lotes de fabricación de un mismo medicamento (o inclusive de medicamentos diferentes), cada medicamento en particular, es decir, el frasco de DOLEX que tengo en mi poder en estos momentos (instancia) fue producido en un solo lote de fabricación.</li>
+<li style="text-align: justify;">Qué hace que el teléfono del paciente sea un atributo multivalorado? Porque un paciente, al ingresar al hospital, pudo haber reportado más de un teléfono de contacto, es decir, cada paciente puede tener más de un valor en el atributo teléfono.</li>
+<li style="text-align: justify;">Cual es la razón para considerar el nombre del laboratorio productor del medicamento y el nombre del medicamento como atributos multivalorados?</li>
+</ul>
+<p> <em>Atributos Derivados</em>: Son atributos cuyos valores son calculados con base en los valores de otros atributos.</p>
+<p style="text-align: justify;">Es de aclarar que no existe un tipo de atributo excluyente con los atributos derivados. Es decir, podría existir un atributo simple y derivado a la vez. También uno compuesto, univalorado y derivado a la vez.</p>
+<p> Todo atributo derivado es calculado numéricamente a través de una fórmula matemática.</p>
+<p> En la tabla No. 5 se muestran ejemplos de atributos derivados.</p>
+<table border="1" style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><span style="font-size: 12pt;"><strong>ATRIBUTOS DERIVADOS</strong></span></td>
+</tr>
+</tbody>
+</table>
+<table border="1" style="width: 99.1959%;">
+<tbody>
+<tr>
+<td width="299" style="width: 49.5477%; text-align: center;">
+<p><strong>Nombre del Atributo</strong></p>
+</td>
+<td width="299" style="width: 49.6482%; text-align: center;">
+<p><strong>Derivado de..........</strong></p>
+</td>
+</tr>
+<tr style="height: 56px;">
+<td rowspan="2" style="height: 103px; width: 49.5477%;">
+<h4>Sueldo-enfermera</h4>
+</td>
+<td style="height: 56px; width: 49.6482%;">
+<h4>Número-horas-trabajadas</h4>
+</td>
+</tr>
+<tr style="height: 47px;">
+<td style="height: 47px; width: 49.6482%;">
+<p>Salario-básico-hora</p>
+</td>
+</tr>
+<tr style="height: 56px;">
+<td style="height: 56px; width: 49.5477%;">
+<h4>Edad-paciente</h4>
+</td>
+<td style="height: 56px; width: 49.6482%;">
+<p>Año-nacimiento-paciente</p>
+</td>
+</tr>
+<tr style="height: 47px;">
+<td rowspan="3" style="height: 141px; width: 49.5477%;">
+<h4>Valor-tratamiento-a-recibir</h4>
+</td>
+<td style="height: 47px; width: 49.6482%;">
+<p>Valor-medicamento</p>
+</td>
+</tr>
+<tr style="height: 47px;">
+<td style="height: 47px; width: 49.6482%;">
+<p>Valor-exámenes</p>
+</td>
+</tr>
+<tr style="height: 47px;">
+<td style="height: 47px; width: 49.6482%;">
+<p>Valor-radiografías</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong style="color: #000000; font-size: 12pt; letter-spacing: 0.5px;">Tabla No. 5  Ejemplos de Atributos Derivados</strong></p>
+<p> Con respecto a los atributos derivados, respondamos las siguientes preguntas:</p>
+<ul>
+<li style="text-align: justify;">Por qué la edad del paciente se deriva del año de nacimiento?</li>
+<li style="text-align: justify;">Se podrá deducir que el nombre del paciente es derivado de la cédula del paciente? Acaso el nombre del paciente se calcula numéricamente a través de la cédula? En este caso, el nombre del paciente depende de la cédula, mas no se deriva de ella.</li>
+</ul>
+<p style="text-align: justify;">No se debe confundir el hecho de que un atributo sea derivado de otro con que un atributo dependa de otro atributo. Son conceptos diferentes. Todo atributo que sea derivado de otro, depende de este para obtener su valor. Pero pueden existir atributos que dependan de otros sin ser derivados.</p>
+<p style="text-align: justify;"><em>Atributos Nulos</em>: Son aquellos atributos que pueden no poseer valores para ciertas o todas las instancias de una entidad. Esta ausencia de valores se puede deber a dos razones:</p>
+<ul>
+<li>Que el atributo no aplica para esa instancia de la entidad.</li>
+<li>Que no se conozca el valor del atributo para la instancia de la entidad.</li>
+</ul>
+<p style="text-align: justify;">Es de anotar que basta con que una sola instancia de una entidad no posea valores en un atributo, para considerarlo atributo nulo. Es decir, no se debe dar el hecho de que el atributo no posea valores en todas las instancias (sobra advertir que este caso no tendría sentido ya que en realidad el atributo sería innecesario en la entidad).</p>
+<p style="text-align: justify;">En la tabla No. 6 se muestran ejemplos de atributos que son nulos: </p>
+<table border="1" style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 100%;">ATRIBUTOS NULOS</td>
+</tr>
+</tbody>
+</table>
+<table border="1" style="width: 99.1959%;">
+<tbody>
+<tr>
+<td width="299" style="width: 49.5477%;">
+<p><strong>Nombre de Atributo</strong></p>
+</td>
+<td width="299" style="width: 49.6482%;">
+<p><strong>Por qué es nulo?</strong></p>
+</td>
+</tr>
+<tr>
+<td width="299" style="width: 49.5477%;">
+<p>Número-celular-paciente</p>
+</td>
+<td width="299" style="width: 49.6482%;">
+<p>No todos los pacientes tienen teléfono celular</p>
+</td>
+</tr>
+<tr>
+<td width="299" style="width: 49.5477%;">
+<p>Email-enfermera</p>
+</td>
+<td width="299" style="width: 49.6482%;">
+<p>No todas las enfermeras tienen correo electrónico</p>
+</td>
+</tr>
+<tr>
+<td width="299" style="width: 49.5477%;">
+<p>Especialidad- Médico</p>
+</td>
+<td width="299" style="width: 49.6482%;">
+<p>Existen médicos generales que no se han especializado.</p>
+</td>
+</tr>
+<tr>
+<td width="299" style="width: 49.5477%;">
+<p>Hobbies-enfermera</p>
+</td>
+<td width="299" style="width: 49.6482%;">
+<p>No se conocen los hobbies de todas las enfermeras.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tabla No. 6 Ejemplos de atributos Nulos</strong></p>
+<p style="text-align: justify;">Es importante tener en cuenta que en el modelo Entidad/Relación es deseable evitar atributos nulos. Esto debido a que posteriormente estos atributos nulos se convertirán en campos de las tablas que no poseerán valor y esto conlleva ciertos problemas en las consultas SQL que se hagan sobre esos campo. La razón de ser de este problema se detallará en el módulo de SQL.</p>
+<p style="text-align: justify;"> En el Modelo Entidad / Relación se deben evitar, en lo posible, los atributos nulos.</p>
+<p style="text-align: justify;"> Para evitar este tipo de atributos, existen mecanismos como la generalización y la especialización los cuales serán explicados más adelante en este módulo.</p>
+<p> </p>
+<hr />
+<p>Videos:</p>
+<table border="1" style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;"><a href="https://youtu.be/R0Uk4HijX2s">Atributo Clave, Simple y Compuesto</a></td>
+<td style="width: 50%; text-align: center;"><a href="https://youtu.be/s2fBmKyJW3w">Atributo Univalorado, Multivalorado, Derivado y Nulo</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="entidades_e_instancias.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="relaciones.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

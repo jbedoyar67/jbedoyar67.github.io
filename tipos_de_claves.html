@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>TIPOS DE CLAVES | FUNDAMENTOS Y DISEÑO DE BASES DE DATOS </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="JORGE IVAN BEDOYA RESTREPO" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-29"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">FUNDAMENTOS Y DISEÑO DE BASES DE DATOS</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">FUNDAMENTOS Y DISEÑO DE BASES DE DATOS</a></li>
+   <li><a href="conceptos_basicos.html" class="daddy">CONCEPTOS BASICOS</a>
+   <ul class="other-section">
+      <li><a href="bases_de_datos_y_dbms.html" class="no-ch">BASES DE DATOS Y DBMS</a></li>
+      <li><a href="niveles_de_abstraccion_de_datos.html" class="no-ch">NIVELES DE ABSTRACCION DE DATOS</a></li>
+      <li><a href="ejemplar_y_esquema.html" class="no-ch">EJEMPLAR Y ESQUEMA</a></li>
+      <li><a href="lenguajes_de_bases_de_datos.html" class="no-ch">LENGUAJES DE BASES DE DATOS</a></li>
+      <li><a href="modelos_de_datos.html" class="no-ch">MODELOS DE DATOS</a></li>
+      <li><a href="tipos_de_usuarios.html" class="no-ch">TIPOS DE USUARIOS</a></li>
+      <li><a href="dba__administrador_de_bases_de_datos.html" class="no-ch">DBA - ADMINISTRADOR DE BASES DE DATOS</a></li>
+      <li><a href="backups_y_tipos.html" class="no-ch">BACKUPS Y TIPOS</a></li>
+   </ul>
+   </li>
+   <li><a href="modelamiento_de_datos.html" class="daddy">MODELAMIENTO DE DATOS</a>
+   <ul class="other-section">
+      <li><a href="que_es.html" class="no-ch">QUE ES?</a></li>
+      <li><a href="modelo_entidad_relacion.html" class="daddy">MODELO ENTIDAD RELACION</a>
+      <ul class="other-section">
+         <li><a href="entidades_e_instancias.html" class="no-ch">ENTIDADES E INSTANCIAS</a></li>
+         <li><a href="atributos_y_tipos.html" class="no-ch">ATRIBUTOS Y TIPOS</a></li>
+         <li><a href="relaciones.html" class="no-ch">RELACIONES</a></li>
+         <li><a href="entidad_debil.html" class="no-ch">ENTIDAD DEBIL</a></li>
+         <li><a href="atributo_en_relacion.html" class="no-ch">ATRIBUTO EN RELACION</a></li>
+      </ul>
+      </li>
+      <li><a href="modelo_entidad_relacion_extendido.html" class="daddy">MODELO ENTIDAD RELACION EXTENDIDO</a>
+      <ul class="other-section">
+         <li><a href="especializacion.html" class="no-ch">ESPECIALIZACION</a></li>
+         <li><a href="generalizacion.html" class="no-ch">GENERALIZACION</a></li>
+      </ul>
+      </li>
+      <li><a href="diagrama_entidad_relacion.html" class="no-ch">DIAGRAMA ENTIDAD RELACION</a></li>
+      <li><a href="ejercicio_completo_de_modelamiento.html" class="no-ch">EJERCICIO COMPLETO DE MODELAMIENTO</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="modelo_relacional.html" class="current-page-parent daddy">MODELO RELACIONAL</a>
+   <ul>
+      <li><a href="terminologia_tecnica.html" class="no-ch">TERMINOLOGIA TECNICA</a></li>
+      <li><a href="dominio_de_un_atributo.html" class="no-ch">DOMINIO DE UN ATRIBUTO</a></li>
+      <li id="active"><a href="tipos_de_claves.html" class="active no-ch">TIPOS DE CLAVES</a></li>
+      <li><a href="reglas_de_mapeo__traduccion.html" class="daddy">REGLAS DE MAPEO / TRADUCCION</a>
+      <ul class="other-section">
+         <li><a href="cantidad_de_tablas.html" class="no-ch">CANTIDAD DE TABLAS</a></li>
+         <li><a href="entidad_normal__fuerte.html" class="no-ch">ENTIDAD NORMAL / FUERTE</a></li>
+         <li><a href="entidad_debil0.html" class="no-ch">ENTIDAD DEBIL</a></li>
+         <li><a href="atributo_multivalorado.html" class="no-ch">ATRIBUTO MULTIVALORADO</a></li>
+         <li><a href="relacion_uno_a_uno.html" class="no-ch">RELACION UNO A UNO</a></li>
+         <li><a href="relacion_uno_a_muchos.html" class="no-ch">RELACION UNO A MUCHOS</a></li>
+         <li><a href="relacion_muchos_a_muchos.html" class="no-ch">RELACION MUCHOS A MUCHOS</a></li>
+         <li><a href="atributo_en_relacion0.html" class="no-ch">ATRIBUTO EN RELACION</a></li>
+         <li><a href="especializacion0.html" class="no-ch">ESPECIALIZACION</a></li>
+         <li><a href="ejercicio_completo.html" class="no-ch">EJERCICIO COMPLETO</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="normalizacion_de_datos.html" class="daddy">NORMALIZACION DE DATOS</a>
+   <ul class="other-section">
+      <li><a href="introduccion.html" class="no-ch">INTRODUCCION</a></li>
+      <li><a href="anomalias_en_el_diseo.html" class="no-ch">ANOMALIAS EN EL DISEÑO</a></li>
+      <li><a href="tuplas_espurias.html" class="no-ch">TUPLAS ESPURIAS</a></li>
+      <li><a href="dependencia_funcional.html" class="no-ch">DEPENDENCIA FUNCIONAL</a></li>
+      <li><a href="formas_normales.html" class="daddy">FORMAS NORMALES</a>
+      <ul class="other-section">
+         <li><a href="primera_forma_normal_1nf.html" class="no-ch">PRIMERA FORMA NORMAL (1NF)</a></li>
+         <li><a href="segunda_forma_normal_2nf.html" class="no-ch">SEGUNDA FORMA NORMAL (2NF)</a></li>
+         <li><a href="tercera_forma_normal_3nf.html" class="no-ch">TERCERA FORMA NORMAL (3NF)</a></li>
+         <li><a href="ejercicio_completo0.html" class="no-ch">EJERCICIO COMPLETO</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="dominio_de_un_atributo.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="reglas_de_mapeo__traduccion.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">TIPOS DE CLAVES</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id32">
+<div class="iDevice emphasis0" >
+<div id="ta32_111_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;"><strong>Claves en el Modelo Relacional</strong></p>
+<p style="text-align: justify;">Así como en el modelo Entidad / Relación existen atributos claves para las entidades, es decir, atributos que identifican en forma única a cada una de las instancias de la entidad, en el modelo relacional existen también tipos de claves que cumplen funciones parecidas dentro de las tablas.</p>
+<p style="text-align: justify;">Las claves que existen en el modelo relacional son las siguientes:</p>
+<ul style="text-align: justify;">
+<li>Superclave</li>
+<li>Clave Candidata</li>
+<li>Clave Primaria</li>
+<li>Clave Foránea</li>
+</ul>
+<p style="text-align: justify;">Como se verá en la explicación, los dos primeros tipos de claves son más conceptuales que prácticos, mientras que los dos últimos son los más utilizados en las bases de datos relacionales.</p>
+<p style="text-align: justify;">A continuación, se mostrarán los diferentes tipos de claves que existen en el modelo relacional, ilustrados a través de un mismo ejemplo, el cual se enuncia a continuación. Vamos a trabajar los 4 tipos de claves con el siguiente esquema de tabla:</p>
+<table border="1" style="width: 15.9799%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><strong>VEHICULO</strong></td>
+</tr>
+<tr>
+<td style="width: 100%;">
+<p>Placa      </p>
+<p>Marca</p>
+<p>Modelo</p>
+<p>Capacidad</p>
+<p>No.Kilometros</p>
+<p>Num-Motor</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;"> <strong>Superclave</strong></p>
+<p style="text-align: justify;">Imaginemos las tuplas que existirán en la tabla Vehículo y será posible que existan 2 o más tuplas con el mismo valor de placa? No.</p>
+<p style="text-align: justify;">Será posible que existan 2 o más tuplas con el mismo valor de número de motor? No. Al igual que la placa, el número del motor es único para cada carro.</p>
+<p style="text-align: justify;">Será posible que existan 2 o más tuplas con el mismo valor de placa y modelo (concatenados sus valores)? No.</p>
+<p style="text-align: justify;">Será posible que existan 2 o más tuplas con el mismo valor de número de motor y capacidad (concatenados sus valores)? No.</p>
+<p style="text-align: justify;">Los anteriores cuatro casos son solo algunos de los casos de superclaves que existen para la tabla Vehículo.</p>
+<p style="text-align: justify;">La definición de superclave es la misma que la de clave de una entidad.</p>
+<p style="text-align: justify;">Superclave es aquel conjunto de atributos que identifica en forma única cada una de las tuplas de una tabla.</p>
+<p style="text-align: justify;">Desde este punto de vista, será el modelo del vehículo una superclave? Lo será la placa y el número del motor (concatenados sus valores)? Será el modelo y la capacidad superclaves?</p>
+<p style="text-align: justify;">Cuantas superclaves posibles tiene la tabla Vehículo?</p>
+<p style="text-align: justify;"> <strong>Clave Candidata</strong></p>
+<p style="text-align: justify;">Dentro de la tabla Vehículo, existen 2 claves candidatas:</p>
+<p style="text-align: justify;">Placa y Número de Motor.</p>
+<p style="text-align: justify;">Estas dos claves candidatas surgen de revisar las superclaves e identificar los atributos que son necesarios en todas las superclaves. Si analizamos con detenimiento todas las superclaves, en todas están incluidos los atributos placa y/o número de motor.</p>
+<p style="text-align: justify;">Por ejemplo, si analizamos la superclave placa, modelo (concatenados sus valores) nos damos cuenta de que en esta superclave el atributo modelo sobra; teniendo solo el número de la placa nos basta para identificar en forma única cada tupla de Vehículo.</p>
+<p style="text-align: justify;">Si analizamos la  superclave número motor, capacidad, marca (concatenados sus valores) nos damos cuenta de que nos basta con el número del motor para cumplir con la función de clave.</p>
+<p style="text-align: justify;">Esta es la razón de las claves candidatas enunciadas anteriormente.</p>
+<p style="text-align: justify;">Se define una clave candidata como una super clave mínima.</p>
+<p style="text-align: justify;"> <strong>Clave Primaria</strong></p>
+<p style="text-align: justify;">La tabla Vehículo tiene dos posibles claves primarias:</p>
+<p style="text-align: justify;">Placa o Número de Motor.</p>
+<p style="text-align: justify;">Una tabla dentro de una base de datos relacional solo puede tener una clave primaria.</p>
+<p style="text-align: justify;">Pero cual es, entonces, la clave primaria de esta tabla? Es la que el analista escoja como identificador de cada una de las tuplas de la tabla. Por eso es que las claves candidatas se llaman así…..porque son candidatas a convertirse en claves primarias de sus respectivas tablas. Y es el analista el jurado encargado de escoger entre las claves candidatas, la clave primaria.</p>
+<p style="text-align: justify;">Y cual es el criterio para escoger la clave primaria? Simplemente se determina cual va a ser el dato por el cual se va a identificar de una manera más frecuente e intuitiva cada una de las tuplas de la tabla. En este caso, cree usted que sería muy práctico identificar cada vehículo por su número de motor, sabiendo que éste se compone de 20 caracteres o más? En cambio, el número de la placa es más fácil de manejar por parte del usuario. Por eso, en un momento dado se elige la placa como la clave primaria.</p>
+<p style="text-align: justify;">La clave primaria de una tabla es aquella clave candidata que el analista escoja para cumplir con la función de identificación única de cada una de las tuplas de la tabla.</p>
+<p style="text-align: justify;">En cuales casos sería conveniente definir el número del motor como la clave primaria de la tabla Vehículo?</p>
+<p style="text-align: justify;">Para mostrar la clave primaria de una tabla a través de su esquema relacional, simplemente ponemos “PK” al lado del atributo. O, en el caso de que sea una clave primaria compuesta de dos o más atributos, se coloca en la parte inferior de la tabla, después de los atributos. Para el caso de Vehículo sería así:</p>
+<table border="1" style="width: 16.0804%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><strong>VEHICULO</strong></td>
+</tr>
+<tr>
+<td style="width: 100%;">
+<p>Placa      PK</p>
+<p>Marca</p>
+<p>Modelo</p>
+<p>Capacidad</p>
+<p>No.Kilometros</p>
+<p>Num-Motor</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;">Y para el caso de las tablas Departamento y Ciudad del ejemplo inicial del módulo sería así:</p>
+<table border="1" style="width: 19.196%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><strong>DEPARTAMENTO</strong></td>
+</tr>
+<tr>
+<td style="width: 100%;">
+<p>Código     PK</p>
+<p>Nombre</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><span style="font-size: 1.05em; text-align: justify;"></span></p>
+<table border="1" style="width: 17.8894%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><strong>CIUDAD</strong></td>
+</tr>
+<tr>
+<td style="width: 100%;">
+<p>Código      PK</p>
+<p>Nombre</p>
+<p>Extensión</p>
+<p>No.Habitantes</p>
+<p>Código-Depto</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Clave Foránea</strong></p>
+<p>En el ejemplo expuesto, la tabla Vehículo no posee clave foránea. Más adelante veremos el ejemplo concreto.</p>
+<p style="text-align: justify;">Una clave foránea es aquel o aquellos atributos de una tabla a través de los cuales dicha tabla se relaciona con otra u otras tablas.</p>
+<p style="text-align: justify;">Pero la tabla Ciudad tiene una clave foránea que le permite relacionarse con la tabla Departamento. Y es a través de esta clave foránea que logramos saber una ciudad dada a qué departamento pertenece.</p>
+<p style="text-align: justify;">Volvamos a mirar el esquema de la base de datos de los municipios del país. Para poder definir la clave foránea en mención, se escribe de la siguiente manera: </p>
+<table border="1" style="width: 19.196%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><strong>DEPARTAMENTO</strong></td>
+</tr>
+<tr>
+<td style="width: 100%;">
+<p>Código      PK</p>
+<p>Nombre</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;"></p>
+<table border="1" style="width: 22.2111%;">
+<tbody>
+<tr>
+<td style="width: 100%; text-align: center;"><strong>CIUDAD</strong></td>
+</tr>
+<tr>
+<td style="width: 100%;">
+<p>Código</p>
+<p>Nombre</p>
+<p>Extensión</p>
+<p>No.Habitantes</p>
+<p>Código-Depto</p>
+</td>
+</tr>
+<tr>
+<td style="width: 100%;">FK: Código-Depto referencia a DEPARTAMENTO(Código)</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;">A través de la frase “Código_depto referencia a Departamento (código)” se define que el campo código_depto es un campo que está relacionando a la tabla Ciudad con Departamento, a través de su clave primaria, es decir, tabla Departamento, campo código.</p>
+<p style="text-align: justify;">Toda clave foránea de una tabla debe referenciar (o apuntar) a la clave primaria de la tabla con la cual se está relacionando.</p>
+<p style="text-align: justify;">Lo anterior es especialmente importante ya que si existiera una clave foránea que apuntará a otro atributo no clave, habría indicios de un mal diseño de la tabla. Este aspecto se podrá entender mucho mejor en el módulo de Normalización de Datos.</p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="dominio_de_un_atributo.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="reglas_de_mapeo__traduccion.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>
